@@ -31,7 +31,7 @@ public class MenuScript : MonoBehaviour
 
         menuOverlay = GameObject.Find("Canvas").transform.GetChild(0).gameObject;       //child 0 of the canvas is the menu/inventory overlay
 
-        levelTimer = timerMax * 60;         //* 60 to turn it from minutes to seconds 
+        levelTimer = timerMax;         //* 60 to turn it from minutes to seconds 
 
         //Game over screen
         gameOverPanel = GameObject.Find("Canvas").transform.GetChild(1).gameObject;     //child 1 of the canvas is the game over panel
@@ -48,6 +48,8 @@ public class MenuScript : MonoBehaviour
 
     void Update()
     {
+        if(gameOver) Debug.Log("Game over");
+
         //Timer
         levelTimer -= Time.deltaTime;
         displayTimer();
@@ -117,19 +119,10 @@ public class MenuScript : MonoBehaviour
         {
             if (!gameOver)
             {
-                gameOver = true;
-                //SceneManager.LoadScene(2);      //scene 2 is game over scene
-
-                gameOverPanel.SetActive(true);      //activate the game over screen
                 reticle.SetActive(false);           //deactivate the reticle
 
-                //transform.parent.gameObject.GetComponent<Rigidbody>().enabled = false;
-
-                GameObject player = transform.parent.gameObject;
-                //player.GetComponent<FirstPersonController>().enabled = false;
-
-                //Start the fade in
-                StartCoroutine(fadeGameOverPanel());
+                gameOverPanel.SetActive(true);              //activate the game over screen
+                StartCoroutine(fadeGameOverPanel());        //Start the fade in
             }
         }
     }
@@ -148,5 +141,7 @@ public class MenuScript : MonoBehaviour
 
             yield return null;
         }
+
+        SceneManager.LoadScene(2);      //Load the game over scene once the image has been faded in
     }
 }
