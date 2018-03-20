@@ -12,6 +12,13 @@ public class MainMenuScript : MonoBehaviour
     private bool canInteract = true;
     private int selectedButton = -1;
 
+    private void Start()
+    {
+        //This ensures when loading the menu from the game, that the cursor returns
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
+
     //Button functions
     public void startGame()
     {

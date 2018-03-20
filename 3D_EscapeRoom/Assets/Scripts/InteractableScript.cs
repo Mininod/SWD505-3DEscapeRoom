@@ -11,7 +11,9 @@ public class InteractableScript : MonoBehaviour
         None,
         Box,
         Cylinder,
-        TestPickup
+        TestPickup,
+        Key,
+        FinalDoor
     }
 
     public objectType myType;

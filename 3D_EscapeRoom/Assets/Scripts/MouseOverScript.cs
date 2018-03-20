@@ -78,6 +78,12 @@ public class MouseOverScript : MonoBehaviour
                             break;
                         case InteractableScript.objectType.TestPickup:
                             break;
+                        case InteractableScript.objectType.Key:
+                            break;
+                        case InteractableScript.objectType.FinalDoor:
+                            if (inventory.checkInventory(InteractableScript.objectType.Key))            //if we have the key
+                                Debug.Log("Door Open");
+                            break;
                     }
                 }
             }

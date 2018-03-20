@@ -27,11 +27,14 @@ public class MenuScript : MonoBehaviour
     {
         inventory = gameObject.GetComponent<PlayerInventoryScript>();
         timerDisplay = GameObject.Find("TimerDisplay").GetComponent<Text>();
+
+        //reticle
         reticle = GameObject.Find("Reticle");
+        if (!SettingsMenuScript.reticleOn) reticle.SetActive(false);            //turn off the reticle if it is off in the settings
 
         menuOverlay = GameObject.Find("Canvas").transform.GetChild(0).gameObject;       //child 0 of the canvas is the menu/inventory overlay
 
-        levelTimer = timerMax;         //* 60 to turn it from minutes to seconds 
+        levelTimer = timerMax * 60;         //* 60 to turn it from minutes to seconds 
 
         //Game over screen
         gameOverPanel = GameObject.Find("Canvas").transform.GetChild(1).gameObject;     //child 1 of the canvas is the game over panel

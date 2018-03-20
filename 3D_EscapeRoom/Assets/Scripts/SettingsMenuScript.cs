@@ -6,14 +6,18 @@ using UnityEngine.UI;
 public class SettingsMenuScript : MonoBehaviour
 {
     public GameObject fullscreenButton;
+    public GameObject reticleButton;
     public GameObject[] mainMenu;
 
     private bool canInteract = true;
     private int selectedButton = -1;
 
+    static public bool reticleOn = true;
+
     void Start()
     {
         fullscreenButton.GetComponent<Toggle>().isOn = Screen.fullScreen;
+        reticleButton.GetComponent<Toggle>().isOn = reticleOn;          //if the reticle is on, the toggle is on
     }
 
     //Button functions
@@ -26,6 +30,12 @@ public class SettingsMenuScript : MonoBehaviour
     {
         if (toggle) QualitySettings.SetQualityLevel(0);
         else QualitySettings.SetQualityLevel(5);
+    }
+
+    public void showReticle(bool toggle)
+    {
+        if (toggle) reticleOn = true;
+        else reticleOn = false;
     }
 
     public void returnToMenu()
