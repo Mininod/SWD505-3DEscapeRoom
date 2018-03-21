@@ -12,7 +12,6 @@ public class InteractableScript : MonoBehaviour
 
     public string clickTooltipText;                 //if it can be clicked/collected text will show up
     public string clickTooltipTextSuccess;          //if it can be clicked, this will show up if there is a success
-    public string clickTooltipTextPostSuccess;      //if it can be clicked, this will show up if clicked after the success
 
     private bool hasBeenTriggered = false;
 
@@ -40,14 +39,14 @@ public class InteractableScript : MonoBehaviour
     public objectType myType;
 }
 
-[CustomEditor(typeof(InteractableScript))]
-public class InteractableScriptEditor : AssemblyIsEditorAssembly
-{
-    override public void OnInspectorGUI()
-    {
-        var myScript = target as InteractableScript;
+//[CustomEditor(typeof(InteractableScript))]
+//public class InteractableScriptEditor : AssemblyIsEditorAssembly
+//{
+//    override public void OnInspectorGUI()
+//    {
+//        var myScript = target as InteractableScript;
 
 
-    }
-}
+//    }
+//}
 

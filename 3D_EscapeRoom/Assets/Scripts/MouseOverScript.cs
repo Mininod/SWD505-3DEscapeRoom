@@ -47,13 +47,13 @@ public class MouseOverScript : MonoBehaviour
             {
                 if (targetObject)        //if there is an object under the mouse over
                 {
-                    clickTooltipDuration = clickTooltipMaxDuration;         //start the timer for the click tooltip
-                    if (targetObject.getTriggerStatus())
-                        onClickDisplayText = targetObject.clickTooltipTextPostSuccess;
-                    else
-                        onClickDisplayText = targetObject.clickTooltipText;    //get the text to be displayed on a click
+                    if (!targetObject.getTriggerStatus())                           //if the target hasnt been activated, get its default on click text
+                    {
+                        clickTooltipDuration = clickTooltipMaxDuration;             //start the timer for the click tooltip
+                        onClickDisplayText = targetObject.clickTooltipText;         //get the text to be displayed on a click
+                    }
 
-                    if (targetObject.collectable)        //if the object can be picked up (does not need a second on click text)
+                    if (targetObject.collectable)        //if the object can be picked up (does not need a second on click text, uses default)
                     {
                         if (inventory.getUsedSlots() < inventory.inventorySize)
                         {
@@ -69,9 +69,11 @@ public class MouseOverScript : MonoBehaviour
                         case InteractableScript.objectType.Box:
                             if (inventory.checkInventory(InteractableScript.objectType.TestPickup))          //if we have the test pickup
                             {
-                                Debug.Log("ActionBox");
-                                targetObject.triggerInteractable();
-                                onClickDisplayText = targetObject.clickTooltipTextSuccess;
+                                if(!targetObject.getTriggerStatus())        //if it hasnt been triggered, trigger it
+                                {
+                                    Debug.Log("ActionBox");
+                                    triggerInteractable();
+                                }
                             }
                             break;
                         case InteractableScript.objectType.Cylinder:
@@ -84,9 +86,11 @@ public class MouseOverScript : MonoBehaviour
                         case InteractableScript.objectType.FinalDoor:
                             if (inventory.checkInventory(InteractableScript.objectType.Key))            //if we have the key
                             {
-                                Debug.Log("Door Open");
-                                targetObject.triggerInteractable();
-                                onClickDisplayText = targetObject.clickTooltipTextSuccess;
+                                if (!targetObject.getTriggerStatus())        //if it hasnt been triggered, trigger it
+                                {
+                                    Debug.Log("Door Open");
+                                    triggerInteractable();
+                                }
                             }
                             break;
                     }
@@ -99,6 +103,17 @@ public class MouseOverScript : MonoBehaviour
         {
             tooltipText.text = onClickDisplayText;
         }
+        else if(clickTooltipDuration == 0)
+        {
+            onClickDisplayText = "";        //when the timer has run out, clear the text so that an on click text is only shown if a new one is input
+        }
 
+    }
+
+    private void triggerInteractable()
+    {
+        targetObject.triggerInteractable();                         //trigger the interactable
+        onClickDisplayText = targetObject.clickTooltipTextSuccess;  //get the success on click text
+        clickTooltipDuration = clickTooltipMaxDuration;             //start the timer
     }
 }
