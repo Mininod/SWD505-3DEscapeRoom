@@ -51,8 +51,6 @@ public class MenuScript : MonoBehaviour
 
     void Update()
     {
-        if(gameOver) Debug.Log("Game over");
-
         //Timer
         levelTimer -= Time.deltaTime;
         displayTimer();
@@ -104,6 +102,15 @@ public class MenuScript : MonoBehaviour
         }
     }
 
+    private void LateUpdate()
+    {
+        if (menuUp)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+        }
+    }
+
     private void displayTimer()
     {
         if (levelTimer <= 0)
@@ -122,8 +129,9 @@ public class MenuScript : MonoBehaviour
         {
             if (!gameOver)
             {
-                reticle.SetActive(false);           //deactivate the reticle
+                gameOver = true;                    //set to game over
 
+                reticle.SetActive(false);                   //deactivate the reticle
                 gameOverPanel.SetActive(true);              //activate the game over screen
                 StartCoroutine(fadeGameOverPanel());        //Start the fade in
             }

@@ -712,6 +712,31 @@ Prefab:
       propertyPath: inventoryDisplay.Array.data[4]
       value: 
       objectReference: {fileID: 1778965265}
+    - target: {fileID: 114095978466029816, guid: 7dee89cefed818748b1ac4dc63f278a3,
+        type: 2}
+      propertyPath: m_MouseLook.lockCursor
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114095978466029816, guid: 7dee89cefed818748b1ac4dc63f278a3,
+        type: 2}
+      propertyPath: m_UseHeadBob
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114095978466029816, guid: 7dee89cefed818748b1ac4dc63f278a3,
+        type: 2}
+      propertyPath: m_MouseLook.MinimumX
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114095978466029816, guid: 7dee89cefed818748b1ac4dc63f278a3,
+        type: 2}
+      propertyPath: m_MouseLook.MaximumX
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 114095978466029816, guid: 7dee89cefed818748b1ac4dc63f278a3,
+        type: 2}
+      propertyPath: m_MouseLook.clampVerticalRotation
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7dee89cefed818748b1ac4dc63f278a3, type: 2}
   m_IsPrefabParent: 0
