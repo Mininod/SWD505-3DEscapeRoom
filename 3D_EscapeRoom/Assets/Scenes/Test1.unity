@@ -249,7 +249,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipText: This is a cylinder!
+  hoverTooltipText: 
+  hasClickTooltip: 0
+  clickTooltipTextA: 
+  clickTooltipTextB: 
   myType: 2
   collectable: 0
 --- !u!1 &131775145
@@ -444,7 +447,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipText: Maybe this will unlock something
+  hoverTooltipText: 
+  hasClickTooltip: 0
+  clickTooltipTextA: 
+  clickTooltipTextB: 
   myType: 4
   collectable: 1
 --- !u!23 &183385119
@@ -688,7 +694,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipText: A test pickup, maybe press e
+  hoverTooltipText: 
+  hasClickTooltip: 0
+  clickTooltipTextA: 
+  clickTooltipTextB: 
   myType: 3
   collectable: 1
 --- !u!23 &392852537
@@ -853,6 +862,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   raycastRange: 4
+  clickTooltipMaxDuration: 2
 --- !u!1 &525129695
 GameObject:
   m_ObjectHideFlags: 0
@@ -1166,7 +1176,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipText: It seems to be locked
+  hoverTooltipText: Its a door
+  hasClickTooltip: 1
+  clickTooltipTextA: Its locked
+  clickTooltipTextB: You unlocked the door
   myType: 5
   collectable: 0
 --- !u!1 &776670150
@@ -1215,7 +1228,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipText: A test pickup, maybe press e
+  hoverTooltipText: 
+  hasClickTooltip: 0
+  clickTooltipTextA: 
+  clickTooltipTextB: 
   myType: 3
   collectable: 1
 --- !u!23 &776670153
@@ -1328,7 +1344,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipText: A test pickup, maybe press e
+  hoverTooltipText: 
+  hasClickTooltip: 0
+  clickTooltipTextA: 
+  clickTooltipTextB: 
   myType: 3
   collectable: 1
 --- !u!23 &794524890
@@ -1441,7 +1460,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipText: A test pickup, maybe press e
+  hoverTooltipText: 
+  hasClickTooltip: 0
+  clickTooltipTextA: 
+  clickTooltipTextB: 
   myType: 3
   collectable: 1
 --- !u!23 &839692930
@@ -2174,7 +2196,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipText: A test pickup, maybe press e
+  hoverTooltipText: 
+  hasClickTooltip: 0
+  clickTooltipTextA: 
+  clickTooltipTextB: 
   myType: 3
   collectable: 1
 --- !u!23 &1397021387
@@ -2514,7 +2539,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipText: A test pickup, maybe press e
+  hoverTooltipText: 
+  hasClickTooltip: 0
+  clickTooltipTextA: 
+  clickTooltipTextB: 
   myType: 3
   collectable: 1
 --- !u!23 &1653432376
@@ -3056,7 +3084,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tooltipText: This is a box/cube
+  hoverTooltipText: 
+  hasClickTooltip: 0
+  clickTooltipTextA: 
+  clickTooltipTextB: 
   myType: 1
   collectable: 0
 --- !u!1 &2022015233
