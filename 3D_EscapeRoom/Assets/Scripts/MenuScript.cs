@@ -72,7 +72,8 @@ public class MenuScript : MonoBehaviour
         //Inventory display
         for (int i = 0; i < inventory.inventorySize; ++i)
         {
-            inventoryDisplay[i].transform.GetChild(0).gameObject.GetComponent<Text>().text = inventory.getObjectAtSlot(i).ToString();    //returns the object at the slot at puts it in the text at the on screen slot
+            //returns the object at the slot at puts it in the text at the on screen slot - child 1 is the button, child 0 is the text
+            inventoryDisplay[i].transform.GetChild(1).GetChild(0).gameObject.GetComponent<Text>().text = inventory.getObjectAtSlot(i).ToString();    
         }
 
         //check to bring up menu
@@ -104,12 +105,16 @@ public class MenuScript : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (menuUp)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-        }
+        if (menuUp) transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().SetCursorLock(false);
+        else transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().SetCursorLock(true);
     }
+
+    
+
+
+
+
+
 
     private void displayTimer()
     {
