@@ -72,7 +72,7 @@ public class MenuScript : MonoBehaviour
         //Inventory display
         for (int i = 0; i < inventory.inventorySize; ++i)
         {
-            //returns the object at the slot at puts it in the text at the on screen slot - child 1 is the button, child 0 is the text
+            //returns the object at the slot and puts it in the text at the on screen slot - child 1 is the button, child 0 is the text
             inventoryDisplay[i].transform.GetChild(1).GetChild(0).gameObject.GetComponent<Text>().text = inventory.getObjectAtSlot(i).ToString();    
         }
 
@@ -91,14 +91,21 @@ public class MenuScript : MonoBehaviour
             }
         }
 
-        //check for exit button press
+        //check for button presses
         if (menuUp)
         {
+            //check for exit button press
             if (Input.GetButtonDown("Exit"))
             {
                 Cursor.lockState = CursorLockMode.None;
                 Cursor.visible = true;
                 SceneManager.LoadScene(0);      //scene 0 is the main menu
+            }
+
+            //check for craft button press
+            if(Input.GetButtonDown("Craft"))
+            {
+                craftObject();
             }
         }
     }
@@ -109,12 +116,29 @@ public class MenuScript : MonoBehaviour
         else transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().SetCursorLock(true);
     }
 
-    
+    private void craftObject()
+    {
+        InteractableScript.objectType componentA = InteractableScript.objectType.None;
+        InteractableScript.objectType componentB = InteractableScript.objectType.None;
 
+        for (int i = 0; i < inventory.inventorySize; ++i)           //for each object in the inventory (even empty slots)
+        {
+            if (inventoryDisplay[i].GetComponent<ButtonSelectScript>().isSelected())         //If the corresponding button is selected - store the object in that slot
+            {
+                if (componentA == InteractableScript.objectType.None)        //if component A is not stored, store in A
+                    componentA = inventory.getObjectAtSlot(i);
+                else                                                        //else store in component b
+                    componentB = inventory.getObjectAtSlot(i);
+            }
+        }
 
+        bool craftStatus = inventory.craftObject(componentA, componentB);            //returns whether or not the craft failed/succeeded
 
+        Debug.Log("Crafting attempted");
 
+        //display craft status
 
+    }
 
     private void displayTimer()
     {
