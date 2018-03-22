@@ -7,6 +7,16 @@ public class PlayerInventoryScript : MonoBehaviour
     public InteractableScript.objectType[] inventory;
     public int inventorySize;
 
+    [System.Serializable]
+    public class recipe
+    {
+        public InteractableScript.objectType ComponentA;
+        public InteractableScript.objectType ComponentB;
+        public InteractableScript.objectType Result;
+    }
+
+    public recipe[] recipeList;
+
     void Start()
     {
         inventory = new InteractableScript.objectType[inventorySize];
@@ -61,21 +71,21 @@ public class PlayerInventoryScript : MonoBehaviour
     {
         bool itemCrafted = false;
 
-        if (a == InteractableScript.objectType.Key && b == InteractableScript.objectType.TestPickup ||
-            b == InteractableScript.objectType.Key && a == InteractableScript.objectType.TestPickup)            //check recipe
+        for(int i = 0; i < recipeList.Length; ++i)          //check each recipe
         {
-            for (int i = 0; i < inventorySize; ++i)         //check all inventory slots
+            if(a == recipeList[i].ComponentA && b == recipeList[i].ComponentB ||
+                b == recipeList[i].ComponentA && a == recipeList[i].ComponentB)        //check that the two components being used match the recipe
             {
-                if (inventory[i] == InteractableScript.objectType.Key)
-                    inventory[i] = InteractableScript.objectType.None;          //remove component A
-
-                if (inventory[i] == InteractableScript.objectType.TestPickup)
-                    inventory[i] = InteractableScript.objectType.None;          //remove component B
-
-                if(itemCrafted == false && inventory[i] == InteractableScript.objectType.None)
+                for (int j = 0; j < inventorySize; ++j)
                 {
-                    inventory[i] = InteractableScript.objectType.Cylinder;      //Add result to inventory
-                    itemCrafted = true;
+                    if (inventory[j] == recipeList[i].ComponentA || inventory[j] == recipeList[i].ComponentB)
+                        inventory[j] = InteractableScript.objectType.None;              //if the object in the inventory is one of the two used, it will be removed
+
+                    if(itemCrafted == false && inventory[j] == InteractableScript.objectType.None)
+                    {
+                        inventory[j] = recipeList[i].Result;        //add the result to the first empty slot
+                        itemCrafted = true; 
+                    }
                 }
             }
         }

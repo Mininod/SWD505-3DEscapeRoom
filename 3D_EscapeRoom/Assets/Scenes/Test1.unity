@@ -830,6 +830,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114881268159040068, guid: 7dee89cefed818748b1ac4dc63f278a3,
+        type: 2}
+      propertyPath: recipeList.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4973976813285588, guid: 7dee89cefed818748b1ac4dc63f278a3, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -911,6 +916,21 @@ Prefab:
         type: 2}
       propertyPath: m_MouseLook.clampVerticalRotation
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114881268159040068, guid: 7dee89cefed818748b1ac4dc63f278a3,
+        type: 2}
+      propertyPath: recipeList.Array.data[0].ComponentA
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114881268159040068, guid: 7dee89cefed818748b1ac4dc63f278a3,
+        type: 2}
+      propertyPath: recipeList.Array.data[0].ComponentB
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114881268159040068, guid: 7dee89cefed818748b1ac4dc63f278a3,
+        type: 2}
+      propertyPath: recipeList.Array.data[0].Result
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7dee89cefed818748b1ac4dc63f278a3, type: 2}
