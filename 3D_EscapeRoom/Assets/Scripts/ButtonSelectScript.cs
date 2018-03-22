@@ -34,4 +34,9 @@ public class ButtonSelectScript : MonoBehaviour
     {
         return selected;
     }
+
+    public void deselect()
+    {
+        selected = false;
+    }
 }

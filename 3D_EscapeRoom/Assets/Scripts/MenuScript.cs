@@ -136,8 +136,15 @@ public class MenuScript : MonoBehaviour
 
         Debug.Log("Crafting attempted");
 
+        clearSelections();          //clear all the selected objects
         //display craft status
 
+    }
+
+    private void clearSelections()
+    {
+        foreach (var button in inventoryDisplay)
+            button.GetComponent<ButtonSelectScript>().deselect();
     }
 
     private void displayTimer()
