@@ -6,20 +6,18 @@ using UnityEngine.UI;
 
 public class MenuScript : MonoBehaviour
 {
-    private GameObject menuOverlay;
-    private GameObject gameOverPanel;
-    private bool menuUp = false;
-    private PlayerInventoryScript inventory;
-    private Text timerDisplay;
-    private GameObject reticle;
+    public GameObject menuOverlay;               //the gameobject of the inventory overlay
+    public GameObject gameOverPanel;             //the gameobject for the game over screen
+    private bool menuUp = false;                 //whether or not the menu/inventory is currently being displayed
+    private PlayerInventoryScript inventory;     //direct access to the players inventory
+    private Text timerDisplay;                   //the text object that displays the timer left
+    private GameObject reticle;                  //the gameobject that displays the reticle
 
-    [Tooltip("Max time for the level, in minutes")]
-    public int timerMax;
-    private float levelTimer;
-    [Tooltip("Time at which the game indicates you are running out of time, in minutes")]
-    public int shortTimer;
-    private bool atShortTimer = false;
-    private bool gameOver = false;
+    public int timerMax;                    //max time for the level in minutes in minutes
+    private float levelTimer;               //actual time left in the level in seconds
+    public int shortTimer;                  //time at which the game indicates you are running out of time (changes music etc) in minutes
+    private bool atShortTimer = false;      //whether the game has passes the "shorttimer" moment
+    private bool gameOver = false;          //whether time has run out or not
 
     public GameObject[] inventoryDisplay;           //will be the size of the inventiry, set by the designer
 
@@ -32,12 +30,9 @@ public class MenuScript : MonoBehaviour
         reticle = GameObject.Find("Reticle");
         if (!SettingsMenuScript.reticleOn) reticle.SetActive(false);            //turn off the reticle if it is off in the settings
 
-        menuOverlay = GameObject.Find("Canvas").transform.GetChild(0).gameObject;       //child 0 of the canvas is the menu/inventory overlay
-
         levelTimer = timerMax * 60;         //* 60 to turn it from minutes to seconds 
 
-        //Game over screen
-        gameOverPanel = GameObject.Find("Canvas").transform.GetChild(1).gameObject;     //child 1 of the canvas is the game over panel
+
 
         //Set game over screen elements to 0 alpha - I could do this in the editor, but then they are hard to edit
         Color panelColor0 = gameOverPanel.GetComponent<Image>().color;
@@ -81,6 +76,7 @@ public class MenuScript : MonoBehaviour
         {
             if (menuOverlay.activeSelf)                 //if the menu is active
             {
+                clearSelections();                      //clear all crafting selections after closing the menu
                 menuOverlay.SetActive(false);           //deactivate
                 menuUp = false;
             }

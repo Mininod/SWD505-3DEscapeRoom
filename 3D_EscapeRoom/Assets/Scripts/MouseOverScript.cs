@@ -77,7 +77,7 @@ public class MouseOverScript : MonoBehaviour
                             }
                             break;
                         case InteractableScript.objectType.Cylinder:
-                            Debug.Log("ActionCylinder");
+                            targetObject.GetComponent<PasswordInputScript>().displayInputOverlay();
                             break;
                         case InteractableScript.objectType.TestPickup:
                             break;
