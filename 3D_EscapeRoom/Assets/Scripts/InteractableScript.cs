@@ -5,6 +5,19 @@ using UnityEngine;
 
 public class InteractableScript : MonoBehaviour
 {
+    //Object type
+    public enum objectType
+    {
+        None,
+        Box,
+        Cylinder,
+        TestPickup,
+        Key,
+        FinalDoor
+    }
+
+    public objectType myType;
+
     public string hoverTooltipText;         //text to show when hovered over
 
     public bool canBeClicked;               //if it can be clicked
@@ -24,19 +37,6 @@ public class InteractableScript : MonoBehaviour
     {
         hasBeenTriggered = true;
     }
-
-    //Object type
-    public enum objectType
-    {
-        None,
-        Box,
-        Cylinder,
-        TestPickup,
-        Key,
-        FinalDoor
-    }
-
-    public objectType myType;
 }
 
 //[CustomEditor(typeof(InteractableScript))]
