@@ -13,7 +13,8 @@ public class InteractableScript : MonoBehaviour
         Cylinder,
         TestPickup,
         Key,
-        FinalDoor
+        FinalDoor,
+        PincodeObject
     }
 
     public objectType myType;

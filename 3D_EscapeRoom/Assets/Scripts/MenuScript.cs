@@ -33,8 +33,7 @@ public class MenuScript : MonoBehaviour
 
         //player controller
         playerController = transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();        //since the script is on the child of the player controller
-        playerController.getMouseLook().XSensitivity = SettingsMenuScript.sensitivity;      //set the sens as per the settings
-        playerController.getMouseLook().YSensitivity = SettingsMenuScript.sensitivity;
+        playerController.restoreSens();     //set desired sens at the start
 
         levelTimer = timerMax * 60;         //* 60 to turn it from minutes to seconds 
 
@@ -85,14 +84,13 @@ public class MenuScript : MonoBehaviour
                 clearSelections();                      //clear all crafting selections after closing the menu
                 menuOverlay.SetActive(false);           //deactivate
                 menuUp = false;
-
+                playerController.restoreSens();         //restore the sens to normal
             }
             else
             {
                 menuOverlay.SetActive(true);
                 menuUp = true;
-                transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().XSensitivity = 0;
-                transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().YSensitivity = 0;
+                playerController.turnOffSens();         //turn off the sens when the menu comes up
             }
         }
 

@@ -56,7 +56,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         public void restoreSens()
         {
-            getMouseLook().XSensitivity = MonoBehaviour::SettingsMenuScript.sensitivity;
+            getMouseLook().XSensitivity = SettingsMenuScript.sensitivity;
             getMouseLook().YSensitivity = SettingsMenuScript.sensitivity;
         }
         //------------------------End of my stuff------------------------

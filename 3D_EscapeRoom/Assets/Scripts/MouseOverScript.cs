@@ -10,6 +10,7 @@ public class MouseOverScript : MonoBehaviour
     private float clickTooltipDuration;
     private Text tooltipText;
     private InteractableScript targetObject;
+    private KeypadButtonScript targetKeypadButton;
     private string onClickDisplayText;
     private PlayerInventoryScript inventory;
 
@@ -25,6 +26,7 @@ public class MouseOverScript : MonoBehaviour
 
         tooltipText.text = "";          //clear tooltip
         targetObject = null;            //clear targets
+        targetKeypadButton = null;      //clear targets
 
         var hits = Physics.RaycastAll(transform.position, transform.forward, raycastRange);         //raycast for hits
 
@@ -38,6 +40,10 @@ public class MouseOverScript : MonoBehaviour
                     tooltipText.text = item.transform.gameObject.GetComponent<InteractableScript>().hoverTooltipText;        //set tooltip text
                     targetObject = item.transform.gameObject.GetComponent<InteractableScript>();                        //set as targeted object
                 }
+                else if(item.transform.gameObject.GetComponent<KeypadButtonScript>())   //if the object is part of the keypad
+                {
+                    targetKeypadButton = item.transform.gameObject.GetComponent<KeypadButtonScript>();
+                }
             }
         }
 
@@ -45,7 +51,7 @@ public class MouseOverScript : MonoBehaviour
         {
             if (Input.GetButtonDown("Action"))
             {
-                if (targetObject)        //if there is an object under the mouse over
+                if (targetObject)        //if there is an interactable object under the mouse over
                 {
                     if (!targetObject.getTriggerStatus())                           //if the target hasnt been activated, get its default on click text
                     {
@@ -93,7 +99,14 @@ public class MouseOverScript : MonoBehaviour
                                 }
                             }
                             break;
+                        case InteractableScript.objectType.PincodeObject:
+                            
+                            break;
                     }
+                }
+                else if(targetKeypadButton)         //if there is a keypad button under the mouse
+                {
+                    targetKeypadButton.pressButton();       //puts the input into the controller that checks the pincode
                 }
             }
         }
