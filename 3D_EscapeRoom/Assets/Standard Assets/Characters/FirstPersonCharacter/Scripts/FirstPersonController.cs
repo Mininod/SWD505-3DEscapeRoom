@@ -42,10 +42,24 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private bool m_Jumping;
         private AudioSource m_AudioSource;
 
+        //-------------------------Stuff I Added------------------------
         public MouseLook getMouseLook()
         {
             return m_MouseLook;
         }
+
+        public void turnOffSens()
+        {
+            getMouseLook().XSensitivity = 0;
+            getMouseLook().YSensitivity = 0;
+        }
+
+        public void restoreSens()
+        {
+            getMouseLook().XSensitivity = MonoBehaviour::SettingsMenuScript.sensitivity;
+            getMouseLook().YSensitivity = SettingsMenuScript.sensitivity;
+        }
+        //------------------------End of my stuff------------------------
 
         // Use this for initialization
         private void Start()

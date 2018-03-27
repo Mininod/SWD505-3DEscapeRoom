@@ -85,8 +85,7 @@ public class MenuScript : MonoBehaviour
                 clearSelections();                      //clear all crafting selections after closing the menu
                 menuOverlay.SetActive(false);           //deactivate
                 menuUp = false;
-                transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().XSensitivity = 2;
-                transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().YSensitivity = 2;
+
             }
             else
             {
