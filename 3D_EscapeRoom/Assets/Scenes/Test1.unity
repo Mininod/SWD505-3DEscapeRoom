@@ -372,12 +372,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myType: 2
   hoverTooltipText: Cylinder here
   canBeClicked: 0
   collectable: 0
   clickTooltipText: 
   clickTooltipTextSuccess: 
-  myType: 2
 --- !u!114 &97488748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,12 +583,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myType: 4
   hoverTooltipText: Its a key
   canBeClicked: 0
   collectable: 1
   clickTooltipText: You picked up a key
   clickTooltipTextSuccess: 
-  myType: 4
 --- !u!23 &183385119
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1030,6 +1030,16 @@ Prefab:
       propertyPath: gameOverPanel
       value: 
       objectReference: {fileID: 2022015233}
+    - target: {fileID: 114095978466029816, guid: 7dee89cefed818748b1ac4dc63f278a3,
+        type: 2}
+      propertyPath: m_MouseLook.XSensitivity
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114095978466029816, guid: 7dee89cefed818748b1ac4dc63f278a3,
+        type: 2}
+      propertyPath: m_MouseLook.YSensitivity
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7dee89cefed818748b1ac4dc63f278a3, type: 2}
   m_IsPrefabParent: 0
@@ -1461,12 +1471,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myType: 5
   hoverTooltipText: Its a door
   canBeClicked: 1
   collectable: 0
   clickTooltipText: Its locked
   clickTooltipTextSuccess: You unlocked the door
-  myType: 5
 --- !u!1 &665140825
 GameObject:
   m_ObjectHideFlags: 0
@@ -1777,12 +1787,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myType: 3
   hoverTooltipText: is a pickup
   canBeClicked: 0
   collectable: 1
   clickTooltipText: you picked this up
   clickTooltipTextSuccess: 
-  myType: 3
 --- !u!23 &839692930
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3823,12 +3833,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myType: 1
   hoverTooltipText: Cube!!!!!!!!!
   canBeClicked: 1
   collectable: 0
   clickTooltipText: you need a pickup here
   clickTooltipTextSuccess: you did it!
-  myType: 1
 --- !u!1 &2022015233
 GameObject:
   m_ObjectHideFlags: 0

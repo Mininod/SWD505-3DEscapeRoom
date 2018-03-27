@@ -12,6 +12,7 @@ public class MenuScript : MonoBehaviour
     private PlayerInventoryScript inventory;     //direct access to the players inventory
     private Text timerDisplay;                   //the text object that displays the timer left
     private GameObject reticle;                  //the gameobject that displays the reticle
+    private UnityStandardAssets.Characters.FirstPerson.FirstPersonController playerController;      //direct reference to the player controller
 
     public int timerMax;                    //max time for the level in minutes in minutes
     private float levelTimer;               //actual time left in the level in seconds
@@ -29,6 +30,11 @@ public class MenuScript : MonoBehaviour
         //reticle
         reticle = GameObject.Find("Reticle");
         if (!SettingsMenuScript.reticleOn) reticle.SetActive(false);            //turn off the reticle if it is off in the settings
+
+        //player controller
+        playerController = transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();        //since the script is on the child of the player controller
+        playerController.getMouseLook().XSensitivity = SettingsMenuScript.sensitivity;      //set the sens as per the settings
+        playerController.getMouseLook().YSensitivity = SettingsMenuScript.sensitivity;
 
         levelTimer = timerMax * 60;         //* 60 to turn it from minutes to seconds 
 
@@ -79,11 +85,15 @@ public class MenuScript : MonoBehaviour
                 clearSelections();                      //clear all crafting selections after closing the menu
                 menuOverlay.SetActive(false);           //deactivate
                 menuUp = false;
+                transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().XSensitivity = 2;
+                transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().YSensitivity = 2;
             }
             else
             {
                 menuOverlay.SetActive(true);
                 menuUp = true;
+                transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().XSensitivity = 0;
+                transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().YSensitivity = 0;
             }
         }
 

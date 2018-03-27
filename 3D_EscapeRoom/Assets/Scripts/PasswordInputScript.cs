@@ -32,8 +32,8 @@ public class PasswordInputScript : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (overlayUp) transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().SetCursorLock(false);
-        else transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().SetCursorLock(true);
+        //if (overlayUp) transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().SetCursorLock(false);
+        //else transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().SetCursorLock(true);
     }
 
     public void displayInputOverlay()

@@ -21,7 +21,7 @@ public class UnitTesting : MonoBehaviour
         testButton.toggleOutline();
 
         //Assert
-        Assert.AreEqual(true, testButton.isSelected();          //should simply select the button
+        Assert.AreEqual(true, testButton.isSelected());          //should simply select the button
     }
 
     [UnityTest]
@@ -212,6 +212,11 @@ public class UnitTesting : MonoBehaviour
     public IEnumerator PIScraftObject()
     {
         //Arrange
+        var testInventory = new GameObject().AddComponent<PlayerInventoryScript>();
+        testInventory.forceSetInventorySize(5);     //testing method to set the inventory size, normally done in start from a public variable
+        testInventory.addToInventory(InteractableScript.objectType.Key);
+        testInventory.addToInventory(InteractableScript.objectType.TestPickup);
+        //Need to use another test method to add a recipe to the inventory
 
         yield return null;
 
