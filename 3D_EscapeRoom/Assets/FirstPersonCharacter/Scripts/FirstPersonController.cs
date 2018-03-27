@@ -48,13 +48,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             return m_MouseLook;
         }
 
-        public void turnOffSens()
-        {
-            getMouseLook().XSensitivity = 0;
-            getMouseLook().YSensitivity = 0;
-        }
-
-        public void restoreSens()
+        public void setSens()
         {
             getMouseLook().XSensitivity = SettingsMenuScript.sensitivity;
             getMouseLook().YSensitivity = SettingsMenuScript.sensitivity;

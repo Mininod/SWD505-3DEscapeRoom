@@ -22,9 +22,6 @@ public class PincodeInputScript : MonoBehaviour
 	
 	void Update ()
     {
-        //string completeInput = input1.ToString() + input2.ToString() + input3.ToString() + input4.ToString();
-        //inputDisplay.text = completeInput;
-
         switch (currentInput)
         {
             case 1:

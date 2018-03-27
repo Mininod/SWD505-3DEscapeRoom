@@ -33,7 +33,7 @@ public class MenuScript : MonoBehaviour
 
         //player controller
         playerController = transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>();        //since the script is on the child of the player controller
-        playerController.restoreSens();     //set desired sens at the start
+        playerController.setSens();     //set desired sens at the start
 
         levelTimer = timerMax * 60;         //* 60 to turn it from minutes to seconds 
 
@@ -84,13 +84,13 @@ public class MenuScript : MonoBehaviour
                 clearSelections();                      //clear all crafting selections after closing the menu
                 menuOverlay.SetActive(false);           //deactivate
                 menuUp = false;
-                playerController.restoreSens();         //restore the sens to normal
+                playerController.enabled = true;        //turn the player controls back on when the menu is gone
             }
             else
             {
                 menuOverlay.SetActive(true);
                 menuUp = true;
-                playerController.turnOffSens();         //turn off the sens when the menu comes up
+                playerController.enabled = false;       //diable all player controls when in the menu
             }
         }
 
@@ -113,10 +113,10 @@ public class MenuScript : MonoBehaviour
         }
     }
 
-    private void LateUpdate()
+    private void LateUpdate()           
     {
-        if (menuUp) transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().SetCursorLock(false);
-        else transform.parent.gameObject.GetComponent<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().getMouseLook().SetCursorLock(true);
+        if (menuUp) playerController.getMouseLook().SetCursorLock(false);               //when the menu is up the cursor needs to be unlocked to be used
+        else playerController.getMouseLook().SetCursorLock(true);
     }
 
     private void craftObject()
