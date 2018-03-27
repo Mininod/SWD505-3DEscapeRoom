@@ -39,4 +39,10 @@ public class ButtonSelectScript : MonoBehaviour
     {
         selected = false;
     }
+
+    //-------------------------------Testing--------------------------
+    public void select()
+    {
+        selected = true;
+    }
 }

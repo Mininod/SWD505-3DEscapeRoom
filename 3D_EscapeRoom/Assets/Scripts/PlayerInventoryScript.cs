@@ -93,4 +93,15 @@ public class PlayerInventoryScript : MonoBehaviour
         if (itemCrafted) return true;
         else return false;
     }
+
+    //----------------------------------------Testing----------------------------------------
+    public void forceSetInventorySize(int size)
+    {
+        inventory = new InteractableScript.objectType[size];
+
+        for (int i = 0; i < size; ++i)
+        {
+            inventory[i] = InteractableScript.objectType.None;                  //fill the inventory with blank objects
+        }
+    }
 }
