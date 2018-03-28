@@ -121,14 +121,14 @@ public class MenuScript : MonoBehaviour
 
     private void craftObject()
     {
-        InteractableScript.objectType componentA = InteractableScript.objectType.None;
-        InteractableScript.objectType componentB = InteractableScript.objectType.None;
+        objectType componentA = objectType.None;
+        objectType componentB = objectType.None;
 
         for (int i = 0; i < inventory.inventorySize; ++i)           //for each object in the inventory (even empty slots)
         {
             if (inventoryDisplay[i].GetComponent<ButtonSelectScript>().isSelected())         //If the corresponding button is selected - store the object in that slot
             {
-                if (componentA == InteractableScript.objectType.None)        //if component A is not stored, store in A
+                if (componentA == objectType.None)        //if component A is not stored, store in A
                     componentA = inventory.getObjectAtSlot(i);
                 else                                                        //else store in component b
                     componentB = inventory.getObjectAtSlot(i);

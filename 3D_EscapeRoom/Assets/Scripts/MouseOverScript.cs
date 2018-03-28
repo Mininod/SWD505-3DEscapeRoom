@@ -70,10 +70,10 @@ public class MouseOverScript : MonoBehaviour
 
                     switch (targetObject.myType)            //if the clicked object has a requirement/condition that is passed, the text is set to textB instead of A
                     {
-                        case InteractableScript.objectType.None:
+                        case objectType.None:
                             break;
-                        case InteractableScript.objectType.Box:
-                            if (inventory.checkInventory(InteractableScript.objectType.TestPickup))          //if we have the test pickup
+                        case objectType.Box:
+                            if (inventory.checkInventory(objectType.TestPickup))          //if we have the test pickup
                             {
                                 if(!targetObject.getTriggerStatus())        //if it hasnt been triggered, trigger it
                                 {
@@ -82,15 +82,15 @@ public class MouseOverScript : MonoBehaviour
                                 }
                             }
                             break;
-                        case InteractableScript.objectType.Cylinder:
+                        case objectType.Cylinder:
                             targetObject.GetComponent<PasswordInputScript>().displayInputOverlay();
                             break;
-                        case InteractableScript.objectType.TestPickup:
+                        case objectType.TestPickup:
                             break;
-                        case InteractableScript.objectType.Key:
+                        case objectType.Key:
                             break;
-                        case InteractableScript.objectType.FinalDoor:
-                            if (inventory.checkInventory(InteractableScript.objectType.Key))            //if we have the key
+                        case objectType.FinalDoor:
+                            if (inventory.checkInventory(objectType.Key))            //if we have the key
                             {
                                 if (!targetObject.getTriggerStatus())        //if it hasnt been triggered, trigger it
                                 {
@@ -99,7 +99,7 @@ public class MouseOverScript : MonoBehaviour
                                 }
                             }
                             break;
-                        case InteractableScript.objectType.PincodeObject:
+                        case objectType.PincodeObject:
                             
                             break;
                     }

@@ -4,34 +4,34 @@ using UnityEngine;
 
 public class PlayerInventoryScript : MonoBehaviour
 {
-    public InteractableScript.objectType[] inventory;
+    public objectType[] inventory;
     public int inventorySize;
 
     [System.Serializable]
     public class recipe
     {
-        public InteractableScript.objectType ComponentA;
-        public InteractableScript.objectType ComponentB;
-        public InteractableScript.objectType Result;
+        public objectType ComponentA;
+        public objectType ComponentB;
+        public objectType Result;
     }
 
     public recipe[] recipeList;
 
     void Start()
     {
-        inventory = new InteractableScript.objectType[inventorySize];
+        inventory = new objectType[inventorySize];
 
         for (int i = 0; i < inventorySize; ++i)
         {
-            inventory[i] = InteractableScript.objectType.None;                  //fill the inventory with blank objects
+            inventory[i] = objectType.None;                  //fill the inventory with blank objects
         }
     }
 
-    public void addToInventory(InteractableScript.objectType addType)
+    public void addToInventory(objectType addType)
     {
         for (int i = 0; i < inventorySize; ++i)
         {
-            if (inventory[i] == InteractableScript.objectType.None)       //at the first 'empty' inventory slot, where the type is set to none
+            if (inventory[i] == objectType.None)       //at the first 'empty' inventory slot, where the type is set to none
             {
                 inventory[i] = addType;
                 return;         //once the object has been added to a slot, return so its only been added to the one
@@ -39,7 +39,7 @@ public class PlayerInventoryScript : MonoBehaviour
         }
     }
 
-    public bool checkInventory(InteractableScript.objectType checkType)       //returns true if the object is in the inventory
+    public bool checkInventory(objectType checkType)       //returns true if the object is in the inventory
     {
         for (int i = 0; i < inventorySize; ++i)
         {
@@ -55,19 +55,19 @@ public class PlayerInventoryScript : MonoBehaviour
         int emptySlots = 0;
 
         for (int i = 0; i < inventorySize; ++i)
-            if (inventory[i] == InteractableScript.objectType.None)
+            if (inventory[i] == objectType.None)
                 ++emptySlots;
 
         int fullSlots = inventorySize - emptySlots;
         return fullSlots;
     }
 
-    public InteractableScript.objectType getObjectAtSlot(int slot)
+    public objectType getObjectAtSlot(int slot)
     {
         return inventory[slot];
     }
 
-    public bool craftObject(InteractableScript.objectType a, InteractableScript.objectType b)
+    public bool craftObject(objectType a, objectType b)
     {
         bool itemCrafted = false;
 
@@ -79,9 +79,9 @@ public class PlayerInventoryScript : MonoBehaviour
                 for (int j = 0; j < inventorySize; ++j)
                 {
                     if (inventory[j] == recipeList[i].ComponentA || inventory[j] == recipeList[i].ComponentB)
-                        inventory[j] = InteractableScript.objectType.None;              //if the object in the inventory is one of the two used, it will be removed
+                        inventory[j] = objectType.None;              //if the object in the inventory is one of the two used, it will be removed
 
-                    if(itemCrafted == false && inventory[j] == InteractableScript.objectType.None)
+                    if(itemCrafted == false && inventory[j] == objectType.None)
                     {
                         inventory[j] = recipeList[i].Result;        //add the result to the first empty slot
                         itemCrafted = true; 
@@ -97,11 +97,11 @@ public class PlayerInventoryScript : MonoBehaviour
     //----------------------------------------Testing----------------------------------------
     public void forceSetInventorySize(int size)
     {
-        inventory = new InteractableScript.objectType[size];
+        inventory = new objectType[size];
 
         for (int i = 0; i < size; ++i)
         {
-            inventory[i] = InteractableScript.objectType.None;                  //fill the inventory with blank objects
+            inventory[i] = objectType.None;                  //fill the inventory with blank objects
         }
     }
 }

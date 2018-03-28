@@ -150,10 +150,10 @@ public class UnitTesting : MonoBehaviour
         yield return null;
 
         //Act
-        testInventory.addToInventory(InteractableScript.objectType.Key);            //add a key to the first open slot
+        testInventory.addToInventory(objectType.Key);            //add a key to the first open slot
 
         //Assert
-        Assert.AreEqual(true, testInventory.checkInventory(InteractableScript.objectType.Key));          //returns true if there is a key in the inventory
+        Assert.AreEqual(true, testInventory.checkInventory(objectType.Key));          //returns true if there is a key in the inventory
     }
 
     [UnityTest]
@@ -162,12 +162,12 @@ public class UnitTesting : MonoBehaviour
         //Arrange
         var testInventory = new GameObject().AddComponent<PlayerInventoryScript>();
         testInventory.forceSetInventorySize(5);     //testing method to set the inventory size, normally done in start from a public variable
-        testInventory.addToInventory(InteractableScript.objectType.Key);            //add a key to the first open slot
+        testInventory.addToInventory(objectType.Key);            //add a key to the first open slot
 
         yield return null;
 
         //Act
-        bool ret = testInventory.checkInventory(InteractableScript.objectType.Key);         //should return true since there is a key in the inventory
+        bool ret = testInventory.checkInventory(objectType.Key);         //should return true since there is a key in the inventory
 
         //Assert
         Assert.AreEqual(true, ret);
@@ -179,8 +179,8 @@ public class UnitTesting : MonoBehaviour
         //Arrange
         var testInventory = new GameObject().AddComponent<PlayerInventoryScript>();
         testInventory.forceSetInventorySize(5);     //testing method to set the inventory size, normally done in start from a public variable
-        testInventory.addToInventory(InteractableScript.objectType.Key);
-        testInventory.addToInventory(InteractableScript.objectType.TestPickup);
+        testInventory.addToInventory(objectType.Key);
+        testInventory.addToInventory(objectType.TestPickup);
 
         yield return null;
 
@@ -197,7 +197,7 @@ public class UnitTesting : MonoBehaviour
         //Arrange
         var testInventory = new GameObject().AddComponent<PlayerInventoryScript>();
         testInventory.forceSetInventorySize(5);     //testing method to set the inventory size, normally done in start from a public variable
-        testInventory.addToInventory(InteractableScript.objectType.Key);
+        testInventory.addToInventory(objectType.Key);
 
         yield return null;
 
@@ -205,7 +205,7 @@ public class UnitTesting : MonoBehaviour
         var ret = testInventory.getObjectAtSlot(0);         //slot 0 is the first slot, where there should be a key
 
         //Assert
-        Assert.AreEqual(InteractableScript.objectType.Key, ret);
+        Assert.AreEqual(objectType.Key, ret);
     }
 
     [UnityTest]
@@ -214,8 +214,8 @@ public class UnitTesting : MonoBehaviour
         //Arrange
         var testInventory = new GameObject().AddComponent<PlayerInventoryScript>();
         testInventory.forceSetInventorySize(5);     //testing method to set the inventory size, normally done in start from a public variable
-        testInventory.addToInventory(InteractableScript.objectType.Key);
-        testInventory.addToInventory(InteractableScript.objectType.TestPickup);
+        testInventory.addToInventory(objectType.Key);
+        testInventory.addToInventory(objectType.TestPickup);
         //Need to use another test method to add a recipe to the inventory
 
         yield return null;

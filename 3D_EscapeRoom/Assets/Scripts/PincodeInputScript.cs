@@ -22,6 +22,7 @@ public class PincodeInputScript : MonoBehaviour
 	
 	void Update ()
     {
+        //update display of current input
         switch (currentInput)
         {
             case 1:
@@ -40,7 +41,6 @@ public class PincodeInputScript : MonoBehaviour
                 inputDisplay.text = input1.ToString() + input2.ToString() + input3.ToString() + input4.ToString();
                 break;
         }
-
     }
 
     public void addInput(int input)
@@ -65,6 +65,7 @@ public class PincodeInputScript : MonoBehaviour
                 if (completeInput == pincode.ToString())
                 {
                     ++currentInput;
+                    inputDisplay.color = Color.green;
                     //pass
                     Debug.Log("Input successful");
                 }

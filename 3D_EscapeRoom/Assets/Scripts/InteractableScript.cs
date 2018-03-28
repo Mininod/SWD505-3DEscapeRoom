@@ -5,19 +5,7 @@ using UnityEngine;
 
 public class InteractableScript : MonoBehaviour
 {
-    //Object type
-    public enum objectType
-    {
-        None,
-        Box,
-        Cylinder,
-        TestPickup,
-        Key,
-        FinalDoor,
-        PincodeObject
-    }
-
-    public objectType myType;
+    public objectType myType;               //objet type includes all pickups and interactables
 
     public string hoverTooltipText;         //text to show when hovered over
 
