@@ -39,6 +39,18 @@ public class PlayerInventoryScript : MonoBehaviour
         }
     }
 
+    public void removeFromInventory(objectType removeType)
+    {
+        for (int i = 0; i < inventorySize; ++i)
+        {
+            if(inventory[i] == removeType)
+            {
+                inventory[i] = objectType.None;
+                return;
+            }
+        }
+    }
+
     public bool checkInventory(objectType checkType)       //returns true if the object is in the inventory
     {
         for (int i = 0; i < inventorySize; ++i)

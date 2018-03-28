@@ -29,18 +29,19 @@ public class MouseOverScript : MonoBehaviour
         targetKeypadButton = null;      //clear targets
 
         var hits = Physics.RaycastAll(transform.position, transform.forward, raycastRange);         //raycast for hits
+        Debug.DrawRay(transform.position, transform.forward * raycastRange, Color.green);
 
         //check for a mouseover
         if (hits.Length > 0)     //this means there is a hit
         {
-            foreach (var item in hits)
+            foreach (var item in hits)      //this will iterate through all items the ray hits
             {
-                if (item.transform.gameObject.GetComponent<InteractableScript>())        //if the object is an interactable and not just a wall etc
-                {                                                                                                                      
+                if (item.transform.gameObject.GetComponent<InteractableScript>() && targetObject == null)        //if the object is an interactable and not just a wall etc && we haven't already hit an interactable
+                {
                     tooltipText.text = item.transform.gameObject.GetComponent<InteractableScript>().hoverTooltipText;        //set tooltip text
                     targetObject = item.transform.gameObject.GetComponent<InteractableScript>();                        //set as targeted object
                 }
-                else if(item.transform.gameObject.GetComponent<KeypadButtonScript>())   //if the object is part of the keypad
+                else if (item.transform.gameObject.GetComponent<KeypadButtonScript>() && targetKeypadButton == null)   //if the object is part of the keypad
                 {
                     targetKeypadButton = item.transform.gameObject.GetComponent<KeypadButtonScript>();
                 }
@@ -99,8 +100,18 @@ public class MouseOverScript : MonoBehaviour
                                 }
                             }
                             break;
-                        case objectType.PincodeObject:
-                            
+                            //Explosive Components
+                        case objectType.CraftedExplosive:                           
+                            break;
+                        case objectType.ExplosivePlantSpot:
+                            if(inventory.checkInventory(objectType.CraftedExplosive))
+                            {
+                                triggerInteractable();      //so that it can only be done once
+                                inventory.removeFromInventory(objectType.CraftedExplosive);         //remove the explosive if you use it
+                                Debug.Log("Boom");
+                            }
+                            break;
+                        case objectType.Door:
                             break;
                     }
                 }
