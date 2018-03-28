@@ -36,10 +36,12 @@ public class MouseOverScript : MonoBehaviour
         {
             foreach (var item in hits)      //this will iterate through all items the ray hits
             {
-                if (item.transform.gameObject.GetComponent<InteractableScript>() && targetObject == null)        //if the object is an interactable and not just a wall etc && we haven't already hit an interactable
+                if (item.transform.gameObject.GetComponent<InteractableScript>()                                //if the object is an interactable and not just a wall etc
+                    && targetObject == null                                                                     //&& we haven't already targeted an interactable in front of this
+                    && !item.transform.gameObject.GetComponent<InteractableScript>().getTriggerStatus())        //&& this interactable hasn't been triggered already
                 {
                     tooltipText.text = item.transform.gameObject.GetComponent<InteractableScript>().hoverTooltipText;        //set tooltip text
-                    targetObject = item.transform.gameObject.GetComponent<InteractableScript>();                        //set as targeted object
+                    targetObject = item.transform.gameObject.GetComponent<InteractableScript>();                             //set as targeted object
                 }
                 else if (item.transform.gameObject.GetComponent<KeypadButtonScript>() && targetKeypadButton == null)   //if the object is part of the keypad
                 {
@@ -108,7 +110,8 @@ public class MouseOverScript : MonoBehaviour
                             {
                                 triggerInteractable();      //so that it can only be done once
                                 inventory.removeFromInventory(objectType.CraftedExplosive);         //remove the explosive if you use it
-                                Debug.Log("Boom");
+                                Debug.Log("Tick Tick");
+                                StartCoroutine(craftedExplosive(targetObject.gameObject));                  
                             }
                             break;
                         case objectType.Door:
@@ -139,5 +142,21 @@ public class MouseOverScript : MonoBehaviour
         targetObject.triggerInteractable();                         //trigger the interactable
         onClickDisplayText = targetObject.clickTooltipTextSuccess;  //get the success on click text
         clickTooltipDuration = clickTooltipMaxDuration;             //start the timer
+    }
+
+    private IEnumerator craftedExplosive(GameObject target)
+    {
+        GameObject explosiveSpot = target;
+
+        //play ticking sound for countdown to explosion
+
+        yield return new WaitForSeconds(5);
+
+        //play explosion sound
+        //trigger explosion animation
+
+        Debug.Log("Boom");
+        Destroy(explosiveSpot.transform.parent.gameObject);
+        Destroy(explosiveSpot);
     }
 }
