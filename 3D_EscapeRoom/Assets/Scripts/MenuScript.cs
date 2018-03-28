@@ -22,10 +22,13 @@ public class MenuScript : MonoBehaviour
 
     public GameObject[] inventoryDisplay;           //will be the size of the inventiry, set by the designer
 
+    private GameObject musicManager;        //Gameobject to switch betweent the two music tracks when the timer reaches the threshold
+
     void Start()
     {
         inventory = gameObject.GetComponent<PlayerInventoryScript>();
         timerDisplay = GameObject.Find("TimerDisplay").GetComponent<Text>();
+        musicManager = GameObject.Find("MusicManager");
 
         //reticle
         reticle = GameObject.Find("Reticle");
@@ -61,6 +64,11 @@ public class MenuScript : MonoBehaviour
             if (!atShortTimer)
             {
                 //trigger all things to be triggered at this time, music chnage etc
+
+                //switchmusic track
+                musicManager.transform.GetChild(0).gameObject.SetActive(false);
+                musicManager.transform.GetChild(1).gameObject.SetActive(true);
+
                 timerDisplay.color = Color.red;
                 atShortTimer = true;
             }

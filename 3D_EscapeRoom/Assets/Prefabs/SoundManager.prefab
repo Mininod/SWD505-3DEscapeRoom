@@ -51,6 +51,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ed1090211b3a93458239cb493042570, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SFXPrefab: {fileID: 0}
-  SFXNames: []
-  SFXs: []
+  SFXPrefab: {fileID: 1041182037091338, guid: bb3fcce4b1eef60439330ce19faa5253, type: 2}
+  SFXNames:
+  - Test1
+  - Test2
+  - Test3
+  SFXs:
+  - {fileID: 8300000, guid: dabd528d97fef90428293678efac549b, type: 3}
+  - {fileID: 8300000, guid: f5431cd907f553c4093fbd226c8ca880, type: 3}
+  - {fileID: 8300000, guid: e1b5f403ef30afa49b7375598221a2f4, type: 3}

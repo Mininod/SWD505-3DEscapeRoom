@@ -14,10 +14,14 @@ public class MouseOverScript : MonoBehaviour
     private string onClickDisplayText;
     private PlayerInventoryScript inventory;
 
+    private SoundManagerScript soundManager;
+
     void Start()
     {
         tooltipText = GameObject.Find("ToolTipText").GetComponent<Text>();
         inventory = gameObject.GetComponent<PlayerInventoryScript>();
+
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManagerScript>();
     }
 
     void Update()
@@ -111,6 +115,7 @@ public class MouseOverScript : MonoBehaviour
                                 triggerInteractable();      //so that it can only be done once
                                 inventory.removeFromInventory(objectType.CraftedExplosive);         //remove the explosive if you use it
                                 Debug.Log("Tick Tick");
+                                soundManager.PlaySFX("Test1");
                                 StartCoroutine(craftedExplosive(targetObject.gameObject));                  
                             }
                             break;
@@ -154,6 +159,8 @@ public class MouseOverScript : MonoBehaviour
 
         //play explosion sound
         //trigger explosion animation
+
+        soundManager.PlaySFX("Test2");
 
         Debug.Log("Boom");
         Destroy(explosiveSpot.transform.parent.gameObject);
