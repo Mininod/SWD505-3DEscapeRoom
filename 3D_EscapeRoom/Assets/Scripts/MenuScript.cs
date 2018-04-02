@@ -23,12 +23,14 @@ public class MenuScript : MonoBehaviour
     public GameObject[] inventoryDisplay;           //will be the size of the inventiry, set by the designer
 
     private GameObject musicManager;        //Gameobject to switch betweent the two music tracks when the timer reaches the threshold
+    private CollectableLibrary collectableLibrary;      //a reference to the library of gameObjects that can be picked up/collected through crafting
 
     void Start()
     {
         inventory = gameObject.GetComponent<PlayerInventoryScript>();
         timerDisplay = GameObject.Find("TimerDisplay").GetComponent<Text>();
         musicManager = GameObject.Find("MusicManager");
+        collectableLibrary = GameObject.Find("CollectableLibrary").GetComponent<CollectableLibrary>();
 
         //reticle
         reticle = GameObject.Find("Reticle");
@@ -118,6 +120,11 @@ public class MenuScript : MonoBehaviour
             {
                 craftObject();
             }
+
+            if(Input.GetButtonDown("Drop"))
+            {
+                dropObject();
+            }
         }
     }
 
@@ -143,13 +150,46 @@ public class MenuScript : MonoBehaviour
             }
         }
 
-        bool craftStatus = inventory.craftObject(componentA, componentB);            //returns whether or not the craft failed/succeeded
+        bool isCrafted = false;
 
+        for (int i = 0; i < inventory.recipeList.Length && !isCrafted; ++i)          //check each recipe as long as an item hasnt been crafted
+        {
+            if (componentA == inventory.recipeList[i].ComponentA && componentB == inventory.recipeList[i].ComponentB ||
+                componentB == inventory.recipeList[i].ComponentA && componentA == inventory.recipeList[i].ComponentB)        //check that the two components being used match the recipe
+            {
+                //if the components match a recipe, remove the selected objects from the inventory
+                for (int j = 0; j < inventory.inventorySize; ++j)
+                    if (inventoryDisplay[j].GetComponent<ButtonSelectScript>().isSelected()) inventory.removeFromInventorySlot(j);
+
+                inventory.addToInventory(inventory.recipeList[i].Result);           //add the item made to the invetory
+                isCrafted = true;
+            }
+        }
+                
         Debug.Log("Crafting attempted");
 
         clearSelections();          //clear all the selected objects
         //display craft status
 
+    }
+
+    private void dropObject()
+    {
+        for (int i = 0; i < inventory.inventorySize; ++i)       //for each slot in the inventory
+        {
+            if(inventoryDisplay[i].GetComponent<ButtonSelectScript>().isSelected())         //if the slot is selected
+            {
+                if(inventory.getObjectAtSlot(i) != objectType.None)         //if the object is not nothing
+                {
+                    GameObject toDrop = collectableLibrary.getGameObject(inventory.getObjectAtSlot(i));         //gets the gameObject from the object type at the selected slot
+                    GameObject drop = Instantiate(toDrop, transform.position, Quaternion.identity);
+                    inventory.removeFromInventorySlot(i);
+                    clearSelections();
+                }
+            }
+        }
+
+        Debug.Log("Item dropped");
     }
 
     private void clearSelections()
