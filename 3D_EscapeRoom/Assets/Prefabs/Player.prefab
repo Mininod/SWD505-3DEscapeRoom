@@ -232,7 +232,7 @@ MonoBehaviour:
   recipeList:
   - ComponentA: 3
     ComponentB: 4
-    Result: 2
+    Result: 1
 --- !u!114 &114015148228876212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -259,7 +259,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   menuOverlay: {fileID: 0}
   gameOverPanel: {fileID: 0}
-  timerMax: 10
+  timerMax: 11
   shortTimer: 10
   inventoryDisplay:
   - {fileID: 0}
