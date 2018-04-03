@@ -228,11 +228,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: 
-  inventorySize: 10
+  inventorySize: 5
   recipeList:
-  - ComponentA: 3
-    ComponentB: 4
-    Result: 1
+  - ComponentA: 11
+    ComponentB: 12
+    Result: 13
+  - ComponentA: 13
+    ComponentB: 14
+    Result: 15
+  - ComponentA: 16
+    ComponentB: 17
+    Result: 18
+  - ComponentA: 20
+    ComponentB: 21
+    Result: 22
 --- !u!114 &114015148228876212
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -262,11 +271,6 @@ MonoBehaviour:
   timerMax: 11
   shortTimer: 10
   inventoryDisplay:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
