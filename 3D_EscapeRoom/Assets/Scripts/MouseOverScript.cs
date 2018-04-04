@@ -33,7 +33,7 @@ public class MouseOverScript : MonoBehaviour
         targetKeypadButton = null;      //clear targets
 
         var hits = Physics.RaycastAll(transform.position, transform.forward, raycastRange);         //raycast for hits
-        Debug.DrawRay(transform.position, transform.forward * raycastRange, Color.green);
+        Debug.DrawRay(transform.position, transform.forward * raycastRange, Color.green);           //Debug draw the raycast
 
         //check for a mouseover
         if (hits.Length > 0)     //this means there is a hit
@@ -109,7 +109,8 @@ public class MouseOverScript : MonoBehaviour
                             //Explosive Components
                         case objectType.CraftedExplosive:                           
                             break;
-                        case objectType.ExplosivePlantSpot:
+                            /*
+                        case objectType.ExplosivePlantSpot:                 //if you click on an explosive spot
                             if(inventory.checkInventory(objectType.CraftedExplosive))
                             {
                                 triggerInteractable();      //so that it can only be done once
@@ -117,6 +118,17 @@ public class MouseOverScript : MonoBehaviour
                                 Debug.Log("Tick Tick");
                                 soundManager.PlaySFX("Test1");
                                 StartCoroutine(craftedExplosive(targetObject.gameObject));                  
+                            }
+                            break;
+                            */
+                        case objectType.LockExplosivePlantSpot:             //the spot to plant the explosive for breaking the chest open
+                            if (inventory.checkInventory(objectType.LockExplosive))     //if you have the clock explosive
+                            {
+                                triggerInteractable();      //so that it can only be done once
+                                inventory.removeFromInventory(objectType.LockExplosive);         //remove the explosive if you use it
+                                Debug.Log("Tick Tick");     
+                                soundManager.PlaySFX("Test1");
+                                StartCoroutine(craftedExplosive(targetObject.gameObject));
                             }
                             break;
                         case objectType.Door:
@@ -151,7 +163,7 @@ public class MouseOverScript : MonoBehaviour
 
     private IEnumerator craftedExplosive(GameObject target)
     {
-        GameObject explosiveSpot = target;
+        GameObject explosiveSpot = target;      //save the target
 
         //play ticking sound for countdown to explosion
 
@@ -160,10 +172,13 @@ public class MouseOverScript : MonoBehaviour
         //play explosion sound
         //trigger explosion animation
 
-        soundManager.PlaySFX("Test2");
+        soundManager.PlaySFX("Test2");      //play explosion sound
 
         Debug.Log("Boom");
-        Destroy(explosiveSpot.transform.parent.gameObject);
-        Destroy(explosiveSpot);
+
+        //Open the chest (currently set to destroy)
+        Destroy(explosiveSpot.transform.parent.gameObject);   
+        
+        Destroy(explosiveSpot);         //remove the explosive point
     }
 }

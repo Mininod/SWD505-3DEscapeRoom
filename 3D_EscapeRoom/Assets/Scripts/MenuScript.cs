@@ -8,7 +8,9 @@ public class MenuScript : MonoBehaviour
 {
     public GameObject menuOverlay;               //the gameobject of the inventory overlay
     public GameObject gameOverPanel;             //the gameobject for the game over screen
+    public GameObject notesOverlay;              //the gameobject for displaying the collectable notes
     private bool menuUp = false;                 //whether or not the menu/inventory is currently being displayed
+    private bool notesUp = false;                //wehther or not the notes are currently being displayed
     private PlayerInventoryScript inventory;     //direct access to the players inventory
     private Text timerDisplay;                   //the text object that displays the timer left
     private GameObject reticle;                  //the gameobject that displays the reticle
