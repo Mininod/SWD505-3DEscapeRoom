@@ -108,6 +108,62 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &12408570 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1986853681179484, guid: 1cc79f083d6b57e40bf3a349ba82407e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1590245799}
+--- !u!1001 &39435932
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 17
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (11)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &41489772
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,6 +594,123 @@ Transform:
   m_PrefabParentObject: {fileID: 4096489310240166, guid: 1cc79f083d6b57e40bf3a349ba82407e,
     type: 2}
   m_PrefabInternal: {fileID: 275877550}
+--- !u!1001 &289689060
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (18)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &323537913
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodesToDrawTo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 914021674}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodesToDrawTo.Array.data[0]
+      value: 
+      objectReference: {fileID: 914021674}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodesToDrawTo.Array.data[1]
+      value: 
+      objectReference: {fileID: 12408570}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &333883597
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +798,11 @@ Transform:
   m_Father: {fileID: 263085532}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &346181515 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15,
+    type: 2}
+  m_PrefabInternal: {fileID: 289689060}
 --- !u!1 &366528691
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,6 +932,108 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &469943107
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 9.21
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (16)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &519961358
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 25
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (19)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &539878666
 GameObject:
   m_ObjectHideFlags: 0
@@ -991,6 +1271,11 @@ Transform:
   m_Father: {fileID: 263085532}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &566368900 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15,
+    type: 2}
+  m_PrefabInternal: {fileID: 2117655313}
 --- !u!1 &567484229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1078,6 +1363,62 @@ Transform:
   m_Father: {fileID: 263085532}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &645640565 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15,
+    type: 2}
+  m_PrefabInternal: {fileID: 1264427555}
+--- !u!1001 &756270783
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 16
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (10)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &796254537
 GameObject:
   m_ObjectHideFlags: 0
@@ -1165,6 +1506,57 @@ Transform:
   m_Father: {fileID: 263085532}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1001 &802807441
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 5.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 26
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (20)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &814329555
 GameObject:
   m_ObjectHideFlags: 0
@@ -1182,7 +1574,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!23 &814329556
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1247,6 +1639,57 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &836189315
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 6.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (8)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &852870388
 GameObject:
   m_ObjectHideFlags: 0
@@ -1312,6 +1755,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &914021674 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15,
+    type: 2}
+  m_PrefabInternal: {fileID: 1139195119}
 --- !u!1001 &931810468
 Prefab:
   m_ObjectHideFlags: 0
@@ -1591,6 +2039,57 @@ Transform:
   m_Father: {fileID: 263085532}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1139195119
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 10.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 645640565}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (4)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1168597703
 GameObject:
   m_ObjectHideFlags: 0
@@ -1765,6 +2264,113 @@ Transform:
   m_Father: {fileID: 263085532}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!1 &1254515275 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15,
+    type: 2}
+  m_PrefabInternal: {fileID: 323537913}
+--- !u!1001 &1264427555
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (5)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &1293999676
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 3.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (6)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1424369083
 Prefab:
   m_ObjectHideFlags: 0
@@ -1828,6 +2434,57 @@ Transform:
   m_PrefabParentObject: {fileID: 4096489310240166, guid: 1cc79f083d6b57e40bf3a349ba82407e,
     type: 2}
   m_PrefabInternal: {fileID: 1424369083}
+--- !u!1001 &1454442078
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (13)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1455252792
 Prefab:
   m_ObjectHideFlags: 0
@@ -1891,6 +2548,123 @@ Transform:
   m_PrefabParentObject: {fileID: 4096489310240166, guid: 1cc79f083d6b57e40bf3a349ba82407e,
     type: 2}
   m_PrefabInternal: {fileID: 1455252792}
+--- !u!1001 &1490167442
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodesToDrawTo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.16
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 1254515275}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodesToDrawTo.Array.data[0]
+      value: 
+      objectReference: {fileID: 1254515275}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &1523181745 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15,
+    type: 2}
+  m_PrefabInternal: {fileID: 1490167442}
+--- !u!1001 &1554239248
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 2.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -1.97
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (12)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1554880342
 Prefab:
   m_ObjectHideFlags: 0
@@ -1942,6 +2716,57 @@ Transform:
   m_PrefabParentObject: {fileID: 4096489310240166, guid: 1cc79f083d6b57e40bf3a349ba82407e,
     type: 2}
   m_PrefabInternal: {fileID: 1554880342}
+--- !u!1001 &1582179685
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.28
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -3.96
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (14)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1590245799
 Prefab:
   m_ObjectHideFlags: 0
@@ -2451,6 +3276,57 @@ Transform:
   m_Father: {fileID: 263085532}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1834380870
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 4.12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 21
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (15)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &1880000993
 Prefab:
   m_ObjectHideFlags: 0
@@ -2514,6 +3390,57 @@ Transform:
   m_PrefabParentObject: {fileID: 4096489310240166, guid: 1cc79f083d6b57e40bf3a349ba82407e,
     type: 2}
   m_PrefabInternal: {fileID: 1880000993}
+--- !u!1001 &1934534325
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 3.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (9)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1001 &2046599047
 Prefab:
   m_ObjectHideFlags: 0
@@ -2521,6 +3448,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodesToDrawTo.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
       propertyPath: m_LocalPosition.x
       value: 13.2
@@ -2557,7 +3489,185 @@ Prefab:
         type: 2}
       propertyPath: nodeToDrawTo
       value: 
+      objectReference: {fileID: 566368900}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: startActive
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodesToDrawTo.Array.data[0]
+      value: 
+      objectReference: {fileID: 566368900}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2102310701
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 11.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (17)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2117454203
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 8.09
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 4.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (7)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2117655313
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodesToDrawTo.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 12.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4811238963165292, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodeToDrawTo
+      value: 
+      objectReference: {fileID: 1523181745}
+    - target: {fileID: 1341707202161160, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
+      propertyPath: m_Name
+      value: PipePuzzleNode (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodesToDrawTo.Array.data[0]
+      value: 
+      objectReference: {fileID: 1523181745}
+    - target: {fileID: 114785419634351058, guid: 4ab264eb42b331148858bf6063021e15,
+        type: 2}
+      propertyPath: nodesToDrawTo.Array.data[1]
+      value: 
+      objectReference: {fileID: 346181515}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4ab264eb42b331148858bf6063021e15, type: 2}
   m_IsPrefabParent: 0
