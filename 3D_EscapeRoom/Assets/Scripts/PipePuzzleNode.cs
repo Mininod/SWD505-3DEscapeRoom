@@ -62,7 +62,7 @@ public class PipePuzzleNode : MonoBehaviour
             {
                 Debug.Log("Line Draw");
                 myLineRenderer.SetPosition(3, nodesToDrawTo[1].transform.position);
-                nodesToDrawTo[0].GetComponent<PipePuzzleNode>().setActive();        //activate the next node
+                nodesToDrawTo[0].GetComponent<PipePuzzleNode>().setActive();            //activate the next node
 
                 line2IsSet = true;
             }
