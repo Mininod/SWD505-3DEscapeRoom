@@ -7,14 +7,16 @@ using UnityEngine.UI;
 public class MenuScript : MonoBehaviour
 {
     public GameObject menuOverlay;               //the gameobject of the inventory overlay
-    public GameObject gameOverPanel;             //the gameobject for the game over screen
-    public GameObject notesOverlay;              //the gameobject for displaying the collectable notes
-    private bool menuUp = false;                 //whether or not the menu/inventory is currently being displayed
-    private bool notesUp = false;                //wehther or not the notes are currently being displayed
+    public GameObject gameOverPanel;             //the gameobject for the game over screen   
+    private bool menuUp = false;                 //whether or not the menu/inventory is currently being displayed   
     private PlayerInventoryScript inventory;     //direct access to the players inventory
     private Text timerDisplay;                   //the text object that displays the timer left
     private GameObject reticle;                  //the gameobject that displays the reticle
     private UnityStandardAssets.Characters.FirstPerson.FirstPersonController playerController;      //direct reference to the player controller
+
+    public GameObject notesOverlay;              //the gameobject for displaying the collectable notes
+    public Sprite[] notes;                        //an array full of notes/images to display
+    private bool notesUp = false;                //wehther or not the notes are currently being displayed
 
     public int timerMax;                    //max time for the level in minutes in minutes
     private float levelTimer;               //actual time left in the level in seconds
@@ -22,7 +24,7 @@ public class MenuScript : MonoBehaviour
     private bool atShortTimer = false;      //whether the game has passes the "shorttimer" moment
     private bool gameOver = false;          //whether time has run out or not
 
-    public GameObject[] inventoryDisplay;           //will be the size of the inventiry, set by the designer
+    public GameObject[] inventoryDisplay;           //will be the size of the inventory, set by the designer
 
     private GameObject musicManager;        //Gameobject to switch betweent the two music tracks when the timer reaches the threshold
     private CollectableLibrary collectableLibrary;      //a reference to the library of gameObjects that can be picked up/collected through crafting
@@ -89,7 +91,7 @@ public class MenuScript : MonoBehaviour
         }
 
         //check to bring up menu
-        if (Input.GetButtonDown("Menu"))
+        if (Input.GetButtonDown("Menu") && !notesUp)    //only check to bringup/close menu if there isnt a note on the screen
         {
             if (menuOverlay.activeSelf)                 //if the menu is active
             {
@@ -126,6 +128,18 @@ public class MenuScript : MonoBehaviour
             if(Input.GetButtonDown("Drop"))
             {
                 dropObject();
+            }
+        }
+
+        //return button for if the note is on screen - the menu button (tab currently)
+        if(notesUp)
+        {
+            //check for return button
+            if(Input.GetButtonDown("Menu"))
+            {
+                notesOverlay.SetActive(false);
+                notesUp = false;
+                playerController.enabled = true;
             }
         }
     }
@@ -225,6 +239,18 @@ public class MenuScript : MonoBehaviour
                 StartCoroutine(fadeGameOverPanel());        //Start the fade in
             }
         }
+    }
+
+    public void displayNote(int number)
+    {
+        if (number <= notes.Length - 1)          //if the note number specified is in the array
+        {
+            notesOverlay.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = notes[number];             //assigns the desired note to the canvas
+            notesOverlay.SetActive(true);
+            notesUp = true;         //tells the script that a note is currently being displayed
+            playerController.enabled = false;
+        }
+        else Debug.Log("No Note");
     }
 
     IEnumerator fadeGameOverPanel()

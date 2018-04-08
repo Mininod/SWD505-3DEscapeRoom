@@ -13,13 +13,15 @@ public class MouseOverScript : MonoBehaviour
     private KeypadButtonScript targetKeypadButton;
     private string onClickDisplayText;
     private PlayerInventoryScript inventory;
+    private MenuScript menuScript;
 
     private SoundManagerScript soundManager;
 
     void Start()
     {
         tooltipText = GameObject.Find("ToolTipText").GetComponent<Text>();
-        inventory = gameObject.GetComponent<PlayerInventoryScript>();
+        inventory = gameObject.GetComponent<PlayerInventoryScript>();           //on the same object
+        menuScript = gameObject.GetComponent<MenuScript>();                     //on the same object
 
         soundManager = GameObject.Find("SoundManager").GetComponent<SoundManagerScript>();
     }
@@ -95,6 +97,7 @@ public class MouseOverScript : MonoBehaviour
                         case objectType.TestPickup:
                             break;
                         case objectType.Key:
+                            menuScript.displayNote(0);
                             break;
                         case objectType.FinalDoor:
                             if (inventory.checkInventory(objectType.Key))            //if we have the key
