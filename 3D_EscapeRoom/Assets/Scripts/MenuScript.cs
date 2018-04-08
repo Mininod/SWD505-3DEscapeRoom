@@ -81,7 +81,7 @@ public class MenuScript : MonoBehaviour
         }
 
         //Check for time up
-        timeUpCheck();
+        timeUpCheck();              //runs game over if time is up
 
         //Inventory display
         for (int i = 0; i < inventory.inventorySize; ++i)
@@ -239,6 +239,11 @@ public class MenuScript : MonoBehaviour
                 StartCoroutine(fadeGameOverPanel());        //Start the fade in
             }
         }
+    }
+
+    public void triggerWin()
+    {
+
     }
 
     public void displayNote(int number)
