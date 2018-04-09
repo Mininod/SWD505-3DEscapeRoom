@@ -142,6 +142,8 @@ public class MouseOverScript : MonoBehaviour
                                 }
                                 break;
                             case objectType.Door:
+                                Debug.Log("Win");
+                                menuScript.triggerWin();    //Test
                                 break;
                             default:        //for if the object is neither collectable or has an interaction
                                 break;

@@ -8,6 +8,7 @@ public class MenuScript : MonoBehaviour
 {
     public GameObject menuOverlay;               //the gameobject of the inventory overlay
     public GameObject gameOverPanel;             //the gameobject for the game over screen   
+    public GameObject winScreenPanel;            //the gameobject for the win screen
     private bool menuUp = false;                 //whether or not the menu/inventory is currently being displayed   
     private PlayerInventoryScript inventory;     //direct access to the players inventory
     private Text timerDisplay;                   //the text object that displays the timer left
@@ -243,7 +244,8 @@ public class MenuScript : MonoBehaviour
 
     public void triggerWin()
     {
-
+        winScreenPanel.SetActive(true);     //activate the win screen
+        StartCoroutine(fadeWinScreen());    //start the fade in
     }
 
     public void displayNote(int number)
@@ -274,5 +276,19 @@ public class MenuScript : MonoBehaviour
         }
 
         SceneManager.LoadScene(2);      //Load the game over scene once the image has been faded in
+    }
+
+    IEnumerator fadeWinScreen()
+    {
+        for (float i = 0; i <= 1; i += Time.deltaTime)
+        {
+            Color panelColour = winScreenPanel.GetComponent<Image>().color;
+            panelColour.a = i;
+            winScreenPanel.GetComponent<Image>().color = panelColour;
+
+            yield return null;
+        }
+
+        SceneManager.LoadScene(3);      //Load the win scene once the image has been faded in
     }
 }
