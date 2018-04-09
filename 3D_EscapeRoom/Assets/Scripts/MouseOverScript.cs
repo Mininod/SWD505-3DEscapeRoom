@@ -11,6 +11,7 @@ public class MouseOverScript : MonoBehaviour
     private Text tooltipText;
     private InteractableScript targetObject;
     private KeypadButtonScript targetKeypadButton;
+    private ValveControlScript targetValveControl;
     private string onClickDisplayText;
     private PlayerInventoryScript inventory;
     private MenuScript menuScript;
@@ -33,6 +34,7 @@ public class MouseOverScript : MonoBehaviour
         tooltipText.text = "";          //clear tooltip
         targetObject = null;            //clear targets
         targetKeypadButton = null;      //clear targets
+        targetValveControl = null;      //clear targets
 
         var hits = Physics.RaycastAll(transform.position, transform.forward, raycastRange);         //raycast for hits
         Debug.DrawRay(transform.position, transform.forward * raycastRange, Color.green);           //Debug draw the raycast
@@ -53,65 +55,70 @@ public class MouseOverScript : MonoBehaviour
                 {
                     targetKeypadButton = item.transform.gameObject.GetComponent<KeypadButtonScript>();
                 }
+                else if (item.transform.gameObject.GetComponent<ValveControlScript>() && targetValveControl == null)    //if the target is a valve control
+                {
+                    targetValveControl = item.transform.gameObject.GetComponent<ValveControlScript>();
+                }
             }
         }
 
         //Act on object (if there is one)
         {
-            if (Input.GetButtonDown("Action"))
+            if (Input.GetButtonDown("Action"))  //when you press the "action" button
             {
                 if (targetObject)        //if there is an interactable object under the mouse over
                 {
-                    if (!targetObject.getTriggerStatus())                           //if the target hasnt been activated, get its default on click text
+                    if (targetObject.collectable)        //if the object can be picked up - pick it up (no text displayed on pickup)
                     {
-                        clickTooltipDuration = clickTooltipMaxDuration;             //start the timer for the click tooltip
-                        onClickDisplayText = targetObject.clickTooltipText;         //get the text to be displayed on a click
-                    }
-
-                    if (targetObject.collectable)        //if the object can be picked up (does not need a second on click text, uses default)
-                    {
-                        if (inventory.getUsedSlots() < inventory.inventorySize)
+                        if (inventory.getUsedSlots() < inventory.inventorySize) //only works if there is room in the inventory
                         {
                             inventory.addToInventory(targetObject.myType);      //add the object to the inventory
                             Destroy(targetObject.gameObject);                   //remove the object from the scene, since its been picked up
                         }
                     }
-
-                    switch (targetObject.myType)            //if the clicked object has a requirement/condition that is passed, the text is set to textB instead of A
+                    else    //if its a normal interactable (not collectable) then act on it
                     {
-                        case objectType.None:
-                            break;
-                        case objectType.Box:
-                            if (inventory.checkInventory(objectType.TestPickup))          //if we have the test pickup
-                            {
-                                if(!targetObject.getTriggerStatus())        //if it hasnt been triggered, trigger it
+                        if (!targetObject.getTriggerStatus())      //if the target hasnt been activated, get its default on click text
+                        {
+                            clickTooltipDuration = clickTooltipMaxDuration;             //start the timer for the click tooltip
+                            onClickDisplayText = targetObject.clickTooltipText;         //get the text to be displayed on a click
+                        }
+
+                        switch (targetObject.myType)            //if the clicked object has a requirement/condition that is passed, the text is set to textB instead of A
+                        {
+                            case objectType.None:
+                                break;
+                            case objectType.Box:
+                                if (inventory.checkInventory(objectType.TestPickup))          //if we have the test pickup
                                 {
-                                    Debug.Log("ActionBox");
-                                    triggerInteractable();
+                                    if (!targetObject.getTriggerStatus())        //if it hasnt been triggered, trigger it
+                                    {
+                                        Debug.Log("ActionBox");
+                                        triggerInteractable();
+                                    }
                                 }
-                            }
-                            break;
-                        case objectType.Cylinder:
-                            targetObject.GetComponent<PasswordInputScript>().displayInputOverlay();
-                            break;
-                        case objectType.TestPickup:
-                            break;
-                        case objectType.Key:
-                            menuScript.displayNote(0);
-                            break;
-                        case objectType.FinalDoor:
-                            if (inventory.checkInventory(objectType.Key))            //if we have the key
-                            {
-                                if (!targetObject.getTriggerStatus())        //if it hasnt been triggered, trigger it
+                                break;
+                            case objectType.Cylinder:
+                                targetObject.GetComponent<PasswordInputScript>().displayInputOverlay();
+                                break;
+                            case objectType.TestPickup:
+                                break;
+                            case objectType.Key:
+                                menuScript.displayNote(0);
+                                break;
+                            case objectType.FinalDoor:
+                                if (inventory.checkInventory(objectType.Key))            //if we have the key
                                 {
-                                    Debug.Log("Door Open");
-                                    triggerInteractable();
+                                    if (!targetObject.getTriggerStatus())        //if it hasnt been triggered, trigger it
+                                    {
+                                        Debug.Log("Door Open");
+                                        triggerInteractable();
+                                    }
                                 }
-                            }
-                            break;
+                                break;
                             //Explosive Components
-                        case objectType.CraftedExplosive:                           
-                            break;
+                            case objectType.CraftedExplosive:
+                                break;
                             /*
                         case objectType.ExplosivePlantSpot:                 //if you click on an explosive spot
                             if(inventory.checkInventory(objectType.CraftedExplosive))
@@ -124,29 +131,36 @@ public class MouseOverScript : MonoBehaviour
                             }
                             break;
                             */
-                        case objectType.LockExplosivePlantSpot:             //the spot to plant the explosive for breaking the chest open
-                            if (inventory.checkInventory(objectType.LockExplosive))     //if you have the clock explosive
-                            {
-                                triggerInteractable();      //so that it can only be done once
-                                inventory.removeFromInventory(objectType.LockExplosive);         //remove the explosive if you use it
-                                Debug.Log("Tick Tick");     
-                                soundManager.PlaySFX("Test1");
-                                StartCoroutine(craftedExplosive(targetObject.gameObject));
-                            }
-                            break;
-                        case objectType.Door:
-                            break;
+                            case objectType.LockExplosivePlantSpot:             //the spot to plant the explosive for breaking the chest open
+                                if (inventory.checkInventory(objectType.LockExplosive))     //if you have the clock explosive
+                                {
+                                    triggerInteractable();      //so that it can only be done once
+                                    inventory.removeFromInventory(objectType.LockExplosive);         //remove the explosive if you use it
+                                    Debug.Log("Tick Tick");
+                                    soundManager.PlaySFX("Test1");
+                                    StartCoroutine(craftedExplosive(targetObject.gameObject));
+                                }
+                                break;
+                            case objectType.Door:
+                                break;
+                            default:        //for if the object is neither collectable or has an interaction
+                                break;
+                        }
                     }
                 }
                 else if(targetKeypadButton)         //if there is a keypad button under the mouse
                 {
                     targetKeypadButton.pressButton();       //puts the input into the controller that checks the pincode
                 }
+                else if (targetValveControl)
+                {
+                    targetValveControl.toggleValve();       //toggles that valve
+                }
             }
         }
 
         //on click tooltip
-        if(clickTooltipDuration > 0)
+        if(clickTooltipDuration > 0)        //if the timer hasnt expired
         {
             tooltipText.text = onClickDisplayText;
         }
@@ -161,7 +175,7 @@ public class MouseOverScript : MonoBehaviour
     {
         targetObject.triggerInteractable();                         //trigger the interactable
         onClickDisplayText = targetObject.clickTooltipTextSuccess;  //get the success on click text
-        clickTooltipDuration = clickTooltipMaxDuration;             //start the timer
+        clickTooltipDuration = clickTooltipMaxDuration;             //start the timer for displaying the text
     }
 
     private IEnumerator craftedExplosive(GameObject target)
