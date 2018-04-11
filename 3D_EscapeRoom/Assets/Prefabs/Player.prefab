@@ -273,7 +273,7 @@ MonoBehaviour:
   notes:
   - {fileID: 21300000, guid: 2cf10821091889c48a38fdb2ee60ff48, type: 3}
   - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
-  timerMax: 1
+  timerMax: 10
   shortTimer: 10
   inventoryDisplay:
   - {fileID: 0}

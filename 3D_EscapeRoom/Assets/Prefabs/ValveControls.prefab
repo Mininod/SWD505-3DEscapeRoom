@@ -182,25 +182,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!1 &1700141596205216
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 4760819267666366}
-  - component: {fileID: 33673788311876252}
-  - component: {fileID: 65682224292710754}
-  - component: {fileID: 23309197716159276}
-  - component: {fileID: 114103502682817634}
-  m_Layer: 0
-  m_Name: ValveControl1 (15)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
 --- !u!1 &1842730853990404
 GameObject:
   m_ObjectHideFlags: 0
@@ -272,6 +253,25 @@ GameObject:
   - component: {fileID: 114892454804117368}
   m_Layer: 0
   m_Name: ValveControl1 (13)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1946207601632968
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4891262658839234}
+  - component: {fileID: 33594342899487606}
+  - component: {fileID: 65031663180400818}
+  - component: {fileID: 23412819908877454}
+  - component: {fileID: 114699665591083168}
+  m_Layer: 0
+  m_Name: ValveControl1 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428,19 +428,6 @@ Transform:
   m_Father: {fileID: 4918943766350784}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &4760819267666366
-Transform:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1700141596205216}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 10, y: 1.7075757, z: 16.81}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 4918943766350784}
-  m_RootOrder: 14
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4799298193130152
 Transform:
   m_ObjectHideFlags: 1
@@ -466,6 +453,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 4918943766350784}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4891262658839234
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1946207601632968}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 10, y: 1.7075757, z: 16.81}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4918943766350784}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4907134830430742
 Transform:
@@ -504,7 +504,7 @@ Transform:
   - {fileID: 4278889186632680}
   - {fileID: 4710161091250080}
   - {fileID: 4907134830430742}
-  - {fileID: 4760819267666366}
+  - {fileID: 4891262658839234}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -662,38 +662,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!23 &23309197716159276
-MeshRenderer:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1700141596205216}
-  m_Enabled: 1
-  m_CastShadows: 1
-  m_ReceiveShadows: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_PreserveUVs: 1
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_SelectedEditorRenderState: 3
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
 --- !u!23 &23327598112712420
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -732,6 +700,38 @@ MeshRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1300383953179310}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!23 &23412819908877454
+MeshRenderer:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1946207601632968}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -1063,19 +1063,19 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1372039493752100}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!33 &33594342899487606
+MeshFilter:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1946207601632968}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33618293215184576
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1499585380356536}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!33 &33673788311876252
-MeshFilter:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1700141596205216}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!33 &33720161941484822
 MeshFilter:
@@ -1119,6 +1119,18 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1264354171643840}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65031663180400818
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1946207601632968}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65053529049388488
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1251,18 +1263,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!65 &65682224292710754
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1700141596205216}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!65 &65729314593790570
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -1299,18 +1299,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114103502682817634
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1700141596205216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  valveNumber: 15
 --- !u!114 &114113192615898826
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1322,7 +1310,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 11
+  gateNumber: 8
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!114 &114232448934202402
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1334,7 +1324,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 12
+  gateNumber: 16
+  canControlSecondgate: 1
+  secondGateNumber: 6
 --- !u!114 &114274108876663432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1346,7 +1338,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 7
+  gateNumber: 3
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!114 &114289430808808276
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1358,7 +1352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 6
+  gateNumber: 7
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!114 &114386788739319846
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1370,7 +1366,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 5
+  gateNumber: 11
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!114 &114421633137055770
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1382,7 +1380,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 9
+  gateNumber: 1
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!114 &114461212959841274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1394,7 +1394,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 10
+  gateNumber: 12
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!114 &114466832275874800
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1406,7 +1408,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 3
+  gateNumber: 5
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!114 &114473112797496190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1418,7 +1422,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 4
+  gateNumber: 10
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!114 &114657425474304980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1430,7 +1436,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 8
+  gateNumber: 4
+  canControlSecondgate: 0
+  secondGateNumber: 0
+--- !u!114 &114699665591083168
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1946207601632968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gateNumber: 15
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!114 &114877244026869716
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1442,7 +1464,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 14
+  gateNumber: 13
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!114 &114892454804117368
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1454,7 +1478,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 13
+  gateNumber: 14
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!114 &114902075012005484
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1466,7 +1492,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 2
+  gateNumber: 9
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!114 &114946234936048444
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1478,4 +1506,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  valveNumber: 1
+  gateNumber: 2
+  canControlSecondgate: 0
+  secondGateNumber: 0

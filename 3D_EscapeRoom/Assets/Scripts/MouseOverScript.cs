@@ -156,7 +156,7 @@ public class MouseOverScript : MonoBehaviour
                 }
                 else if (targetValveControl)
                 {
-                    targetValveControl.toggleValve();       //toggles that valve
+                    targetValveControl.toggleGate();       //toggles that valve
                 }
             }
         }

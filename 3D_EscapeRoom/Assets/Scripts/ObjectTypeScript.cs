@@ -7,19 +7,7 @@ public enum objectType
     //For the system
     None,
 
-    //Stuffs
-    CraftedExplosive,
-    ExplosivePlantSpot,
-    C4,
-    Detonator,
-    Door,
-    Box,
-    Cylinder,
-    TestPickup,
-    Key,
-    FinalDoor,
-
-    //Official final items that can be picked up and used
+    //Collectable items
     Potato,
     Battery,
     SuperChargedPotato,
@@ -28,7 +16,6 @@ public enum objectType
     GunPowder,
     ConductivePaste,
     LockExplosive,
-    LockExplosivePlantSpot,         //to denote where to place the explosive (not actually collectable)
     Shoe,
     TitaniumSpray,
     DoorStop,
@@ -37,7 +24,27 @@ public enum objectType
     Spaghetti,
     PickLock,
     DuctTape,
-    MemoryStick
+    MemoryStick,
+
+    //Interactables/Tooltip items
+    DoorA,      //to be openeded by the handle
+    DoorHandleAttachSpot,   //for door A
+    DoorB,      //to be opened by keypad
+    DoorC,      //towards the escape pod, to be opened by the second keypad
+    SleepingChamber,
+    Crate,      //the one to be exploded open
+    ControlPanel,
+    Lever,      //controls/updates the control terminal
+    PipeWithoutHandle,  //slot for handle
+    PipeHandle,         //handles on pipes
+    KeyPad,     //??? add keypad text ???
+    FuseBoxA,    //where you place the sc potato
+    FuseBoxWithPotato,  //Where you collect the sc potato from
+    FuseBoxB,   //Where you place the potato circuit thing
+    EscapePodButton,
+    LockExplosivePlantSpot,      //to denote where to place the explosive (not actually collectable)#
+    DoorStopSpot,       //place to put the door stop
+    
 }
 
 

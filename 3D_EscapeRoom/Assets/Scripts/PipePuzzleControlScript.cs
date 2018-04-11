@@ -17,9 +17,19 @@ public class PipePuzzleControlScript : MonoBehaviour
 
 	void Start ()
     {
-        valves = new bool[15];      //there are 15 valves in our puzzle
-        for (int i = 0; i < valves.Length; ++i)
+        valves = new bool[16];      //there are 16 gates in our puzzle
+        for (int i = 0; i < valves.Length; ++i)     //set all gates to closed
             valves[i] = false;
+
+        //set specific, starting open gates
+        valves[1 - 1] = true;
+        valves[3 - 1] = true;
+        valves[4 - 1] = true;
+        valves[5 - 1] = true;
+        valves[7 - 1] = true;
+        valves[10 - 1] = true;
+        valves[11 - 1] = true;
+        valves[13 - 1] = true;
 	}
 	
 	void Update ()
@@ -71,7 +81,7 @@ public class PipePuzzleControlScript : MonoBehaviour
 
     public void toggleValve(int number)
     {
-        if(number <= valves.Length)     //valves are labelled as 1-15 but are 0-14 in the array
+        if(number <= valves.Length)     //valves/gates are labelled as 1-16 but are 0-15 in the array
             valves[number - 1] = !valves[number - 1];
     }
 }
