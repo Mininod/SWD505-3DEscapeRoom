@@ -86,8 +86,8 @@ public class MouseOverScript : MonoBehaviour
 
                         switch (targetObject.myType)            //if the clicked object has a requirement/condition that is passed, the text is set to textB instead of A
                         {
-                            case objectType.None:
-                                break;
+
+                                /*
                             case objectType.Box:
                                 if (inventory.checkInventory(objectType.TestPickup))          //if we have the test pickup
                                 {
@@ -116,21 +116,21 @@ public class MouseOverScript : MonoBehaviour
                                     }
                                 }
                                 break;
+                                
                             //Explosive Components
                             case objectType.CraftedExplosive:
                                 break;
-                            /*
-                        case objectType.ExplosivePlantSpot:                 //if you click on an explosive spot
-                            if(inventory.checkInventory(objectType.CraftedExplosive))
-                            {
-                                triggerInteractable();      //so that it can only be done once
-                                inventory.removeFromInventory(objectType.CraftedExplosive);         //remove the explosive if you use it
-                                Debug.Log("Tick Tick");
-                                soundManager.PlaySFX("Test1");
-                                StartCoroutine(craftedExplosive(targetObject.gameObject));                  
-                            }
-                            break;
-                            */
+                            case objectType.ExplosivePlantSpot:                 //if you click on an explosive spot
+                                if(inventory.checkInventory(objectType.CraftedExplosive))
+                                {
+                                    triggerInteractable();      //so that it can only be done once
+                                    inventory.removeFromInventory(objectType.CraftedExplosive);         //remove the explosive if you use it
+                                    Debug.Log("Tick Tick");
+                                    soundManager.PlaySFX("Test1");
+                                    StartCoroutine(craftedExplosive(targetObject.gameObject));                  
+                                }
+                                break;
+                                */
                             case objectType.LockExplosivePlantSpot:             //the spot to plant the explosive for breaking the chest open
                                 if (inventory.checkInventory(objectType.LockExplosive))     //if you have the clock explosive
                                 {
@@ -141,9 +141,13 @@ public class MouseOverScript : MonoBehaviour
                                     StartCoroutine(craftedExplosive(targetObject.gameObject));
                                 }
                                 break;
+                                /*
                             case objectType.Door:
                                 Debug.Log("Win");
                                 menuScript.triggerWin();    //Test
+                                break;
+                                */
+                            case objectType.None:
                                 break;
                             default:        //for if the object is neither collectable or has an interaction
                                 break;
