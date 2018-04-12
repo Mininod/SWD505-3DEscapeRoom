@@ -9,9 +9,10 @@ public class MenuScript : MonoBehaviour
     public GameObject menuOverlay;               //the gameobject of the inventory overlay
     public GameObject gameOverPanel;             //the gameobject for the game over screen   
     public GameObject winScreenPanel;            //the gameobject for the win screen
+    public Text timerDisplay;                    //the text object that displays the timer left
+    public Text timerDisplayMenu;                //the text object that displays the timer in the menu
     private bool menuUp = false;                 //whether or not the menu/inventory is currently being displayed   
     private PlayerInventoryScript inventory;     //direct access to the players inventory
-    private Text timerDisplay;                   //the text object that displays the timer left
     private GameObject reticle;                  //the gameobject that displays the reticle
     private UnityStandardAssets.Characters.FirstPerson.FirstPersonController playerController;      //direct reference to the player controller
 
@@ -33,7 +34,6 @@ public class MenuScript : MonoBehaviour
     void Start()
     {
         inventory = gameObject.GetComponent<PlayerInventoryScript>();
-        timerDisplay = GameObject.Find("TimerDisplay").GetComponent<Text>();
         musicManager = GameObject.Find("MusicManager");
         collectableLibrary = GameObject.Find("CollectableLibrary").GetComponent<CollectableLibrary>();
 
@@ -77,6 +77,7 @@ public class MenuScript : MonoBehaviour
                 musicManager.transform.GetChild(1).gameObject.SetActive(true);
 
                 timerDisplay.color = Color.red;
+                timerDisplayMenu.color = Color.red;
                 atShortTimer = true;
             }
         }
@@ -112,14 +113,6 @@ public class MenuScript : MonoBehaviour
         //check for button presses
         if (menuUp)
         {
-            //check for exit button press
-            if (Input.GetButtonDown("Exit"))
-            {
-                Cursor.lockState = CursorLockMode.None;
-                Cursor.visible = true;
-                SceneManager.LoadScene(0);      //scene 0 is the main menu
-            }
-
             //check for craft button press
             if(Input.GetButtonDown("Craft"))
             {
@@ -218,12 +211,16 @@ public class MenuScript : MonoBehaviour
     private void displayTimer()
     {
         if (levelTimer <= 0)
+        {
             timerDisplay.text = "00:00";
-        else
+            timerDisplayMenu.text = "00:00";
+        }
+        else        //updates both timer displays
         {
             int minutes = Mathf.FloorToInt(levelTimer / 60);
             int seconds = Mathf.FloorToInt(levelTimer - (minutes * 60));
             timerDisplay.text = minutes.ToString("00") + ":" + seconds.ToString("00");
+            timerDisplayMenu.text = minutes.ToString("00") + ":" + seconds.ToString("00");
         }
     }
 
@@ -258,6 +255,13 @@ public class MenuScript : MonoBehaviour
             playerController.enabled = false;
         }
         else Debug.Log("No Note");
+    }
+
+    public void returnToMainMenu()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SceneManager.LoadScene(0);      //scene 0 is the main menu
     }
 
     IEnumerator fadeGameOverPanel()
