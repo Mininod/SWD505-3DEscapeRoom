@@ -9,21 +9,21 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1690349068567412}
+  m_RootGameObject: {fileID: 1340342446138086}
   m_IsPrefabParent: 1
---- !u!1 &1690349068567412
+--- !u!1 &1340342446138086
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4635998409864526}
-  - component: {fileID: 33175448566133850}
-  - component: {fileID: 65546265391940096}
-  - component: {fileID: 23602250266525562}
-  - component: {fileID: 54279387098987116}
-  - component: {fileID: 114156635140834398}
+  - component: {fileID: 4439475054004678}
+  - component: {fileID: 33359347055878878}
+  - component: {fileID: 65297875442197478}
+  - component: {fileID: 23202129672062580}
+  - component: {fileID: 54656999991667266}
+  - component: {fileID: 114681218828904380}
   m_Layer: 0
   m_Name: TitaniumSpray
   m_TagString: Untagged
@@ -31,12 +31,12 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4635998409864526
+--- !u!4 &4439475054004678
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690349068567412}
+  m_GameObject: {fileID: 1340342446138086}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2.78, y: 1.91, z: 19.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -44,12 +44,12 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &23602250266525562
+--- !u!23 &23202129672062580
 MeshRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690349068567412}
+  m_GameObject: {fileID: 1340342446138086}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -76,19 +76,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!33 &33175448566133850
+--- !u!33 &33359347055878878
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690349068567412}
+  m_GameObject: {fileID: 1340342446138086}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &54279387098987116
+--- !u!54 &54656999991667266
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690349068567412}
+  m_GameObject: {fileID: 1340342446138086}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -98,30 +98,30 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65546265391940096
+--- !u!65 &65297875442197478
 BoxCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690349068567412}
+  m_GameObject: {fileID: 1340342446138086}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114156635140834398
+--- !u!114 &114681218828904380
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1690349068567412}
+  m_GameObject: {fileID: 1340342446138086}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myType: 21
+  myType: 10
   hoverTooltipText: I assume this makes things metal
   canBeClicked: 0
   collectable: 1

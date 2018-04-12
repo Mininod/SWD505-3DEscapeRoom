@@ -13,12 +13,7 @@ public class PincodeInputScript : MonoBehaviour
     private int input4 = 0;
     private int currentInput = 1;       //input starts at 1;  This is the next number to be input
 
-    private Text inputDisplay;
-
-    void Start ()
-    {
-        inputDisplay = GameObject.Find("PincodeInputDisplay").GetComponent<Text>();
-	}
+    public Text inputDisplay;
 	
 	void Update ()
     {

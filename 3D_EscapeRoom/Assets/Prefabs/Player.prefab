@@ -269,6 +269,8 @@ MonoBehaviour:
   menuOverlay: {fileID: 0}
   gameOverPanel: {fileID: 0}
   winScreenPanel: {fileID: 0}
+  timerDisplay: {fileID: 0}
+  timerDisplayMenu: {fileID: 0}
   notesOverlay: {fileID: 0}
   notes:
   - {fileID: 21300000, guid: 2cf10821091889c48a38fdb2ee60ff48, type: 3}
@@ -296,7 +298,7 @@ MonoBehaviour:
   m_WalkSpeed: 5
   m_RunSpeed: 10
   m_RunstepLenghten: 0.7
-  m_JumpSpeed: 10
+  m_JumpSpeed: 0
   m_StickToGroundForce: 10
   m_GravityMultiplier: 2
   m_MouseLook:
@@ -375,13 +377,13 @@ MonoBehaviour:
       m_RotationOrder: 4
     VerticaltoHorizontalRatio: 2
   m_JumpBob:
-    BobDuration: 0.2
-    BobAmount: 0.1
+    BobDuration: 0
+    BobAmount: 0
   m_StepInterval: 5
   m_FootstepSounds:
   - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
   - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
-  m_JumpSound: {fileID: 8300000, guid: 5897aeed9b676024fbb8c694b421a861, type: 3}
+  m_JumpSound: {fileID: 0}
   m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
 --- !u!124 &124411326685567678
 Behaviour:
