@@ -26,6 +26,11 @@ public class InteractableScript : MonoBehaviour
     {
         hasBeenTriggered = true;
     }
+
+    public void untriggerInteractable()
+    {
+        hasBeenTriggered = false;
+    }
 }
 
 //[CustomEditor(typeof(InteractableScript))]

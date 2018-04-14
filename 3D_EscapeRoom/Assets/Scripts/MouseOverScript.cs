@@ -114,11 +114,15 @@ public class MouseOverScript : MonoBehaviour
                             case objectType.FuseBoxA:
                                 if(inventory.checkInventory(objectType.SuperChargedPotato))     //if you have the sc potato
                                 {
-                                    //replace fuse box with potato fuse box
                                     triggerInteractable();
                                     inventory.removeFromInventory(objectType.SuperChargedPotato);
-                                    logicController.setPotatoInFuseBox();
+                                    logicController.setPotatoInFuseBox(true);
                                 }
+                                break;
+                            case objectType.FuseBoxWithPotato:
+                                triggerInteractable();
+                                inventory.addToInventory(objectType.SuperChargedPotato);
+                                logicController.setPotatoInFuseBox(false);
                                 break;
                                 /*
                             case objectType.Box:
