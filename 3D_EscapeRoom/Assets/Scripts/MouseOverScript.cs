@@ -16,6 +16,7 @@ public class MouseOverScript : MonoBehaviour
     private PlayerInventoryScript inventory;
     private MenuScript menuScript;
 
+    private GameLogicScript logicController;
     private SoundManagerScript soundManager;
 
     void Start()
@@ -24,6 +25,7 @@ public class MouseOverScript : MonoBehaviour
         inventory = gameObject.GetComponent<PlayerInventoryScript>();           //on the same object
         menuScript = gameObject.GetComponent<MenuScript>();                     //on the same object
 
+        logicController = GameObject.Find("GameLogicManager").GetComponent<GameLogicScript>();
         soundManager = GameObject.Find("SoundManager").GetComponent<SoundManagerScript>();
     }
 
@@ -80,13 +82,44 @@ public class MouseOverScript : MonoBehaviour
                     {
                         if (!targetObject.getTriggerStatus())      //if the target hasnt been activated, get its default on click text
                         {
-                            clickTooltipDuration = clickTooltipMaxDuration;             //start the timer for the click tooltip
-                            onClickDisplayText = targetObject.clickTooltipText;         //get the text to be displayed on a click
+                            if(targetObject.clickTooltipText != "")     //if the object has a click text, display it
+                            {
+                                clickTooltipDuration = clickTooltipMaxDuration;             //start the timer for the click tooltip
+                                onClickDisplayText = targetObject.clickTooltipText;         //get the text to be displayed on a click
+                            }
                         }
 
                         switch (targetObject.myType)            //if the clicked object has a requirement/condition that is passed, the text is set to textB instead of A
                         {
+                            case objectType.DoorA:
+                                if(logicController.openDoorA())     //checks for both the door handle and the fuse box being powered
+                                {
+                                    //open door
+                                    triggerInteractable();
+                                    logicController.setDoorAOpen();
 
+                                    //test
+                                    targetObject.gameObject.SetActive(false);
+                                }
+                                break;
+                            case objectType.DoorHandleAttachSpot:
+                                if(inventory.checkInventory(objectType.DoorHandle))     //if you have the door handle
+                                {
+                                    //place handle visually
+                                    triggerInteractable();      
+                                    inventory.removeFromInventory(objectType.DoorHandle);
+                                    logicController.setDoorHandleAttached();        
+                                }
+                                break;
+                            case objectType.FuseBoxA:
+                                if(inventory.checkInventory(objectType.SuperChargedPotato))     //if you have the sc potato
+                                {
+                                    //replace fuse box with potato fuse box
+                                    triggerInteractable();
+                                    inventory.removeFromInventory(objectType.SuperChargedPotato);
+                                    logicController.setPotatoInFuseBox();
+                                }
+                                break;
                                 /*
                             case objectType.Box:
                                 if (inventory.checkInventory(objectType.TestPickup))          //if we have the test pickup

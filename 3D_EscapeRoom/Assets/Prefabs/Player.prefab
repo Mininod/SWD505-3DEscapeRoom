@@ -58,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354266926466404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.5, z: 0}
+  m_LocalPosition: {x: -19.621, y: 1.5, z: -17.312}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4627350504240624}
@@ -230,18 +230,18 @@ MonoBehaviour:
   inventory: 
   inventorySize: 5
   recipeList:
-  - ComponentA: 11
-    ComponentB: 12
-    Result: 13
-  - ComponentA: 13
-    ComponentB: 14
-    Result: 15
-  - ComponentA: 16
-    ComponentB: 17
-    Result: 18
-  - ComponentA: 20
-    ComponentB: 21
-    Result: 22
+  - ComponentA: 2
+    ComponentB: 1
+    Result: 3
+  - ComponentA: 3
+    ComponentB: 4
+    Result: 5
+  - ComponentA: 6
+    ComponentB: 7
+    Result: 8
+  - ComponentA: 9
+    ComponentB: 10
+    Result: 11
 --- !u!114 &114015148228876212
 MonoBehaviour:
   m_ObjectHideFlags: 1
