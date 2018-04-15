@@ -13,6 +13,9 @@ public class GameLogicScript : MonoBehaviour
     public GameObject doorStopSpot;                 //The spot where the doorstop can be placed
     public GameObject doorA;                        //The first door, that can be held open by the door stop
 
+    public GameObject fuseBoxB;                     //The second fuse box
+    public GameObject fuseBoxBWithPotato;           //The second fuse box with the potato circuit in
+
     private bool doorStopInPlace = false;           //check if the door stop is used to prop open door a
     private bool potatoCircuitInFuseBox = false;    //check if the seconds fuse box is on
 
@@ -67,7 +70,11 @@ public class GameLogicScript : MonoBehaviour
             if (!doorA.activeSelf) doorA.SetActive(true);
         }
 
-
+        if(potatoCircuitInFuseBox && !fuseBoxBWithPotato.activeSelf)    //when the potato is placed, switch models
+        {
+            fuseBoxB.SetActive(false);
+            fuseBoxBWithPotato.SetActive(true);
+        }
 
 
 
@@ -82,9 +89,13 @@ public class GameLogicScript : MonoBehaviour
 
     public int flipLever()
     {
-        if (!terminalCooled && !escapePodCooled) return 1;
-        else if (terminalCooled && !escapePodCooled) return 2;
-        else if (terminalCooled && escapePodCooled) return 3;
+        if (!potatoCircuitInFuseBox) return 1;      //1 if potato circuit is not in fuse box
+        else
+        {
+            if (!terminalCooled && !escapePodCooled) return 2;          //2 if circuit is in but nothing is cooled
+            else if (terminalCooled && !escapePodCooled) return 3;      //3 is the terminal is cooled
+            else if (terminalCooled && escapePodCooled) return 4;       //4 if the escape pod is cooled
+        }
 
         return 0;
     }

@@ -10,6 +10,8 @@ public class PipePuzzleControlScript : MonoBehaviour
 
     public Text[] statusDisplays;
 
+    private GameLogicScript logicController;
+
     private bool[] valves;
 
     private bool controlPanelCooled = false;
@@ -17,6 +19,8 @@ public class PipePuzzleControlScript : MonoBehaviour
 
 	void Start ()
     {
+        logicController = GameObject.Find("GameLogicManager").GetComponent<GameLogicScript>();
+
         valves = new bool[16];      //there are 16 gates in our puzzle
         for (int i = 0; i < valves.Length; ++i)     //set all gates to closed
             valves[i] = false;
@@ -39,12 +43,16 @@ public class PipePuzzleControlScript : MonoBehaviour
         {
             Debug.Log("ControlPanelCooled");
             controlPanelCooled = true;
+
+            logicController.setTerminalCooled();
         }
 
         if(checkPuzzle(escapePodCooling) && !escapePodCooled)
         {
             Debug.Log("EscapePodCooled");
             escapePodCooled = true;
+
+            logicController.setEscapePodCooled();
         }
 
         //Update valve status display

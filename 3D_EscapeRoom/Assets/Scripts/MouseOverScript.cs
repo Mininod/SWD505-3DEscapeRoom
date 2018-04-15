@@ -134,6 +134,23 @@ public class MouseOverScript : MonoBehaviour
                                     logicController.setPotatoCircuitInFuseBox();
                                 }
                                 break;
+                            case objectType.Lever:
+                                switch(logicController.flipLever())
+                                {
+                                    case 1:     //no potato circuit
+                                        Debug.Log("Needs Power");
+                                        break;
+                                    case 2:     //nothing is cooled
+                                        Debug.Log("Terminal needs cooling");
+                                        break;
+                                    case 3:     //terminal is cooled
+                                        break;
+                                    case 4:     //escape pod is cooled
+                                        break;
+                                    case 0:
+                                        break;
+                                }
+                                break;
                                 /*
                             case objectType.Box:
                                 if (inventory.checkInventory(objectType.TestPickup))          //if we have the test pickup
