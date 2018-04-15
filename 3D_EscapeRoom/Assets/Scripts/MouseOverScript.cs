@@ -144,6 +144,8 @@ public class MouseOverScript : MonoBehaviour
                                         Debug.Log("Terminal needs cooling");
                                         break;
                                     case 3:     //terminal is cooled
+                                        Debug.Log("Terminal is cooled");
+                                        //Display codes for first keycode
                                         break;
                                     case 4:     //escape pod is cooled
                                         break;

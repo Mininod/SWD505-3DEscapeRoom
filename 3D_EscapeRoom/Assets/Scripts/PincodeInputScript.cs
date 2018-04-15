@@ -14,23 +14,31 @@ public class PincodeInputScript : MonoBehaviour
     private int currentInput = 1;       //input starts at 1;  This is the next number to be input
 
     public Text inputDisplay;
-	
-	void Update ()
+    public char keypadID;                //to tell the gameLogicController which keypad has been successfully activated
+
+    private GameLogicScript logicController;
+
+    private void Start()
+    {
+        logicController = GameObject.Find("GameLogicManager").GetComponent<GameLogicScript>();    
+    }
+
+    void Update ()
     {
         //update display of current input
         switch (currentInput)
         {
             case 1:
-                inputDisplay.text = "    ";
+                inputDisplay.text = "----";
                 break;
             case 2:
-                inputDisplay.text = input1.ToString() + "   ";
+                inputDisplay.text = input1.ToString() + "---";
                 break;
             case 3:
-                inputDisplay.text = input1.ToString() + input2.ToString() + "  ";
+                inputDisplay.text = input1.ToString() + input2.ToString() + "--";
                 break;
             case 4:
-                inputDisplay.text = input1.ToString() + input2.ToString() + input3.ToString() + " ";
+                inputDisplay.text = input1.ToString() + input2.ToString() + input3.ToString() + "-";
                 break;
             case 5:
                 inputDisplay.text = input1.ToString() + input2.ToString() + input3.ToString() + input4.ToString();
@@ -63,6 +71,7 @@ public class PincodeInputScript : MonoBehaviour
                     inputDisplay.color = Color.green;
                     //pass
                     Debug.Log("Input successful");
+                    logicController.setKeyPadSuccess(keypadID);
                 }
                 else
                 {

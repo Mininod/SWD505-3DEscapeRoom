@@ -13,17 +13,21 @@ public class GameLogicScript : MonoBehaviour
     public GameObject doorStopSpot;                 //The spot where the doorstop can be placed
     public GameObject doorA;                        //The first door, that can be held open by the door stop
 
-    public GameObject fuseBoxB;                     //The second fuse box
-    public GameObject fuseBoxBWithPotato;           //The second fuse box with the potato circuit in
-
     private bool doorStopInPlace = false;           //check if the door stop is used to prop open door a
     private bool potatoCircuitInFuseBox = false;    //check if the seconds fuse box is on
 
+    public GameObject fuseBoxB;                     //The second fuse box
+    public GameObject fuseBoxBWithPotato;           //The second fuse box with the potato circuit in
+
     private bool terminalCooled = false;            //check for teminal cooled for the level flip
 
+    private bool keypadASuccess = false;            //check if the correct code has been entered into keypad A
     private bool doorBOpen = false;                 //check if boor b has been opened
 
-    private bool escapePodCooled=  false;           //check if the escape pod has been cooled
+    public GameObject doorB;                        //the second door, controlled by the keypad
+
+    private bool escapePodCooled =  false;          //check if the escape pod has been cooled
+    private bool keypadBSuccess = false;            //check if the correct code has been entered in to keypad B
     private bool doorCOpen = false;                 //check if the final door is open
 
 	void Start ()
@@ -76,7 +80,12 @@ public class GameLogicScript : MonoBehaviour
             fuseBoxBWithPotato.SetActive(true);
         }
 
-
+        if(keypadASuccess && !doorBOpen)
+        {
+            doorBOpen = true;
+            //open door
+            doorB.SetActive(false);
+        }
 
 	}
 
@@ -143,5 +152,11 @@ public class GameLogicScript : MonoBehaviour
     public void setDoorCOpen()
     {
         doorCOpen = true;
+    }
+
+    public void setKeyPadSuccess(char ID)
+    {
+        if (ID == 'A') keypadASuccess = true;
+        if (ID =='B') keypadBSuccess = true;
     }
 }
