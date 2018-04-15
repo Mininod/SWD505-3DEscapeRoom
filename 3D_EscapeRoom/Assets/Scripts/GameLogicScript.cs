@@ -11,6 +11,7 @@ public class GameLogicScript : MonoBehaviour
     public GameObject fuseBoxA;                     //Fusebox a without the potato
     public GameObject fuseBoxWithPotato;            //The fusebox with the takeable potato
     public GameObject doorStopSpot;                 //The spot where the doorstop can be placed
+    public GameObject doorA;                        //The first door, that can be held open by the door stop
 
     private bool doorStopInPlace = false;           //check if the door stop is used to prop open door a
     private bool potatoCircuitInFuseBox = false;    //check if the seconds fuse box is on
@@ -43,19 +44,31 @@ public class GameLogicScript : MonoBehaviour
             fuseBoxA.GetComponent<InteractableScript>().untriggerInteractable();
         }
 
-        if(openDoorA())     //checks if door A can be opened
-        {
-            //door in open state
-
-        }
-
-
-
-
-		if(doorAOpen && !doorStopSpot.activeSelf)       //when door a is opened, the door stop can now be placed
+        if (doorAOpen && !doorStopSpot.activeSelf)       //when door a is opened, the door stop can now be placed
         {
             doorStopSpot.SetActive(true);
         }
+        else if(!doorAOpen)       //if the door is closed, disable the spot
+        {
+            if (doorStopSpot.activeSelf) doorStopSpot.SetActive(false);
+        }
+
+        if (doorAOpen || doorStopInPlace)     //checks if door A has been opened or if it is wedged open by the door stop
+        {
+            //door in open state
+            if (doorA.activeSelf) doorA.SetActive(false);
+        }
+
+        if(!openDoorA() && !doorStopInPlace)       //if the fuse box is unpowered, the door must be closed (as long as the door stop is not in place)
+        {
+            //door in close state
+            doorAOpen = false;
+            doorA.GetComponent<InteractableScript>().untriggerInteractable();
+            if (!doorA.activeSelf) doorA.SetActive(true);
+        }
+
+
+
 
 
 	}

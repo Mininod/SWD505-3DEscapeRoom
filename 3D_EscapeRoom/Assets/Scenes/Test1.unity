@@ -140,6 +140,53 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &67650245
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 478755069}
+    m_Modifications:
+    - target: {fileID: 4201483804742674, guid: 4f7c3ac7890f00540a946b8117e0f161, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -10.754616
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201483804742674, guid: 4f7c3ac7890f00540a946b8117e0f161, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.49608147
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201483804742674, guid: 4f7c3ac7890f00540a946b8117e0f161, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.8999405
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201483804742674, guid: 4f7c3ac7890f00540a946b8117e0f161, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201483804742674, guid: 4f7c3ac7890f00540a946b8117e0f161, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201483804742674, guid: 4f7c3ac7890f00540a946b8117e0f161, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201483804742674, guid: 4f7c3ac7890f00540a946b8117e0f161, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4201483804742674, guid: 4f7c3ac7890f00540a946b8117e0f161, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 4f7c3ac7890f00540a946b8117e0f161, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &67650246 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4201483804742674, guid: 4f7c3ac7890f00540a946b8117e0f161,
+    type: 2}
+  m_PrefabInternal: {fileID: 67650245}
 --- !u!1 &75241524 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1445500064433296, guid: 0e0fe28cba0f1974cb03de8169c796cf,
@@ -1010,6 +1057,10 @@ Transform:
   m_Children:
   - {fileID: 1744973287}
   - {fileID: 1204563289}
+  - {fileID: 1156893864}
+  - {fileID: 67650246}
+  - {fileID: 721456648}
+  - {fileID: 657259197}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1019,6 +1070,106 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 839583325}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1 &488735245
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 488735246}
+  - component: {fileID: 488735250}
+  - component: {fileID: 488735249}
+  - component: {fileID: 488735248}
+  - component: {fileID: 488735247}
+  m_Layer: 0
+  m_Name: FuseBoxB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &488735246
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 488735245}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -9.389, y: 1.348, z: -6.24}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.099999994}
+  m_Children: []
+  m_Father: {fileID: 1304864687}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &488735247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 488735245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myType: 31
+  hoverTooltipText: This is completely busted
+  canBeClicked: 1
+  collectable: 0
+  clickTooltipText: 
+  clickTooltipTextSuccess: I have the power!
+--- !u!23 &488735248
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 488735245}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 2100000, guid: 48b6988dc7eb5eb42b3a72f34133b8e2, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &488735249
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 488735245}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &488735250
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 488735245}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &499989465
 Prefab:
   m_ObjectHideFlags: 0
@@ -1311,6 +1462,53 @@ MonoBehaviour:
   collectable: 0
   clickTooltipText: Its locked
   clickTooltipTextSuccess: You unlocked the door
+--- !u!1001 &657259196
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 478755069}
+    m_Modifications:
+    - target: {fileID: 4519010712038532, guid: 944a9a430a27c604699c19a027b8aec1, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -9.927959
+      objectReference: {fileID: 0}
+    - target: {fileID: 4519010712038532, guid: 944a9a430a27c604699c19a027b8aec1, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.49608117
+      objectReference: {fileID: 0}
+    - target: {fileID: 4519010712038532, guid: 944a9a430a27c604699c19a027b8aec1, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -1.7781143
+      objectReference: {fileID: 0}
+    - target: {fileID: 4519010712038532, guid: 944a9a430a27c604699c19a027b8aec1, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4519010712038532, guid: 944a9a430a27c604699c19a027b8aec1, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4519010712038532, guid: 944a9a430a27c604699c19a027b8aec1, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4519010712038532, guid: 944a9a430a27c604699c19a027b8aec1, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4519010712038532, guid: 944a9a430a27c604699c19a027b8aec1, type: 2}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 944a9a430a27c604699c19a027b8aec1, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &657259197 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4519010712038532, guid: 944a9a430a27c604699c19a027b8aec1,
+    type: 2}
+  m_PrefabInternal: {fileID: 657259196}
 --- !u!114 &661792955 stripped
 MonoBehaviour:
   m_PrefabParentObject: {fileID: 114606227300840498, guid: 3247574fd4c79b64e92b1a34ff727307,
@@ -1365,6 +1563,53 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1425607285}
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+--- !u!1001 &721456647
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 478755069}
+    m_Modifications:
+    - target: {fileID: 4439475054004678, guid: 7269004a1f5cb354caee0ca6fb2a2d28, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -10.752701
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439475054004678, guid: 7269004a1f5cb354caee0ca6fb2a2d28, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.4960815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439475054004678, guid: 7269004a1f5cb354caee0ca6fb2a2d28, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: -0.4308815
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439475054004678, guid: 7269004a1f5cb354caee0ca6fb2a2d28, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439475054004678, guid: 7269004a1f5cb354caee0ca6fb2a2d28, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439475054004678, guid: 7269004a1f5cb354caee0ca6fb2a2d28, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439475054004678, guid: 7269004a1f5cb354caee0ca6fb2a2d28, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4439475054004678, guid: 7269004a1f5cb354caee0ca6fb2a2d28, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7269004a1f5cb354caee0ca6fb2a2d28, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &721456648 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4439475054004678, guid: 7269004a1f5cb354caee0ca6fb2a2d28,
+    type: 2}
+  m_PrefabInternal: {fileID: 721456647}
 --- !u!4 &789662427 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4247173424600208, guid: d93000379b5fbeb48b1dc2faa3428606,
@@ -1798,6 +2043,11 @@ GameObject:
   m_PrefabParentObject: {fileID: 1228669097582294, guid: 0e0fe28cba0f1974cb03de8169c796cf,
     type: 2}
   m_PrefabInternal: {fileID: 1425607285}
+--- !u!4 &1156893864 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4039718208144008, guid: 28e9d6fba27d1d448b0449eb5fe61bd3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1859994491}
 --- !u!1001 &1168182404
 Prefab:
   m_ObjectHideFlags: 0
@@ -2033,7 +2283,7 @@ MonoBehaviour:
   hoverTooltipText: 
   canBeClicked: 1
   collectable: 0
-  clickTooltipText: Why did I remove the handle?
+  clickTooltipText: Hmm, I can't open it
   clickTooltipTextSuccess: Freedom
 --- !u!23 &1289229461
 MeshRenderer:
@@ -2129,6 +2379,8 @@ Transform:
   - {fileID: 1289229464}
   - {fileID: 402868837}
   - {fileID: 1479562153}
+  - {fileID: 1459245615}
+  - {fileID: 488735246}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -2555,6 +2807,106 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8ca2fab1a2d6cf641a2f0297f488ba2a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1459245610
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1459245615}
+  - component: {fileID: 1459245614}
+  - component: {fileID: 1459245613}
+  - component: {fileID: 1459245612}
+  - component: {fileID: 1459245611}
+  m_Layer: 0
+  m_Name: DoorStopSpot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1459245611
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459245610}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdf2a9ec766e5734cb0064f9516858dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myType: 34
+  hoverTooltipText: If I put a door stop here...
+  canBeClicked: 1
+  collectable: 0
+  clickTooltipText: 
+  clickTooltipTextSuccess: Now the door won't shut
+--- !u!23 &1459245612
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459245610}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!65 &1459245613
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459245610}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &1459245614
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459245610}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &1459245615
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1459245610}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -4.92, y: 0.39, z: 3.0900002}
+  m_LocalScale: {x: 1, y: 0.5, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1304864687}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1470054856 stripped
 Transform:
   m_PrefabParentObject: {fileID: 4435911916995872, guid: c295477e5ef6c804a9ebb0b9f8983f87,
@@ -3174,11 +3526,11 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 478755069}
     m_Modifications:
     - target: {fileID: 4039718208144008, guid: 28e9d6fba27d1d448b0449eb5fe61bd3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -22.577084
+      value: -2.5770836
       objectReference: {fileID: 0}
     - target: {fileID: 4039718208144008, guid: 28e9d6fba27d1d448b0449eb5fe61bd3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -3186,7 +3538,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4039718208144008, guid: 28e9d6fba27d1d448b0449eb5fe61bd3, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -19.141869
+      value: 0.8581314
       objectReference: {fileID: 0}
     - target: {fileID: 4039718208144008, guid: 28e9d6fba27d1d448b0449eb5fe61bd3, type: 2}
       propertyPath: m_LocalRotation.x
@@ -3206,7 +3558,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4039718208144008, guid: 28e9d6fba27d1d448b0449eb5fe61bd3, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 28e9d6fba27d1d448b0449eb5fe61bd3, type: 2}
@@ -3540,7 +3892,7 @@ MonoBehaviour:
   canBeClicked: 1
   collectable: 0
   clickTooltipText: I can put a door handle here
-  clickTooltipTextSuccess: 
+  clickTooltipTextSuccess: Now how do I open this door?
 --- !u!23 &1976992433
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3629,7 +3981,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fuseBoxA: {fileID: 402868836}
   fuseBoxWithPotato: {fileID: 1479562152}
-  doorStopSpot: {fileID: 0}
+  doorStopSpot: {fileID: 1459245610}
+  doorA: {fileID: 1289229459}
 --- !u!23 &2006203804
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3692,7 +4045,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 24
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2022015233 stripped
 GameObject:

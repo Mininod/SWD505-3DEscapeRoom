@@ -97,9 +97,6 @@ public class MouseOverScript : MonoBehaviour
                                     //open door
                                     triggerInteractable();
                                     logicController.setDoorAOpen();
-
-                                    //test
-                                    targetObject.gameObject.SetActive(false);
                                 }
                                 break;
                             case objectType.DoorHandleAttachSpot:
@@ -123,6 +120,19 @@ public class MouseOverScript : MonoBehaviour
                                 triggerInteractable();
                                 inventory.addToInventory(objectType.SuperChargedPotato);
                                 logicController.setPotatoInFuseBox(false);
+                                break;
+                            case objectType.DoorStopSpot:
+                                triggerInteractable();
+                                inventory.removeFromInventory(objectType.DoorStop);
+                                logicController.setDoorStopInPlace();
+                                break;
+                            case objectType.FuseBoxB:
+                                if(inventory.checkInventory(objectType.PotatoCircuit))
+                                {
+                                    triggerInteractable();
+                                    inventory.removeFromInventory(objectType.PotatoCircuit);
+                                    logicController.setPotatoCircuitInFuseBox();
+                                }
                                 break;
                                 /*
                             case objectType.Box:
