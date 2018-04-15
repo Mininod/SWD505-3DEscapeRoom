@@ -59,9 +59,9 @@ public class PipePuzzleControlScript : MonoBehaviour
         for (int i = 0; i < valves.Length; ++i)
         {
             if (valves[i])
-                statusDisplays[i].text = i + 1 + " = Open";
+                statusDisplays[i].text = i + 1 + " = O";
             else
-                statusDisplays[i].text = i + 1 + " = Close";
+                statusDisplays[i].text = i + 1 + " = C";
         }
 	}
 
