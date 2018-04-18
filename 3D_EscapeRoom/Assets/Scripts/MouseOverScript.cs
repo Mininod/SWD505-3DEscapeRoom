@@ -122,9 +122,12 @@ public class MouseOverScript : MonoBehaviour
                                 logicController.setPotatoInFuseBox(false);
                                 break;
                             case objectType.DoorStopSpot:
-                                triggerInteractable();
-                                inventory.removeFromInventory(objectType.DoorStop);
-                                logicController.setDoorStopInPlace();
+                                if(inventory.checkInventory(objectType.DoorStop))
+                                {
+                                    triggerInteractable();
+                                    inventory.removeFromInventory(objectType.DoorStop);
+                                    logicController.setDoorStopInPlace();
+                                }
                                 break;
                             case objectType.FuseBoxB:
                                 if(inventory.checkInventory(objectType.PotatoCircuit))

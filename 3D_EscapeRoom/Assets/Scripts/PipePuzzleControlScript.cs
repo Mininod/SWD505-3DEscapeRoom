@@ -6,7 +6,10 @@ using UnityEngine.UI;
 public class PipePuzzleControlScript : MonoBehaviour
 {
     public int[] controlPanelCooling;
+    public int[] controlPanelCoolingClosed;
+
     public int[] escapePodCooling;
+    public int[] escapePodCoolingClosed;
 
     public Text[] statusDisplays;
 
@@ -39,7 +42,7 @@ public class PipePuzzleControlScript : MonoBehaviour
 	void Update ()
     {
         //Check for puzzle success
-		if(checkPuzzle(controlPanelCooling) && !controlPanelCooled)
+		if(checkPuzzle(controlPanelCooling, controlPanelCoolingClosed) && !controlPanelCooled)
         {
             Debug.Log("ControlPanelCooled");
             controlPanelCooled = true;
@@ -47,7 +50,7 @@ public class PipePuzzleControlScript : MonoBehaviour
             logicController.setTerminalCooled();
         }
 
-        if(checkPuzzle(escapePodCooling) && !escapePodCooled)
+        if(checkPuzzle(escapePodCooling, escapePodCoolingClosed) && !escapePodCooled)
         {
             Debug.Log("EscapePodCooled");
             escapePodCooled = true;
@@ -65,7 +68,7 @@ public class PipePuzzleControlScript : MonoBehaviour
         }
 	}
 
-    private bool checkPuzzle(int[] valvesToBeOpen)
+    private bool checkPuzzle(int[] valvesToBeOpen, int[] valvesToBeClosed)
     {
         for (int i = 0; i < valves.Length;)
         {
@@ -75,10 +78,14 @@ public class PipePuzzleControlScript : MonoBehaviour
                 else return false;      //if false, the puzzle is not solved, return false
 
             }
-            else        //if the valve is not meant to be true/open
+            else if(UnityEditor.ArrayUtility.Contains(valvesToBeClosed, i + 1))
             {
-                if (!valves[i]) ++i;    //if false, increment to the next valve to check
-                else return false;      //if true, the puzzle is not solved
+                if (!valves[i]) ++i;    //if true (valve is closed), increment to the next valve to check
+                else return false;
+            }
+            else        
+            {
+                ++i;    //if the valve os not specified open or closed, just increment to the next one
             }
 
             if (i == valves.Length) return true;    //if all the valves are incremented through, the puzzle must be solved

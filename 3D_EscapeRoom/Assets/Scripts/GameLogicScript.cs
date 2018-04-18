@@ -55,9 +55,9 @@ public class GameLogicScript : MonoBehaviour
         {
             doorStopSpot.SetActive(true);
         }
-        else if(!doorAOpen)       //if the door is closed, disable the spot
+        else if(!doorAOpen && doorStopSpot.activeSelf)       //if the door is closed, disable the spot
         {
-            if (doorStopSpot.activeSelf) doorStopSpot.SetActive(false);
+            doorStopSpot.SetActive(false);
         }
 
         if (doorAOpen || doorStopInPlace)     //checks if door A has been opened or if it is wedged open by the door stop
