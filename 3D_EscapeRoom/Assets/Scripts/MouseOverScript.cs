@@ -169,7 +169,12 @@ public class MouseOverScript : MonoBehaviour
                                     logicController.setValveAttached();
                                 }
                                 break;
-                            case objectType.PipeHandle:
+                            case objectType.EscapePodButton:
+                                menuScript.triggerWin();
+                                break;
+
+
+                            case objectType.PipeHandle:     //TEST--------------------------------------------
                                 logicController.setTerminalCooled();
                                 logicController.setEscapePodCooled();
                                 logicController.setPotatoCircuitInFuseBox();

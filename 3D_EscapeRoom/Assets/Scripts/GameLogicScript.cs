@@ -32,6 +32,9 @@ public class GameLogicScript : MonoBehaviour
     public GameObject pipeHandleSpot;               //the spot for the handle, so it can be deactivated once used
 
     private bool escapePodCooled =  false;          //check if the escape pod has been cooled
+
+    public GameObject doorC;                        //the final door to be opened
+
     private bool keypadBSuccess = false;            //check if the correct code has been entered in to keypad B
     private bool doorCOpen = false;                 //check if the final door is open
 
@@ -106,6 +109,13 @@ public class GameLogicScript : MonoBehaviour
             pipeHandleSpot.SetActive(false);        //deactivate the spot
         }
 
+        //Open door c when keycode is successful
+        if(keypadBSuccess && !doorCOpen)
+        {
+            doorCOpen = true;
+            //open door
+            doorC.SetActive(false);
+        }
 	}
 
     public bool openDoorA()     //to open door A, the potato must be in the fuse box and the handle must be attached
