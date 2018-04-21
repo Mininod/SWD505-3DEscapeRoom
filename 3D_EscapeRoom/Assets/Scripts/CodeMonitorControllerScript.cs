@@ -26,10 +26,10 @@ public class CodeMonitorControllerScript : MonoBehaviour
         }
         else if(displayCode2)
         {
-            codeMonitor1.text = "code2";
-            codeMonitor2.text = "code2";
-            codeMonitor3.text = "code2";
-            codeMonitor4.text = "code2";
+            codeMonitor1.text = "nrac";
+            codeMonitor2.text = "csva";
+            codeMonitor3.text = "fdgd";
+            codeMonitor4.text = "bsbt";
         }
         else
         {

@@ -121,8 +121,8 @@ public class GameLogicScript : MonoBehaviour
         else
         {
             if (!terminalCooled && !escapePodCooled) return 2;          //2 if circuit is in but nothing is cooled
-            else if (terminalCooled && !escapePodCooled) return 3;      //3 is the terminal is cooled
-            else if (terminalCooled && escapePodCooled) return 4;       //4 if the escape pod is cooled
+            else if (terminalCooled && !escapePodCooled) return 3;      //3 is the terminal is cooled, the second puzzle wont have been solved yet
+            else if (terminalCooled && escapePodCooled) return 4;       //4 if the escape pod is cooled, the terminal puzzle will have been solved
         }
 
         return 0;

@@ -169,6 +169,11 @@ public class MouseOverScript : MonoBehaviour
                                     logicController.setValveAttached();
                                 }
                                 break;
+                            case objectType.PipeHandle:
+                                logicController.setTerminalCooled();
+                                logicController.setEscapePodCooled();
+                                logicController.setPotatoCircuitInFuseBox();
+                                break;
                                 /*
                             case objectType.Box:
                                 if (inventory.checkInventory(objectType.TestPickup))          //if we have the test pickup
