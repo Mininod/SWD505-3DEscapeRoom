@@ -17,6 +17,7 @@ public class MouseOverScript : MonoBehaviour
     private MenuScript menuScript;
 
     private GameLogicScript logicController;
+    private CodeMonitorControllerScript codeMonitorController;        //Controller for displaying the codes on the monitors to solve the keycode
     private SoundManagerScript soundManager;
 
     void Start()
@@ -26,6 +27,7 @@ public class MouseOverScript : MonoBehaviour
         menuScript = gameObject.GetComponent<MenuScript>();                     //on the same object
 
         logicController = GameObject.Find("GameLogicManager").GetComponent<GameLogicScript>();
+        codeMonitorController = GameObject.Find("CodeMonitorControl").GetComponent<CodeMonitorControllerScript>();
         soundManager = GameObject.Find("SoundManager").GetComponent<SoundManagerScript>();
     }
 
@@ -148,9 +150,12 @@ public class MouseOverScript : MonoBehaviour
                                         break;
                                     case 3:     //terminal is cooled
                                         Debug.Log("Terminal is cooled");
-                                        //Display codes for first keycode
+                                        codeMonitorController.setDisplay1(true);
                                         break;
                                     case 4:     //escape pod is cooled
+                                        Debug.Log("Escape Pod is cooled");
+                                        codeMonitorController.setDisplay1(false);
+                                        codeMonitorController.setDisplay2(true);
                                         break;
                                     case 0:
                                         break;

@@ -37,6 +37,7 @@ public class GameLogicScript : MonoBehaviour
 	
 	void Update ()
     {
+        //Switch potato in for non potato fusebox
         if(potatoInFuseBox && !fuseBoxWithPotato.activeSelf)        //if the potato is placed in the fusebox, switch the box with potato
         {
             fuseBoxWithPotato.SetActive(true);
@@ -44,6 +45,7 @@ public class GameLogicScript : MonoBehaviour
             fuseBoxA.SetActive(false);
         }
 
+        //Switch out for normal fusebox after taking potato
         if(!potatoInFuseBox && fuseBoxWithPotato.activeSelf)        //if the potato is taken, switch back to the empty fuse box
         {
             fuseBoxWithPotato.SetActive(false);
@@ -51,6 +53,7 @@ public class GameLogicScript : MonoBehaviour
             fuseBoxA.GetComponent<InteractableScript>().untriggerInteractable();
         }
 
+        //Set door stop spot active if door A is open
         if (doorAOpen && !doorStopSpot.activeSelf)       //when door a is opened, the door stop can now be placed
         {
             doorStopSpot.SetActive(true);
@@ -60,12 +63,14 @@ public class GameLogicScript : MonoBehaviour
             doorStopSpot.SetActive(false);
         }
 
+        //Lock open door A if door stop is in place
         if (doorAOpen || doorStopInPlace)     //checks if door A has been opened or if it is wedged open by the door stop
         {
             //door in open state
             if (doorA.activeSelf) doorA.SetActive(false);
         }
 
+        //Close door A if the door stop is not in place and the fuse box is off
         if(!openDoorA() && !doorStopInPlace)       //if the fuse box is unpowered, the door must be closed (as long as the door stop is not in place)
         {
             //door in close state
@@ -74,12 +79,14 @@ public class GameLogicScript : MonoBehaviour
             if (!doorA.activeSelf) doorA.SetActive(true);
         }
 
+        //Check that the circuit is in fuse box b
         if(potatoCircuitInFuseBox && !fuseBoxBWithPotato.activeSelf)    //when the potato is placed, switch models
         {
             fuseBoxB.SetActive(false);
             fuseBoxBWithPotato.SetActive(true);
         }
 
+        //Open door B when the keycode is successful
         if(keypadASuccess && !doorBOpen)
         {
             doorBOpen = true;
