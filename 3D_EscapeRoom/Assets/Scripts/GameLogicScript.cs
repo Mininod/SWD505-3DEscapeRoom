@@ -26,6 +26,11 @@ public class GameLogicScript : MonoBehaviour
 
     public GameObject doorB;                        //the second door, controlled by the keypad
 
+    private bool pipeHandleAttached = false;        //check if the handle has been attached to the pipe
+
+    public GameObject pipeValve10;                  //the 10th valve to be activated once the handle has been attached
+    public GameObject pipeHandleSpot;               //the spot for the handle, so it can be deactivated once used
+
     private bool escapePodCooled =  false;          //check if the escape pod has been cooled
     private bool keypadBSuccess = false;            //check if the correct code has been entered in to keypad B
     private bool doorCOpen = false;                 //check if the final door is open
@@ -92,6 +97,13 @@ public class GameLogicScript : MonoBehaviour
             doorBOpen = true;
             //open door
             doorB.SetActive(false);
+        }
+
+        //Activate valve10 when the handle is attached
+        if(pipeHandleAttached && !pipeValve10.activeSelf)
+        {
+            pipeValve10.SetActive(true);    //activate the valve
+            pipeHandleSpot.SetActive(false);        //deactivate the spot
         }
 
 	}
@@ -165,5 +177,10 @@ public class GameLogicScript : MonoBehaviour
     {
         if (ID == 'A') keypadASuccess = true;
         if (ID =='B') keypadBSuccess = true;
+    }
+
+    public void setValveAttached()
+    {
+        pipeHandleAttached = true;
     }
 }

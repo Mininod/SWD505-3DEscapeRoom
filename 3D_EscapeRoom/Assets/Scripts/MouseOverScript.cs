@@ -161,6 +161,14 @@ public class MouseOverScript : MonoBehaviour
                                         break;
                                 }
                                 break;
+                            case objectType.PipeWithoutHandle:
+                                if(inventory.checkInventory(objectType.Valve))      //if you have the valve
+                                {
+                                    triggerInteractable();
+                                    inventory.removeFromInventory(objectType.Valve);
+                                    logicController.setValveAttached();
+                                }
+                                break;
                                 /*
                             case objectType.Box:
                                 if (inventory.checkInventory(objectType.TestPickup))          //if we have the test pickup
