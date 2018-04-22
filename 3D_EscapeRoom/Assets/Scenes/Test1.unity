@@ -8074,7 +8074,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4223706088788262, guid: 2e5d2cfcbfe9e7e408d3a9569417b42a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -1.9
+      value: -10.95
       objectReference: {fileID: 0}
     - target: {fileID: 4223706088788262, guid: 2e5d2cfcbfe9e7e408d3a9569417b42a, type: 2}
       propertyPath: m_LocalPosition.y
@@ -8082,7 +8082,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4223706088788262, guid: 2e5d2cfcbfe9e7e408d3a9569417b42a, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 5.46
+      value: 4.73
       objectReference: {fileID: 0}
     - target: {fileID: 4223706088788262, guid: 2e5d2cfcbfe9e7e408d3a9569417b42a, type: 2}
       propertyPath: m_LocalRotation.x
@@ -8321,7 +8321,7 @@ GameObject:
   - component: {fileID: 919824719}
   - component: {fileID: 919824718}
   m_Layer: 0
-  m_Name: ValveControl10Spot
+  m_Name: ValveControl12Spot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -18364,7 +18364,7 @@ MonoBehaviour:
   fuseBoxBWithPotato: {fileID: 625827438}
   doorB: {fileID: 1748407977}
   pipeValve10: {fileID: 1300500684}
-  pipeHandleSpot: {fileID: 87042458}
+  pipeHandleSpot: {fileID: 919824717}
   doorC: {fileID: 1073165506}
 --- !u!23 &2006203804
 MeshRenderer:
