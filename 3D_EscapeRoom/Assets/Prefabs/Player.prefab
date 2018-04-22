@@ -58,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354266926466404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -19.621, y: 1.5, z: -17.312}
+  m_LocalPosition: {x: -28.86, y: 1.5, z: -17.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4627350504240624}
@@ -274,6 +274,12 @@ MonoBehaviour:
   notesOverlay: {fileID: 0}
   notes:
   - {fileID: 21300000, guid: 2cf10821091889c48a38fdb2ee60ff48, type: 3}
+  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
+  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
+  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
+  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
+  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
+  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
   - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
   timerMax: 10
   shortTimer: 10

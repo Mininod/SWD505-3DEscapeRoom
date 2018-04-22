@@ -44,6 +44,16 @@ public enum objectType
     EscapePodButton,
     LockExplosivePlantSpot,      //to denote where to place the explosive (not actually collectable)#
     DoorStopSpot,       //place to put the door stop
+
+    //Journals
+    Journal1,
+    Journal2,
+    Journal3,
+    Journal4,
+    Journal5,
+    Journal6,
+    Journal7,
+    Journal8
     
 }
 

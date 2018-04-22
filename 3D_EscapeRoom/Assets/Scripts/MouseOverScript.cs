@@ -175,6 +175,34 @@ public class MouseOverScript : MonoBehaviour
                             case objectType.EscapePodButton:
                                 menuScript.triggerWin();
                                 break;
+                            case objectType.Journal1:
+                                menuScript.displayNote(0);
+                                break;
+                            case objectType.Journal2:
+                                menuScript.displayNote(1);
+                                break;
+                            case objectType.Journal3:
+                                menuScript.displayNote(2);
+                                break;
+                            case objectType.Journal4:
+                                menuScript.displayNote(3);
+                                break;
+                            case objectType.Journal5:
+                                menuScript.displayNote(4);
+                                break;
+                            case objectType.Journal6:
+                                menuScript.displayNote(5);
+                                break;
+                            case objectType.Journal7:
+                                menuScript.displayNote(6);
+                                break;
+                            case objectType.Journal8:
+                                menuScript.displayNote(7);
+                                break;
+
+
+
+
 
 
                             case objectType.PipeHandle:     //TEST--------------------------------------------
