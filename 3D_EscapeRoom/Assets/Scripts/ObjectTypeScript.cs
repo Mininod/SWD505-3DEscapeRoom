@@ -53,7 +53,9 @@ public enum objectType
     Journal5,
     Journal6,
     Journal7,
-    Journal8
+    Journal8,
+    Journal9,
+    Journal10
     
 }
 

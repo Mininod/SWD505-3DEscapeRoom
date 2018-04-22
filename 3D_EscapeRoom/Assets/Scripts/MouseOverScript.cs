@@ -199,6 +199,12 @@ public class MouseOverScript : MonoBehaviour
                             case objectType.Journal8:
                                 menuScript.displayNote(7);
                                 break;
+                            case objectType.Journal9:
+                                menuScript.displayNote(8);
+                                break;
+                            case objectType.Journal10:
+                                menuScript.displayNote(9);
+                                break;
 
 
 
