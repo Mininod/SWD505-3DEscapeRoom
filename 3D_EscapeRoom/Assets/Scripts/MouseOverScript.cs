@@ -54,14 +54,17 @@ public class MouseOverScript : MonoBehaviour
                 {
                     tooltipText.text = item.transform.gameObject.GetComponent<InteractableScript>().hoverTooltipText;        //set tooltip text
                     targetObject = item.transform.gameObject.GetComponent<InteractableScript>();                             //set as targeted object
+                    break;
                 }
                 else if (item.transform.gameObject.GetComponent<KeypadButtonScript>() && targetKeypadButton == null)   //if the object is part of the keypad
                 {
                     targetKeypadButton = item.transform.gameObject.GetComponent<KeypadButtonScript>();
+                    break;
                 }
                 else if (item.transform.gameObject.GetComponent<ValveControlScript>() && targetValveControl == null)    //if the target is a valve control
                 {
                     targetValveControl = item.transform.gameObject.GetComponent<ValveControlScript>();
+                    break;
                 }
             }
         }
