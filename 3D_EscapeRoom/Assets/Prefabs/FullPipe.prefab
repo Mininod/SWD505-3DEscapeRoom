@@ -54,6 +54,7 @@ GameObject:
   - component: {fileID: 33908219327857342}
   - component: {fileID: 23450850304470742}
   - component: {fileID: 65052015457191976}
+  - component: {fileID: 114517155800718240}
   m_Layer: 0
   m_Name: ValveHandle
   m_TagString: Untagged
@@ -473,6 +474,20 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 40.31652, y: 3.6681, z: 40.316498}
   m_Center: {x: -63.22397, y: 49.423874, z: -50.72165}
+--- !u!114 &114517155800718240
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1432289985582842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd5feb0887d9c2a48825601ceb0e06c0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gateNumber: 0
+  canControlSecondgate: 0
+  secondGateNumber: 0
 --- !u!136 &136526332944888094
 CapsuleCollider:
   m_ObjectHideFlags: 1
