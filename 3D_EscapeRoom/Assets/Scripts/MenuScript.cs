@@ -9,7 +9,6 @@ public class MenuScript : MonoBehaviour
     public GameObject menuOverlay;               //the gameobject of the inventory overlay
     public GameObject gameOverPanel;             //the gameobject for the game over screen   
     public GameObject winScreenPanel;            //the gameobject for the win screen
-    public Text timerDisplay;                    //the text object that displays the timer left
     public Text timerDisplayMenu;                //the text object that displays the timer in the menu
     private bool menuUp = false;                 //whether or not the menu/inventory is currently being displayed   
     private PlayerInventoryScript inventory;     //direct access to the players inventory
@@ -78,7 +77,6 @@ public class MenuScript : MonoBehaviour
                 musicManager.transform.GetChild(0).gameObject.SetActive(false);
                 musicManager.transform.GetChild(1).gameObject.SetActive(true);
 
-                timerDisplay.color = Color.red;
                 timerDisplayMenu.color = Color.red;
                 atShortTimer = true;
             }
@@ -215,14 +213,12 @@ public class MenuScript : MonoBehaviour
     {
         if (levelTimer <= 0)
         {
-            timerDisplay.text = "00:00";
             timerDisplayMenu.text = "00:00";
         }
         else        //updates both timer displays
         {
             int minutes = Mathf.FloorToInt(levelTimer / 60);
             int seconds = Mathf.FloorToInt(levelTimer - (minutes * 60));
-            timerDisplay.text = minutes.ToString("00") + ":" + seconds.ToString("00");
             timerDisplayMenu.text = minutes.ToString("00") + ":" + seconds.ToString("00");
         }
     }
