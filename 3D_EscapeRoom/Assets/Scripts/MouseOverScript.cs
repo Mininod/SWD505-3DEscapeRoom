@@ -326,11 +326,10 @@ public class MouseOverScript : MonoBehaviour
 
         soundManager.PlaySFX("Test2");      //play explosion sound
 
-        Debug.Log("Boom");
-
-        //Open the chest (currently set to destroy)
-        Destroy(explosiveSpot.transform.parent.gameObject);   
+        Debug.Log("Boom"); 
         
         Destroy(explosiveSpot);         //remove the explosive point
+
+        logicController.setLockExploded();
     }
 }

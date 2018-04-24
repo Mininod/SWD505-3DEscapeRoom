@@ -26,6 +26,12 @@ public class GameLogicScript : MonoBehaviour
 
     public GameObject doorB;                        //the second door, controlled by the keypad
 
+    private bool lockExploded = false;              //check to see when the crate has been opened
+    private bool openedCrate = false;               //check to see if the crate has been opened in the code
+
+    public GameObject valveCrateLid;                //the crate with the valve in it - the lid
+    public GameObject valveHandle;                  //the valve inside the crate
+
     private bool pipeHandleAttached = false;        //check if the handle has been attached to the pipe
 
     public GameObject pipeValve10;                  //the 10th valve to be activated once the handle has been attached
@@ -102,6 +108,14 @@ public class GameLogicScript : MonoBehaviour
             doorB.SetActive(false);
         }
 
+        //Set valve handle in crate
+        if(lockExploded && !openedCrate)    //if the lock is exploded but the crate isnt open
+        {
+            openedCrate = true;
+            valveHandle.SetActive(true);
+            valveCrateLid.SetActive(false);
+        }
+
         //Activate valve10 when the handle is attached
         if(pipeHandleAttached && !pipeValve10.activeSelf)
         {
@@ -171,6 +185,11 @@ public class GameLogicScript : MonoBehaviour
     public void setDoorBOpen()
     {
         doorBOpen = true;
+    }
+
+    public void setLockExploded()
+    {
+        lockExploded = true;
     }
 
     public void setEscapePodCooled()
