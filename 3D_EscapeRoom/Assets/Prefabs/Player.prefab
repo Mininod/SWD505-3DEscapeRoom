@@ -58,7 +58,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1354266926466404}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.86, y: 1.5, z: -17.12}
+  m_LocalPosition: {x: -27.6, y: 1.5, z: -17.12}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4627350504240624}
@@ -273,15 +273,17 @@ MonoBehaviour:
   timerDisplayMenu: {fileID: 0}
   notesOverlay: {fileID: 0}
   notes:
-  - {fileID: 21300000, guid: 2cf10821091889c48a38fdb2ee60ff48, type: 3}
-  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
-  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
-  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
-  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
-  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
-  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
-  - {fileID: 21300000, guid: 807947af01aac80458b24759a10b0bb0, type: 3}
-  timerMax: 10
+  - {fileID: 21300000, guid: d6944aafd5180984883febc773c6d630, type: 3}
+  - {fileID: 21300000, guid: 25cd3dd7845a71446a1792dba9c06457, type: 3}
+  - {fileID: 21300000, guid: 791cdfd2d76475845875f064e3cb15a9, type: 3}
+  - {fileID: 21300000, guid: 86a7fcde9762dd245bc294dc010b7956, type: 3}
+  - {fileID: 21300000, guid: 9ef066618dbabc44bbf8ec6dc502f57d, type: 3}
+  - {fileID: 21300000, guid: f4f77b7f5183a9444a21170ce6426c9e, type: 3}
+  - {fileID: 21300000, guid: 9c96bec5a7744fe488e6bd92731b004d, type: 3}
+  - {fileID: 21300000, guid: 22715c08f2d56da4bba4683e0db64459, type: 3}
+  - {fileID: 21300000, guid: 891a67ca01f1636469b5ce3d6ba7efa1, type: 3}
+  - {fileID: 21300000, guid: 04c1255cf114cbe4892e33a5660da55d, type: 3}
+  timerMax: 60
   shortTimer: 10
   inventoryDisplay:
   - {fileID: 0}
@@ -387,10 +389,11 @@ MonoBehaviour:
     BobAmount: 0
   m_StepInterval: 5
   m_FootstepSounds:
-  - {fileID: 8300000, guid: 42e65e088b3f4374e851b8dbd38f3df9, type: 3}
-  - {fileID: 8300000, guid: 8bc94ec6ed537e743b481638bdcd503d, type: 3}
+  - {fileID: 8300000, guid: a0b54d1f94a280248b1f326a0522e184, type: 3}
+  - {fileID: 8300000, guid: eccdfb0f1d6794748bc27c8331e0ec51, type: 3}
+  - {fileID: 8300000, guid: bfcf73bc70420c94ca12f40234ca446e, type: 3}
   m_JumpSound: {fileID: 0}
-  m_LandSound: {fileID: 8300000, guid: 3b09d59f4499d45428baa7a21e954296, type: 3}
+  m_LandSound: {fileID: 0}
 --- !u!124 &124411326685567678
 Behaviour:
   m_ObjectHideFlags: 1
