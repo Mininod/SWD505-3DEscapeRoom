@@ -6,7 +6,11 @@ using UnityEngine.UI;
 public class CodeMonitorControllerScript : MonoBehaviour
 {
     public Text[] codeMonitorTimers;
-    public Text mainMonitor;
+    public GameObject mainMonitor;
+
+    public Sprite mainOverHeat;  //Inital display on the main monitor
+    public Sprite mainCode1; //details to solve the first code
+    public Sprite mainCode2; //details to solve the second code
 
     private bool displayCode1 = false;
     private bool displayCode2 = false;
@@ -23,15 +27,15 @@ public class CodeMonitorControllerScript : MonoBehaviour
         //Update main monitor display
         if(displayCode1)
         {
-            mainMonitor.text = "";
+            mainMonitor.GetComponent<Image>().sprite = mainCode1;
         }
         else if(displayCode2)
         {
-            mainMonitor.text = "";
+            mainMonitor.GetComponent<Image>().sprite = mainCode2;
         }
         else
         {
-            mainMonitor.text = "OVERHEATING";
+            mainMonitor.GetComponent<Image>().sprite = mainOverHeat;
         }
 
 
