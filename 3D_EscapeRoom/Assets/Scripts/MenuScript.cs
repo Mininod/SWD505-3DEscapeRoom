@@ -30,12 +30,14 @@ public class MenuScript : MonoBehaviour
 
     private GameObject musicManager;        //Gameobject to switch betweent the two music tracks when the timer reaches the threshold
     private CollectableLibrary collectableLibrary;      //a reference to the library of gameObjects that can be picked up/collected through crafting
+    private SoundManagerScript soundManager;        //reference to the sound manager
 
     void Start()
     {
         inventory = gameObject.GetComponent<PlayerInventoryScript>();
         musicManager = GameObject.Find("MusicManager");
         collectableLibrary = GameObject.Find("CollectableLibrary").GetComponent<CollectableLibrary>();
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManagerScript>();
 
         //reticle
         reticle = GameObject.Find("Reticle");
@@ -172,6 +174,7 @@ public class MenuScript : MonoBehaviour
                     if (inventoryDisplay[j].GetComponent<ButtonSelectScript>().isSelected()) inventory.removeFromInventorySlot(j);
 
                 inventory.addToInventory(inventory.recipeList[i].Result);           //add the item made to the invetory
+                soundManager.PlaySFX("Craft");  //play sound if successful craft
                 isCrafted = true;
             }
         }

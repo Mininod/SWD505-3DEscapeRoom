@@ -17,10 +17,12 @@ public class PincodeInputScript : MonoBehaviour
     public char keypadID;                //to tell the gameLogicController which keypad has been successfully activated
 
     private GameLogicScript logicController;
+    private SoundManagerScript soundManager;
 
     private void Start()
     {
-        logicController = GameObject.Find("GameLogicManager").GetComponent<GameLogicScript>();    
+        logicController = GameObject.Find("GameLogicManager").GetComponent<GameLogicScript>();
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManagerScript>();
     }
 
     void Update ()
@@ -73,8 +75,9 @@ public class PincodeInputScript : MonoBehaviour
                     Debug.Log("Input successful");
                     logicController.setKeyPadSuccess(keypadID);
                 }
-                else
+                else  //failed input
                 {
+                    soundManager.PlaySFX("Error");
                     currentInput = 1;       //reset current input
                     input1 = 0;
                     input2 = 0;
