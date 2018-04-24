@@ -11,7 +11,9 @@ public class PipePuzzleControlScript : MonoBehaviour
     public int[] escapePodCooling;
     public int[] escapePodCoolingClosed;
 
-    public Text[] statusDisplays;
+    public GameObject[] gateDisplays;
+    public GameObject terminalSpot;
+    public GameObject escapePodSpot;
 
     private GameLogicScript logicController;
 
@@ -23,6 +25,10 @@ public class PipePuzzleControlScript : MonoBehaviour
 	void Start ()
     {
         logicController = GameObject.Find("GameLogicManager").GetComponent<GameLogicScript>();
+
+        //spots are not cooled
+        terminalSpot.GetComponent<Image>().color = Color.red;
+        escapePodSpot.GetComponent<Image>().color = Color.red;
 
         valves = new bool[16];      //there are 16 gates in our puzzle
         for (int i = 0; i < valves.Length; ++i)     //set all gates to closed
@@ -46,6 +52,7 @@ public class PipePuzzleControlScript : MonoBehaviour
         {
             Debug.Log("ControlPanelCooled");
             controlPanelCooled = true;
+            terminalSpot.GetComponent<Image>().color = Color.green;
 
             logicController.setTerminalCooled();
         }
@@ -54,6 +61,7 @@ public class PipePuzzleControlScript : MonoBehaviour
         {
             Debug.Log("EscapePodCooled");
             escapePodCooled = true;
+            escapePodSpot.GetComponent<Image>().color = Color.green;
 
             logicController.setEscapePodCooled();
         }
@@ -62,9 +70,9 @@ public class PipePuzzleControlScript : MonoBehaviour
         for (int i = 0; i < valves.Length; ++i)
         {
             if (valves[i])
-                statusDisplays[i].text = i + 1 + " = O";
+                gateDisplays[i].SetActive(false);
             else
-                statusDisplays[i].text = i + 1 + " = C";
+                gateDisplays[i].SetActive(true);
         }
 	}
 
