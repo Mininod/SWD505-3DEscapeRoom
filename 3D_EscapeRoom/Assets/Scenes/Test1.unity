@@ -6367,6 +6367,11 @@ Prefab:
       propertyPath: inventoryDisplay.Array.data[4]
       value: 
       objectReference: {fileID: 75241524}
+    - target: {fileID: 114477321061236928, guid: 7dee89cefed818748b1ac4dc63f278a3,
+        type: 2}
+      propertyPath: timerMax
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7dee89cefed818748b1ac4dc63f278a3, type: 2}
   m_IsPrefabParent: 0
@@ -15152,6 +15157,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 82848062943182476, guid: ecc4eea6b9dc6a942b4e52306cc527ea,
+        type: 2}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ddf7b79eb648ef04aae9ba152209e9a5, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ecc4eea6b9dc6a942b4e52306cc527ea, type: 2}
   m_IsPrefabParent: 0
