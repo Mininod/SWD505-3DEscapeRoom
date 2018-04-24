@@ -153,12 +153,12 @@ public class MouseOverScript : MonoBehaviour
                                         break;
                                     case 3:     //terminal is cooled
                                         Debug.Log("Terminal is cooled");
-                                        codeMonitorController.setDisplay1(true);
+                                        //codeMonitorController.setDisplay1(true);
                                         break;
                                     case 4:     //escape pod is cooled
                                         Debug.Log("Escape Pod is cooled");
-                                        codeMonitorController.setDisplay1(false);
-                                        codeMonitorController.setDisplay2(true);
+                                        //codeMonitorController.setDisplay1(false);
+                                        //codeMonitorController.setDisplay2(true);
                                         break;
                                     case 0:
                                         break;

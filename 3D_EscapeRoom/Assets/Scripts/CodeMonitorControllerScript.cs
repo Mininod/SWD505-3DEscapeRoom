@@ -5,48 +5,46 @@ using UnityEngine.UI;
 
 public class CodeMonitorControllerScript : MonoBehaviour
 {
-    public Text codeMonitor1, codeMonitor2, codeMonitor3, codeMonitor4;
+    public Text[] codeMonitorTimers;
 
-    private bool displayCode1 = false;
-    private bool displayCode2 = false;
+    //private bool displayCode1 = false;
+    //private bool displayCode2 = false;
+
+    public GameObject player;
 
 	void Start ()
     {
-		
+
 	}
 	
 	void Update ()
     {
-		if(displayCode1)
-        {
-            codeMonitor1.text = "code1";
-            codeMonitor2.text = "code1";
-            codeMonitor3.text = "code1";
-            codeMonitor4.text = "code1";
-        }
-        else if(displayCode2)
-        {
-            codeMonitor1.text = "nrac";
-            codeMonitor2.text = "csva";
-            codeMonitor3.text = "fdgd";
-            codeMonitor4.text = "bsbt";
-        }
-        else
-        {
-            codeMonitor1.text = "----";
-            codeMonitor2.text = "----";
-            codeMonitor3.text = "----";
-            codeMonitor4.text = "----";
-        }
-	}
+        float levelTimer = player.transform.GetChild(0).gameObject.GetComponent<MenuScript>().getTimeRemaining(); //get time remaining
+        int minutes = Mathf.FloorToInt(levelTimer / 60);
+        int seconds = Mathf.FloorToInt(levelTimer - (minutes * 60));
 
-    public void setDisplay1(bool value)
-    {
-        displayCode1 = value;
+        foreach (Text timer in codeMonitorTimers)
+        {
+            //Display time remaining
+            if (levelTimer <= 0)
+                timer.text = "00:00:00";
+            else
+                timer.text = "00:" + minutes.ToString("00") + ":" + seconds.ToString("00");
+
+            //Text colour
+            if (player.transform.GetChild(0).gameObject.GetComponent<MenuScript>().isTimerBelowThreshold())
+                timer.color = Color.red;
+        }
+
     }
 
-    public void setDisplay2(bool value)
-    {
-        displayCode2 = value;
-    }
+    //public void setDisplay1(bool value)
+    //{
+    //    displayCode1 = value;
+    //}
+
+    //public void setDisplay2(bool value)
+    //{
+    //    displayCode2 = value;
+    //}
 }

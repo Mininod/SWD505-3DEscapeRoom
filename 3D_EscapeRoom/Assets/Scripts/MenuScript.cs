@@ -224,6 +224,16 @@ public class MenuScript : MonoBehaviour
         }
     }
 
+    public float getTimeRemaining()
+    {
+        return levelTimer;
+    }
+
+    public bool isTimerBelowThreshold()
+    {
+        return atShortTimer;
+    }
+
     private void timeUpCheck()
     {
         if (levelTimer <= 0)     //times up
