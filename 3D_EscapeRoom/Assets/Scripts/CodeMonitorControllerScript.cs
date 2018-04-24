@@ -6,9 +6,10 @@ using UnityEngine.UI;
 public class CodeMonitorControllerScript : MonoBehaviour
 {
     public Text[] codeMonitorTimers;
+    public Text mainMonitor;
 
-    //private bool displayCode1 = false;
-    //private bool displayCode2 = false;
+    private bool displayCode1 = false;
+    private bool displayCode2 = false;
 
     public GameObject player;
 
@@ -19,6 +20,22 @@ public class CodeMonitorControllerScript : MonoBehaviour
 	
 	void Update ()
     {
+        //Update main monitor display
+        if(displayCode1)
+        {
+            mainMonitor.text = "";
+        }
+        else if(displayCode2)
+        {
+            mainMonitor.text = "";
+        }
+        else
+        {
+            mainMonitor.text = "OVERHEATING";
+        }
+
+
+        //Calculate time
         float levelTimer = player.transform.GetChild(0).gameObject.GetComponent<MenuScript>().getTimeRemaining(); //get time remaining
         int minutes = Mathf.FloorToInt(levelTimer / 60);
         int seconds = Mathf.FloorToInt(levelTimer - (minutes * 60));
@@ -38,13 +55,13 @@ public class CodeMonitorControllerScript : MonoBehaviour
 
     }
 
-    //public void setDisplay1(bool value)
-    //{
-    //    displayCode1 = value;
-    //}
+    public void setDisplay1(bool value)
+    {
+        displayCode1 = value;
+    }
 
-    //public void setDisplay2(bool value)
-    //{
-    //    displayCode2 = value;
-    //}
+    public void setDisplay2(bool value)
+    {
+        displayCode2 = value;
+    }
 }

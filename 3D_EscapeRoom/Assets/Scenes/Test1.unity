@@ -1326,7 +1326,7 @@ Prefab:
     - target: {fileID: 114241669052405018, guid: e9a07b57024246845952b737b13be0c4,
         type: 2}
       propertyPath: pincode
-      value: 1234
+      value: 4275
       objectReference: {fileID: 0}
     - target: {fileID: 4551599198807128, guid: e9a07b57024246845952b737b13be0c4, type: 2}
       propertyPath: m_LocalScale.y
@@ -10207,7 +10207,7 @@ Prefab:
     - target: {fileID: 114241669052405018, guid: e9a07b57024246845952b737b13be0c4,
         type: 2}
       propertyPath: pincode
-      value: 1234
+      value: 5136
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e9a07b57024246845952b737b13be0c4, type: 2}
