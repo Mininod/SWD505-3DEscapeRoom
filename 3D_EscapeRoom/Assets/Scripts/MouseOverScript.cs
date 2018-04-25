@@ -56,9 +56,10 @@ public class MouseOverScript : MonoBehaviour
                     targetObject = item.transform.gameObject.GetComponent<InteractableScript>();                             //set as targeted object
                     break;
                 }
-                else if (item.transform.gameObject.GetComponent<KeypadButtonScript>() && targetKeypadButton == null)   //if the object is part of the keypad
+                else if ((item.transform.gameObject.GetComponent<KeypadButtonScript>() && targetKeypadButton == null)) //if the object is part of the keypad
                 {
                     targetKeypadButton = item.transform.gameObject.GetComponent<KeypadButtonScript>();
+                    Debug.Log("Keypad");
                     break;
                 }
                 else if (item.transform.gameObject.GetComponent<ValveControlScript>() && targetValveControl == null)    //if the target is a valve control
