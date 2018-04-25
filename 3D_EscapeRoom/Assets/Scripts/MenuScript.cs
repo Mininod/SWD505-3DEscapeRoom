@@ -193,7 +193,8 @@ public class MenuScript : MonoBehaviour
                 if(inventory.getObjectAtSlot(i) != objectType.None)         //if the object is not nothing
                 {
                     GameObject toDrop = collectableLibrary.getGameObject(inventory.getObjectAtSlot(i));         //gets the gameObject from the object type at the selected slot
-                    GameObject drop = Instantiate(toDrop, transform.position, Quaternion.identity);             //Needs a translation on the drop point
+                    Vector3 dropPos = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z) + transform.forward;    //drop pos
+                    GameObject drop = Instantiate(toDrop, dropPos, Quaternion.identity);             //Needs a translation on the drop point
                     inventory.removeFromInventorySlot(i);
                     clearSelections();
                 }
