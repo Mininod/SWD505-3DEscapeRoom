@@ -31,6 +31,7 @@ public class GameLogicScript : MonoBehaviour
 
     public GameObject valveCrateLid;                //the crate with the valve in it - the lid
     public GameObject valveHandle;                  //the valve inside the crate
+    public GameObject journal10;                    //the journal inside the crate
 
     private bool pipeHandleAttached = false;        //check if the handle has been attached to the pipe
 
@@ -113,6 +114,7 @@ public class GameLogicScript : MonoBehaviour
         {
             openedCrate = true;
             valveHandle.SetActive(true);
+            journal10.SetActive(true);
             valveCrateLid.SetActive(false);
         }
 
