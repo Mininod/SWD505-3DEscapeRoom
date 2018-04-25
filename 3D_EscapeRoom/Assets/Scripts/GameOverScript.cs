@@ -5,13 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScript : MonoBehaviour
 {
-    void Update()
+    public void returnToMenu()
     {
-        if (Input.GetButtonDown("Exit"))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
-            SceneManager.LoadScene(0);          //load menu scene
-        }
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+        SceneManager.LoadScene(0);          //load menu scene
     }
 }
