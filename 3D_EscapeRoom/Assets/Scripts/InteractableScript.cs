@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
 
 public class InteractableScript : MonoBehaviour
@@ -33,14 +32,4 @@ public class InteractableScript : MonoBehaviour
     }
 }
 
-//[CustomEditor(typeof(InteractableScript))]
-//public class InteractableScriptEditor : AssemblyIsEditorAssembly
-//{
-//    override public void OnInspectorGUI()
-//    {
-//        var myScript = target as InteractableScript;
-
-
-//    }
-//}
 

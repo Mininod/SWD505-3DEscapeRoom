@@ -80,23 +80,45 @@ public class PipePuzzleControlScript : MonoBehaviour
     {
         for (int i = 0; i < valves.Length;)
         {
-            if(UnityEditor.ArrayUtility.Contains(valvesToBeOpen, i + 1))       //check if the valve is meant to be true
+            foreach(int value in valvesToBeOpen)
             {
-                if (valves[i]) ++i;     //if true, increment to the next valve to check
-                else return false;      //if false, the puzzle is not solved, return false
+                if(value == i)
+                {
+                    if (valves[i]) ++i;     //if true, increment to the next valve to check
+                    else return false;      //if false, the puzzle is not solved, return false
+                }
+            }
+            
+            foreach(int value in valvesToBeClosed)
+            {
+                if(value == i)
+                {
+                    if (!valves[i]) ++i;    //if true (valve is closed), increment to the next valve to check
+                    else return false;
+                }
+            }
 
-            }
-            else if(UnityEditor.ArrayUtility.Contains(valvesToBeClosed, i + 1))
-            {
-                if (!valves[i]) ++i;    //if true (valve is closed), increment to the next valve to check
-                else return false;
-            }
-            else        
-            {
-                ++i;    //if the valve os not specified open or closed, just increment to the next one
-            }
+            ++i;
 
-            if (i == valves.Length) return true;    //if all the valves are incremented through, the puzzle must be solved
+            if (i == valves.Length) return true;
+
+            //if(UnityEditor.ArrayUtility.Contains(valvesToBeOpen, i + 1))       //check if the valve is meant to be true
+            //{
+            //    if (valves[i]) ++i;     //if true, increment to the next valve to check
+            //    else return false;      //if false, the puzzle is not solved, return false
+
+            //}
+            //else if(UnityEditor.ArrayUtility.Contains(valvesToBeClosed, i + 1))
+            //{
+            //    if (!valves[i]) ++i;    //if true (valve is closed), increment to the next valve to check
+            //    else return false;
+            //}
+            //else        
+            //{
+            //    ++i;    //if the valve os not specified open or closed, just increment to the next one
+            //}
+
+            //if (i == valves.Length) return true;    //if all the valves are incremented through, the puzzle must be solved
         }
 
         return false;
