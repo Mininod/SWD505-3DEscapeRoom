@@ -289,6 +289,8 @@ public class MenuScript : MonoBehaviour
             yield return null;
         }
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene(2);      //Load the game over scene once the image has been faded in
     }
 
@@ -303,6 +305,8 @@ public class MenuScript : MonoBehaviour
             yield return null;
         }
 
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         SceneManager.LoadScene(3);      //Load the win scene once the image has been faded in
     }
 }
