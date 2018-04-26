@@ -10,10 +10,12 @@ public class ValveControlScript : MonoBehaviour
     public int secondGateNumber = 0;
 
     private PipePuzzleControlScript controller;
+    private SoundManagerScript soundManager;
 
     void Start()
     {
         controller = GameObject.Find("PipePuzzleControl").GetComponent<PipePuzzleControlScript>();
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManagerScript>();
     }
 
     void Update()
@@ -24,6 +26,7 @@ public class ValveControlScript : MonoBehaviour
     public void toggleGate()
     {
         //animation & sound here
+        soundManager.PlaySFX("ValveTurn");
 
         if (gateNumber != 0)     //if there is an assigned gate, else nothing happens
         {

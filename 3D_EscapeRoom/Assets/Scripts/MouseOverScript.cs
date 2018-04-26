@@ -136,7 +136,8 @@ public class MouseOverScript : MonoBehaviour
                                     triggerInteractable();
                                     targetObject.gameObject.SetActive(false);   //disable attach spot
                                     inventory.removeFromInventory(objectType.DoorHandle);
-                                    logicController.setDoorHandleAttached();        
+                                    logicController.setDoorHandleAttached();
+                                    soundManager.PlaySFX("HandleAttach");
                                 }
                                 break;
                             case objectType.FuseBoxA:
@@ -145,6 +146,7 @@ public class MouseOverScript : MonoBehaviour
                                     triggerInteractable();
                                     inventory.removeFromInventory(objectType.SuperChargedPotato);
                                     logicController.setPotatoInFuseBox(true);
+                                    soundManager.PlaySFX("FuseBoxZap");
                                 }
                                 break;
                             case objectType.FuseBoxWithPotato:
@@ -159,6 +161,7 @@ public class MouseOverScript : MonoBehaviour
                                     targetObject.gameObject.SetActive(false);   //disable door stop spot
                                     inventory.removeFromInventory(objectType.DoorStop);
                                     logicController.setDoorStopInPlace();
+                                    soundManager.PlaySFX("HandleAttach");
                                 }
                                 break;
                             case objectType.FuseBoxB:
@@ -167,10 +170,12 @@ public class MouseOverScript : MonoBehaviour
                                     triggerInteractable();
                                     inventory.removeFromInventory(objectType.PotatoCircuit);
                                     logicController.setPotatoCircuitInFuseBox();
+                                    soundManager.PlaySFX("FuseBoxZap");
                                 }
                                 break;
                             case objectType.Lever:
-                                switch(logicController.flipLever())
+                                soundManager.PlaySFX("HandleAttach");
+                                switch (logicController.flipLever())
                                 {
                                     case 1:     //no potato circuit
                                         Debug.Log("Needs Power");
