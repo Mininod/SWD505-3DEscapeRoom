@@ -57,9 +57,11 @@ public class GameLogicScript : MonoBehaviour
     private bool keypadBSuccess = false;            //check if the correct code has been entered in to keypad B
     private bool doorCOpen = false;                 //check if the final door is open
 
+    private SoundManagerScript soundManager;
+
 	void Start ()
     {
-		
+        soundManager = GameObject.Find("SoundManager").GetComponent<SoundManagerScript>();
 	}
 	
 	void Update ()
@@ -106,7 +108,11 @@ public class GameLogicScript : MonoBehaviour
         if (doorAOpen || doorStopInPlace)     //checks if door A has been opened or if it is wedged open by the door stop
         {
             //door in open state
-            if (doorA.activeSelf) doorA.SetActive(false);
+            if (doorA.activeSelf)
+            {
+                soundManager.PlaySFX("ElectricHum");
+                doorA.SetActive(false);
+            }
         }
 
         //Close door A if the door stop is not in place and the fuse box is off
@@ -130,6 +136,7 @@ public class GameLogicScript : MonoBehaviour
         {
             doorBOpen = true;
             //open door
+            soundManager.PlaySFX("ElectricHum");
             doorB.SetActive(false);
         }
 
@@ -167,6 +174,7 @@ public class GameLogicScript : MonoBehaviour
         {
             doorCOpen = true;
             //open door
+            soundManager.PlaySFX("ElectricHum");
             doorC.SetActive(false);
         }
 	}

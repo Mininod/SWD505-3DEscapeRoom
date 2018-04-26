@@ -4313,12 +4313,12 @@ Prefab:
     - target: {fileID: 114442297581272424, guid: afbec026df31b2d4fb2c3389e7c907b2,
         type: 2}
       propertyPath: SFXs.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114442297581272424, guid: afbec026df31b2d4fb2c3389e7c907b2,
         type: 2}
       propertyPath: SFXNames.Array.size
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4674333732534960, guid: afbec026df31b2d4fb2c3389e7c907b2, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4400,7 +4400,7 @@ Prefab:
     - target: {fileID: 114442297581272424, guid: afbec026df31b2d4fb2c3389e7c907b2,
         type: 2}
       propertyPath: SFXNames.Array.data[9]
-      value: Test3
+      value: ElectricHum
       objectReference: {fileID: 0}
     - target: {fileID: 114442297581272424, guid: afbec026df31b2d4fb2c3389e7c907b2,
         type: 2}
@@ -4497,6 +4497,11 @@ Prefab:
       propertyPath: SFXs.Array.data[8]
       value: 
       objectReference: {fileID: 8300000, guid: c4217e65802511245802b30bdec4009c, type: 3}
+    - target: {fileID: 114442297581272424, guid: afbec026df31b2d4fb2c3389e7c907b2,
+        type: 2}
+      propertyPath: SFXs.Array.data[9]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4568d2739d37ec345baaabe5d9797b3c, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afbec026df31b2d4fb2c3389e7c907b2, type: 2}
   m_IsPrefabParent: 0
@@ -11920,7 +11925,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4b18ddd7dc5884b45ac8e9626d652d2b, type: 2}
+  - {fileID: 2100000, guid: 384f9e4a0ddde6e43871ee4f2a6b0ea8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18713,7 +18718,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4b18ddd7dc5884b45ac8e9626d652d2b, type: 2}
+  - {fileID: 2100000, guid: 384f9e4a0ddde6e43871ee4f2a6b0ea8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -18759,7 +18764,7 @@ Transform:
   m_GameObject: {fileID: 1459245610}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -4.969, y: 0.233, z: 3.006}
-  m_LocalScale: {x: 1, y: 0.11537529, z: 2.43676}
+  m_LocalScale: {x: 0.8136028, y: 0.11537529, z: 2.43676}
   m_Children: []
   m_Father: {fileID: 1304864687}
   m_RootOrder: 3
@@ -20165,7 +20170,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!65 &1564800421
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23268,7 +23273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myType: 33
-  hoverTooltipText: Plant explosive
+  hoverTooltipText: I wonder if I can get rid of the lock...
   canBeClicked: 1
   collectable: 0
   clickTooltipText: 
@@ -23287,7 +23292,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4b18ddd7dc5884b45ac8e9626d652d2b, type: 2}
+  - {fileID: 2100000, guid: 384f9e4a0ddde6e43871ee4f2a6b0ea8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -26558,10 +26563,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myType: 19
-  hoverTooltipText: 
+  hoverTooltipText: It looks like there should be a handle here
   canBeClicked: 1
   collectable: 0
-  clickTooltipText: I can put a door handle here
+  clickTooltipText: 
   clickTooltipTextSuccess: Now how do I open this door?
 --- !u!23 &1976992433
 MeshRenderer:
@@ -26576,7 +26581,7 @@ MeshRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 2100000, guid: 4b18ddd7dc5884b45ac8e9626d652d2b, type: 2}
+  - {fileID: 2100000, guid: 384f9e4a0ddde6e43871ee4f2a6b0ea8, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
