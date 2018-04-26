@@ -15,6 +15,7 @@ public class MenuScript : MonoBehaviour
     private GameObject reticle;                  //the gameobject that displays the reticle
     private UnityStandardAssets.Characters.FirstPerson.FirstPersonController playerController;      //direct reference to the player controller
 
+    public GameObject tooltipText;                  //the tooltip text, so it can be disabled when neccessary
     public GameObject notesOverlay;              //the gameobject for displaying the collectable notes
     public Sprite[] notes;                        //an array full of notes/images to display
     private bool notesUp = false;                //wehther or not the notes are currently being displayed
@@ -101,12 +102,14 @@ public class MenuScript : MonoBehaviour
                 menuOverlay.SetActive(false);           //deactivate
                 menuUp = false;
                 playerController.enabled = true;        //turn the player controls back on when the menu is gone
+                tooltipText.SetActive(true);
             }
             else
             {
                 menuOverlay.SetActive(true);
                 menuUp = true;
                 playerController.enabled = false;       //diable all player controls when in the menu
+                tooltipText.SetActive(false);
             }
         }
 
@@ -134,6 +137,7 @@ public class MenuScript : MonoBehaviour
                 notesOverlay.SetActive(false);
                 notesUp = false;
                 playerController.enabled = true;
+                tooltipText.SetActive(true);    
             }
         }
     }
@@ -263,6 +267,7 @@ public class MenuScript : MonoBehaviour
             notesOverlay.SetActive(true);
             notesUp = true;         //tells the script that a note is currently being displayed
             playerController.enabled = false;
+            tooltipText.SetActive(false);       //hide tooltip text when a note is open
         }
         else Debug.Log("No Note");
     }
