@@ -108,8 +108,8 @@ public class MouseOverScript : MonoBehaviour
                             case objectType.DoorHandleAttachSpot:
                                 if(inventory.checkInventory(objectType.DoorHandle))     //if you have the door handle
                                 {
-                                    //place handle visually
-                                    triggerInteractable();      
+                                    triggerInteractable();
+                                    targetObject.gameObject.SetActive(false);   //disable attach spot
                                     inventory.removeFromInventory(objectType.DoorHandle);
                                     logicController.setDoorHandleAttached();        
                                 }
@@ -131,6 +131,7 @@ public class MouseOverScript : MonoBehaviour
                                 if(inventory.checkInventory(objectType.DoorStop))
                                 {
                                     triggerInteractable();
+                                    targetObject.gameObject.SetActive(false);   //disable door stop spot
                                     inventory.removeFromInventory(objectType.DoorStop);
                                     logicController.setDoorStopInPlace();
                                 }
@@ -212,11 +213,7 @@ public class MouseOverScript : MonoBehaviour
 
 
 
-                            case objectType.PipeHandle:     //TEST--------------------------------------------
-                                logicController.setTerminalCooled();
-                                logicController.setEscapePodCooled();
-                                logicController.setPotatoCircuitInFuseBox();
-                                break;
+
                                 /*
                             case objectType.Box:
                                 if (inventory.checkInventory(objectType.TestPickup))          //if we have the test pickup
@@ -266,17 +263,10 @@ public class MouseOverScript : MonoBehaviour
                                 {
                                     triggerInteractable();      //so that it can only be done once
                                     inventory.removeFromInventory(objectType.LockExplosive);         //remove the explosive if you use it
-                                    Debug.Log("Tick Tick");
-                                    soundManager.PlaySFX("Test1");
-                                    StartCoroutine(craftedExplosive(targetObject.gameObject));
+                                    targetObject.gameObject.SetActive(false);       //disable placement spot
+                                    StartCoroutine(craftedExplosive());
                                 }
                                 break;
-                                /*
-                            case objectType.Door:
-                                Debug.Log("Win");
-                                menuScript.triggerWin();    //Test
-                                break;
-                                */
                             case objectType.None:
                                 break;
                             default:        //for if the object is neither collectable or has an interaction
@@ -314,9 +304,10 @@ public class MouseOverScript : MonoBehaviour
         clickTooltipDuration = clickTooltipMaxDuration;             //start the timer for displaying the text
     }
 
-    private IEnumerator craftedExplosive(GameObject target)
+    private IEnumerator craftedExplosive()
     {
-        GameObject explosiveSpot = target;      //save the target
+        soundManager.PlaySFX("Beep3");
+        logicController.setExplosivePlaced();
 
         //play ticking sound for countdown to explosion
 
@@ -325,11 +316,9 @@ public class MouseOverScript : MonoBehaviour
         //play explosion sound
         //trigger explosion animation
 
-        soundManager.PlaySFX("Test2");      //play explosion sound
+        //play explosion sound
 
         Debug.Log("Boom"); 
-        
-        Destroy(explosiveSpot);         //remove the explosive point
 
         logicController.setLockExploded();
     }

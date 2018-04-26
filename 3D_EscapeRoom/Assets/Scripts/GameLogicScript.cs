@@ -5,6 +5,9 @@ using UnityEngine;
 public class GameLogicScript : MonoBehaviour
 {
     private bool doorAhandleAttached = false;       //check if the handle attached to door a
+
+    public GameObject doorHandle;                   //the door handle to be shown, when attached
+
     private bool potatoInFuseBox = false;           //check if the fuse box is powered in room 1
     private bool doorAOpen = false;                 //check if door a is currently open
 
@@ -14,6 +17,9 @@ public class GameLogicScript : MonoBehaviour
     public GameObject doorA;                        //The first door, that can be held open by the door stop
 
     private bool doorStopInPlace = false;           //check if the door stop is used to prop open door a
+
+    public GameObject doorStop;                     //the door stop to keep the door open
+
     private bool potatoCircuitInFuseBox = false;    //check if the seconds fuse box is on
 
     public GameObject fuseBoxB;                     //The second fuse box
@@ -26,9 +32,11 @@ public class GameLogicScript : MonoBehaviour
 
     public GameObject doorB;                        //the second door, controlled by the keypad
 
+    private bool explosivePlaced = false;           //check when the explosive has been planted
     private bool lockExploded = false;              //check to see when the crate has been opened
     private bool openedCrate = false;               //check to see if the crate has been opened in the code
 
+    public GameObject lockExplosive;                //The explosive to blow the lid off the crate
     public GameObject valveCrateLid;                //the crate with the valve in it - the lid
     public GameObject valveHandle;                  //the valve inside the crate
     public GameObject journal10;                    //the journal inside the crate
@@ -52,6 +60,12 @@ public class GameLogicScript : MonoBehaviour
 	
 	void Update ()
     {
+        //set door handle to appear
+        if(doorAhandleAttached && !doorHandle.activeSelf)
+        {
+            doorHandle.SetActive(true);
+        }
+
         //Switch potato in for non potato fusebox
         if(potatoInFuseBox && !fuseBoxWithPotato.activeSelf)        //if the potato is placed in the fusebox, switch the box with potato
         {
@@ -68,8 +82,14 @@ public class GameLogicScript : MonoBehaviour
             fuseBoxA.GetComponent<InteractableScript>().untriggerInteractable();
         }
 
+        //Set door stop to appear
+        if(doorStopInPlace && !doorStop.activeSelf)
+        {
+            doorStop.SetActive(true);
+        }
+
         //Set door stop spot active if door A is open
-        if (doorAOpen && !doorStopSpot.activeSelf)       //when door a is opened, the door stop can now be placed
+        if (doorAOpen && !doorStopSpot.activeSelf && !doorStopInPlace)       //when door a is opened, the door stop can now be placed (as long as it hasnt all ready been placed)
         {
             doorStopSpot.SetActive(true);
         }
@@ -109,6 +129,12 @@ public class GameLogicScript : MonoBehaviour
             doorB.SetActive(false);
         }
 
+        //activate lock explosive
+        if(explosivePlaced && !lockExplosive.activeSelf && !lockExploded)   //only until the lock has been blown
+        {
+            lockExplosive.SetActive(true);
+        }
+
         //Set valve handle in crate
         if(lockExploded && !openedCrate)    //if the lock is exploded but the crate isnt open
         {
@@ -116,6 +142,7 @@ public class GameLogicScript : MonoBehaviour
             valveHandle.SetActive(true);
             journal10.SetActive(true);
             valveCrateLid.SetActive(false);
+            lockExplosive.SetActive(false);
         }
 
         //Activate valve10 when the handle is attached
@@ -187,6 +214,11 @@ public class GameLogicScript : MonoBehaviour
     public void setDoorBOpen()
     {
         doorBOpen = true;
+    }
+
+    public void setExplosivePlaced()
+    {
+        explosivePlaced = true;
     }
 
     public void setLockExploded()
