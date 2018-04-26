@@ -86,7 +86,7 @@ public class PipePuzzleControlScript : MonoBehaviour
                 {
                     if (valves[i])
                     {
-                        ++i;     //if true, increment to the next valve to check
+                        //++i;     //if true, increment to the next valve to check
                         break;
                     }
                     else return false;      //if false, the puzzle is not solved, return false
@@ -99,7 +99,7 @@ public class PipePuzzleControlScript : MonoBehaviour
                 {
                     if (!valves[i])
                     {
-                        ++i;    //if true (valve is closed), increment to the next valve to check
+                        //++i;    //if true (valve is closed), increment to the next valve to check
                         break;
                     }
                     else return false;
