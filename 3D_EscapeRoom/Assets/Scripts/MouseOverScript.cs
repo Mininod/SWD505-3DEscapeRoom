@@ -48,26 +48,51 @@ public class MouseOverScript : MonoBehaviour
         {
             foreach (var item in hits)      //this will iterate through all items the ray hits
             {
-                if (item.transform.gameObject.GetComponent<InteractableScript>()                                //if the object is an interactable and not just a wall etc
-                    && targetObject == null                                                                     //&& we haven't already targeted an interactable in front of this
-                    && !item.transform.gameObject.GetComponent<InteractableScript>().getTriggerStatus())        //&& this interactable hasn't been triggered already
+                //if (item.transform.gameObject.GetComponent<InteractableScript>()                                //if the object is an interactable and not just a wall etc
+                //    && targetObject == null                                                                     //&& we haven't already targeted an interactable in front of this
+                //    && !item.transform.gameObject.GetComponent<InteractableScript>().getTriggerStatus())        //&& this interactable hasn't been triggered already
+                //{
+                //    tooltipText.text = item.transform.gameObject.GetComponent<InteractableScript>().hoverTooltipText;        //set tooltip text
+                //    targetObject = item.transform.gameObject.GetComponent<InteractableScript>();                             //set as targeted object
+                //    break;
+                //}
+                //else if ((item.transform.gameObject.GetComponent<KeypadButtonScript>() && targetKeypadButton == null)) //if the object is part of the keypad
+                //{
+                //    targetKeypadButton = item.transform.gameObject.GetComponent<KeypadButtonScript>();
+                //    break;
+                //}
+                //else if (item.transform.gameObject.GetComponent<ValveControlScript>() && targetValveControl == null)    //if the target is a valve control
+                //{
+                //    targetValveControl = item.transform.gameObject.GetComponent<ValveControlScript>();
+                //    break;
+                //}
+
+                if(item.transform.gameObject.GetComponent<InteractableScript>() && targetObject == null && !item.transform.gameObject.GetComponent<InteractableScript>().getTriggerStatus())
                 {
                     tooltipText.text = item.transform.gameObject.GetComponent<InteractableScript>().hoverTooltipText;        //set tooltip text
-                    targetObject = item.transform.gameObject.GetComponent<InteractableScript>();                             //set as targeted object
-                    break;
+                    targetObject = item.transform.gameObject.GetComponent<InteractableScript>();
                 }
-                else if ((item.transform.gameObject.GetComponent<KeypadButtonScript>() && targetKeypadButton == null)) //if the object is part of the keypad
+                else if(item.transform.gameObject.GetComponent<KeypadButtonScript>() && targetKeypadButton == null)
                 {
                     targetKeypadButton = item.transform.gameObject.GetComponent<KeypadButtonScript>();
-                    Debug.Log("Keypad");
-                    break;
                 }
-                else if (item.transform.gameObject.GetComponent<ValveControlScript>() && targetValveControl == null)    //if the target is a valve control
+                else if(item.transform.gameObject.GetComponent<ValveControlScript>() && targetValveControl == null)
                 {
                     targetValveControl = item.transform.gameObject.GetComponent<ValveControlScript>();
-                    break;
                 }
             }
+
+            //After checking for targets, run through priority
+            if(targetValveControl)
+            {
+                targetKeypadButton = null;
+                targetObject = null;
+            }
+            else if(targetKeypadButton)
+            {
+                targetObject = null;
+            }
+            //else the target object will be priority
         }
 
         //Act on object (if there is one)
