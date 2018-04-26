@@ -207,57 +207,6 @@ public class MouseOverScript : MonoBehaviour
                             case objectType.Journal10:
                                 menuScript.displayNote(9);
                                 break;
-
-
-
-
-
-
-
-                                /*
-                            case objectType.Box:
-                                if (inventory.checkInventory(objectType.TestPickup))          //if we have the test pickup
-                                {
-                                    if (!targetObject.getTriggerStatus())        //if it hasnt been triggered, trigger it
-                                    {
-                                        Debug.Log("ActionBox");
-                                        triggerInteractable();
-                                    }
-                                }
-                                break;
-                            case objectType.Cylinder:
-                                targetObject.GetComponent<PasswordInputScript>().displayInputOverlay();
-                                break;
-                            case objectType.TestPickup:
-                                break;
-                            case objectType.Key:
-                                menuScript.displayNote(0);
-                                break;
-                            case objectType.FinalDoor:
-                                if (inventory.checkInventory(objectType.Key))            //if we have the key
-                                {
-                                    if (!targetObject.getTriggerStatus())        //if it hasnt been triggered, trigger it
-                                    {
-                                        Debug.Log("Door Open");
-                                        triggerInteractable();
-                                    }
-                                }
-                                break;
-                                
-                            //Explosive Components
-                            case objectType.CraftedExplosive:
-                                break;
-                            case objectType.ExplosivePlantSpot:                 //if you click on an explosive spot
-                                if(inventory.checkInventory(objectType.CraftedExplosive))
-                                {
-                                    triggerInteractable();      //so that it can only be done once
-                                    inventory.removeFromInventory(objectType.CraftedExplosive);         //remove the explosive if you use it
-                                    Debug.Log("Tick Tick");
-                                    soundManager.PlaySFX("Test1");
-                                    StartCoroutine(craftedExplosive(targetObject.gameObject));                  
-                                }
-                                break;
-                                */
                             case objectType.LockExplosivePlantSpot:             //the spot to plant the explosive for breaking the chest open
                                 if (inventory.checkInventory(objectType.LockExplosive))     //if you have the clock explosive
                                 {
