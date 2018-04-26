@@ -84,33 +84,6 @@ public class PlayerInventoryScript : MonoBehaviour
         return inventory[slot];
     }
 
-    //public bool craftObject(objectType a, objectType b)
-    //{
-    //    bool itemCrafted = false;
-
-    //    for(int i = 0; i < recipeList.Length; ++i)          //check each recipe
-    //    {
-    //        if(a == recipeList[i].ComponentA && b == recipeList[i].ComponentB ||
-    //            b == recipeList[i].ComponentA && a == recipeList[i].ComponentB)        //check that the two components being used match the recipe
-    //        {
-    //            for (int j = 0; j < inventorySize; ++j)
-    //            {
-    //                if (inventory[j] == recipeList[i].ComponentA || inventory[j] == recipeList[i].ComponentB)
-    //                    inventory[j] = objectType.None;              //if the object in the inventory is one of the two used, it will be removed
-
-    //                if(itemCrafted == false && inventory[j] == objectType.None)
-    //                {
-    //                    inventory[j] = recipeList[i].Result;        //add the result to the first empty slot
-    //                    itemCrafted = true; 
-    //                }
-    //            }
-    //        }
-    //    }
-
-    //    if (itemCrafted) return true;
-    //    else return false;
-    //}
-
     //----------------------------------------Testing----------------------------------------
     public void forceSetInventorySize(int size)
     {

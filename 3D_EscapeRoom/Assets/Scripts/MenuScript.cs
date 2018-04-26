@@ -49,16 +49,6 @@ public class MenuScript : MonoBehaviour
 
         levelTimer = timerMax * 60;         //* 60 to turn it from minutes to seconds 
 
-
-
-        //Set game over screen elements to 0 alpha - I could do this in the editor, but then they are hard to edit
-        Color panelColor0 = gameOverPanel.GetComponent<Image>().color;
-        panelColor0.a = 0;
-        gameOverPanel.GetComponent<Image>().color = panelColor0;
-
-        Color textColor0 = gameOverPanel.transform.GetChild(0).gameObject.GetComponent<Text>().color;
-        textColor0.a = 0;
-        gameOverPanel.transform.GetChild(0).gameObject.GetComponent<Text>().color = textColor0;
     }
 
     void Update()
@@ -247,6 +237,7 @@ public class MenuScript : MonoBehaviour
                 gameOver = true;                    //set to game over
 
                 reticle.SetActive(false);                   //deactivate the reticle
+                tooltipText.SetActive(false);               //disable tooltip text
                 gameOverPanel.SetActive(true);              //activate the game over screen
                 StartCoroutine(fadeGameOverPanel());        //Start the fade in
             }
@@ -255,6 +246,8 @@ public class MenuScript : MonoBehaviour
 
     public void triggerWin()
     {
+        tooltipText.SetActive(false);       //disable tooltip text
+        reticle.SetActive(false);           //deactivate the reticle
         winScreenPanel.SetActive(true);     //activate the win screen
         StartCoroutine(fadeWinScreen());    //start the fade in
     }
@@ -286,10 +279,6 @@ public class MenuScript : MonoBehaviour
             Color panelColour = gameOverPanel.GetComponent<Image>().color;
             panelColour.a = i;
             gameOverPanel.GetComponent<Image>().color = panelColour;
-
-            Color textColour = gameOverPanel.transform.GetChild(0).gameObject.GetComponent<Text>().color;
-            textColour.a = i;
-            gameOverPanel.transform.GetChild(0).gameObject.GetComponent<Text>().color = textColour;
 
             yield return null;
         }

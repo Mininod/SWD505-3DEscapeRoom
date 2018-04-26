@@ -9,20 +9,20 @@ public class UnitTesting : MonoBehaviour
 {
     //ButtonSelectScriptTests
     //Start
-    [UnityTest]
-    public IEnumerator BSStoggleOutline()
-    {
-        //Arrange
-        var testButton = new GameObject().AddComponent<ButtonSelectScript>();
+    //[UnityTest]
+    //public IEnumerator BSStoggleOutline()
+    //{
+    //    //Arrange
+    //    var testButton = new GameObject().AddComponent<ButtonSelectScript>();
         
-        yield return null;
+    //    yield return null;
 
-        //Act
-        testButton.toggleOutline();
+    //    //Act
+    //    testButton.toggleOutline();
 
-        //Assert
-        Assert.AreEqual(true, testButton.isSelected());          //should simply select the button
-    }
+    //    //Assert
+    //    Assert.AreEqual(true, testButton.isSelected());          //should simply select the button
+    //}
 
     [UnityTest]
     public IEnumerator BSSisSelected()
@@ -54,50 +54,6 @@ public class UnitTesting : MonoBehaviour
         Assert.AreEqual(false, testButton.isSelected());            //should be false after being deselected
     }
     //End
-
-
-    //MainMenuScriptTests
-    //Start
-    [UnityTest]
-    public IEnumerator MMSstartGame()
-    {
-        //Arrange
-
-        yield return null;
-
-        //Act
-
-        //Assert
-        Assert.AreEqual(1, 1);
-    }
-
-    [UnityTest]
-    public IEnumerator MMSsettings()
-    {
-        //Arrange
-
-        yield return null;
-
-        //Act
-
-        //Assert
-        Assert.AreEqual(1, 1);
-    }
-
-    [UnityTest]
-    public IEnumerator MMSquitGame()
-    {
-        //Arrange
-
-        yield return null;
-
-        //Act
-
-        //Assert
-        Assert.AreEqual(1, 1);
-    }
-    //End
-
 
     //InteractableScriptTests
     //Start
@@ -131,13 +87,6 @@ public class UnitTesting : MonoBehaviour
     }
     //End
 
-
-    //PasswordInputScriptTests
-    //Start
-
-    //End
-
-
     //PlayerInventoryScriptTests
     //Start
     [UnityTest]
@@ -150,7 +99,7 @@ public class UnitTesting : MonoBehaviour
         yield return null;
 
         //Act
-        testInventory.addToInventory(objectType.Battery);            //add a key to the first open slot
+        testInventory.addToInventory(objectType.Battery);            //add a Battery to the first open slot
 
         //Assert
         Assert.AreEqual(true, testInventory.checkInventory(objectType.Battery));          //returns true if there is a key in the inventory
@@ -205,25 +154,7 @@ public class UnitTesting : MonoBehaviour
         var ret = testInventory.getObjectAtSlot(0);         //slot 0 is the first slot, where there should be a key
 
         //Assert
-        //Assert.AreEqual(objectType.Key, ret);
-    }
-
-    [UnityTest]
-    public IEnumerator PIScraftObject()
-    {
-        //Arrange
-        var testInventory = new GameObject().AddComponent<PlayerInventoryScript>();
-        testInventory.forceSetInventorySize(5);     //testing method to set the inventory size, normally done in start from a public variable
-        testInventory.addToInventory(objectType.Battery);
-        testInventory.addToInventory(objectType.CircuitAdapter);
-        //Need to use another test method to add a recipe to the inventory
-
-        yield return null;
-
-        //Act
-
-        //Assert
-        Assert.AreEqual(1, 1);
+        Assert.AreEqual(objectType.Battery, ret);
     }
     //End
 
