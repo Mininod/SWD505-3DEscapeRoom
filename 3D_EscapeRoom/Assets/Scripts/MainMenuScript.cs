@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class MainMenuScript : MonoBehaviour
 {
     public GameObject settingsMenuPanel;
+    public GameObject creditsPanel;
     public GameObject[] mainMenu;
 
     private bool canInteract = true;
@@ -29,6 +30,16 @@ public class MainMenuScript : MonoBehaviour
     public void settings()
     {
         settingsMenuPanel.SetActive(true);
+    }
+
+    public void credits()
+    {
+        creditsPanel.SetActive(true);
+    }
+
+    public void leaveCredits()
+    {
+        creditsPanel.SetActive(false);
     }
 
     public void quitGame()
