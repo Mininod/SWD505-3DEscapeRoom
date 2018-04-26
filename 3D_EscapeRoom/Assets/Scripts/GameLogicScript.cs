@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameLogicScript : MonoBehaviour
 {
@@ -47,6 +48,9 @@ public class GameLogicScript : MonoBehaviour
     public GameObject pipeHandleSpot;               //the spot for the handle, so it can be deactivated once used
 
     private bool escapePodCooled =  false;          //check if the escape pod has been cooled
+
+    public GameObject escapePodMonitor;             //The monitor showing the status of the escape pod
+    public Sprite escapePodReady;                   //The sprite to display on the monitor when the escape pod is cooled
 
     public GameObject doorC;                        //the final door to be opened
 
@@ -150,6 +154,12 @@ public class GameLogicScript : MonoBehaviour
         {
             pipeValve10.SetActive(true);    //activate the valve
             pipeHandleSpot.SetActive(false);        //deactivate the spot
+        }
+
+        //update escape pod monitor
+        if(escapePodCooled && (escapePodMonitor.GetComponent<Image>().sprite != escapePodReady))
+        {
+            escapePodMonitor.GetComponent<Image>().sprite = escapePodReady;
         }
 
         //Open door c when keycode is successful
