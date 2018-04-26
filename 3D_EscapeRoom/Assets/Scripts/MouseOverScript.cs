@@ -292,12 +292,10 @@ public class MouseOverScript : MonoBehaviour
 
         yield return new WaitForSeconds(5);
 
-        //play explosion sound
         //trigger explosion animation
 
-        //play explosion sound
-
-        Debug.Log("Boom"); 
+        Debug.Log("Boom");
+        soundManager.PlaySFX("Explode");
 
         logicController.setLockExploded();
     }

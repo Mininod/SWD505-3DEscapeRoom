@@ -4313,12 +4313,12 @@ Prefab:
     - target: {fileID: 114442297581272424, guid: afbec026df31b2d4fb2c3389e7c907b2,
         type: 2}
       propertyPath: SFXs.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 114442297581272424, guid: afbec026df31b2d4fb2c3389e7c907b2,
         type: 2}
       propertyPath: SFXNames.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4674333732534960, guid: afbec026df31b2d4fb2c3389e7c907b2, type: 2}
       propertyPath: m_LocalPosition.x
@@ -4405,7 +4405,7 @@ Prefab:
     - target: {fileID: 114442297581272424, guid: afbec026df31b2d4fb2c3389e7c907b2,
         type: 2}
       propertyPath: SFXNames.Array.data[10]
-      value: Test3
+      value: Explode
       objectReference: {fileID: 0}
     - target: {fileID: 114442297581272424, guid: afbec026df31b2d4fb2c3389e7c907b2,
         type: 2}
@@ -4502,6 +4502,11 @@ Prefab:
       propertyPath: SFXs.Array.data[9]
       value: 
       objectReference: {fileID: 8300000, guid: 4568d2739d37ec345baaabe5d9797b3c, type: 3}
+    - target: {fileID: 114442297581272424, guid: afbec026df31b2d4fb2c3389e7c907b2,
+        type: 2}
+      propertyPath: SFXs.Array.data[10]
+      value: 
+      objectReference: {fileID: 8300000, guid: 4c799348365221d40bb8b2e66ca85a5a, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: afbec026df31b2d4fb2c3389e7c907b2, type: 2}
   m_IsPrefabParent: 0
