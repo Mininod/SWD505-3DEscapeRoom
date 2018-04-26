@@ -6482,7 +6482,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4423036973413602, guid: 7dee89cefed818748b1ac4dc63f278a3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -28.46
+      value: -17.88
       objectReference: {fileID: 0}
     - target: {fileID: 4423036973413602, guid: 7dee89cefed818748b1ac4dc63f278a3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -6570,7 +6570,7 @@ Prefab:
     - target: {fileID: 114477321061236928, guid: 7dee89cefed818748b1ac4dc63f278a3,
         type: 2}
       propertyPath: timerMax
-      value: 1
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 114477321061236928, guid: 7dee89cefed818748b1ac4dc63f278a3,
         type: 2}
