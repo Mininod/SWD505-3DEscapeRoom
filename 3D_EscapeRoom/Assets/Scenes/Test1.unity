@@ -6482,7 +6482,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4423036973413602, guid: 7dee89cefed818748b1ac4dc63f278a3, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -17.88
+      value: -29.52
       objectReference: {fileID: 0}
     - target: {fileID: 4423036973413602, guid: 7dee89cefed818748b1ac4dc63f278a3, type: 2}
       propertyPath: m_LocalPosition.y
@@ -21345,6 +21345,16 @@ Prefab:
       propertyPath: gateDisplays.Array.size
       value: 16
       objectReference: {fileID: 0}
+    - target: {fileID: 114886609667457480, guid: b4c78c6d02e469f4c9a304559372d373,
+        type: 2}
+      propertyPath: escapePodCoolingClosed.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114886609667457480, guid: b4c78c6d02e469f4c9a304559372d373,
+        type: 2}
+      propertyPath: controlPanelCoolingClosed.Array.size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4833309948329740, guid: b4c78c6d02e469f4c9a304559372d373, type: 2}
       propertyPath: m_LocalPosition.x
       value: -25.514
@@ -21547,6 +21557,51 @@ Prefab:
       propertyPath: gateDisplays.Array.data[15]
       value: 
       objectReference: {fileID: 2126252534}
+    - target: {fileID: 114886609667457480, guid: b4c78c6d02e469f4c9a304559372d373,
+        type: 2}
+      propertyPath: controlPanelCoolingClosed.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114886609667457480, guid: b4c78c6d02e469f4c9a304559372d373,
+        type: 2}
+      propertyPath: controlPanelCoolingClosed.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114886609667457480, guid: b4c78c6d02e469f4c9a304559372d373,
+        type: 2}
+      propertyPath: controlPanelCoolingClosed.Array.data[2]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114886609667457480, guid: b4c78c6d02e469f4c9a304559372d373,
+        type: 2}
+      propertyPath: controlPanelCoolingClosed.Array.data[3]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 114886609667457480, guid: b4c78c6d02e469f4c9a304559372d373,
+        type: 2}
+      propertyPath: controlPanelCoolingClosed.Array.data[4]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114886609667457480, guid: b4c78c6d02e469f4c9a304559372d373,
+        type: 2}
+      propertyPath: controlPanelCoolingClosed.Array.data[5]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 114886609667457480, guid: b4c78c6d02e469f4c9a304559372d373,
+        type: 2}
+      propertyPath: controlPanelCoolingClosed.Array.data[6]
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114886609667457480, guid: b4c78c6d02e469f4c9a304559372d373,
+        type: 2}
+      propertyPath: escapePodCoolingClosed.Array.data[2]
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114886609667457480, guid: b4c78c6d02e469f4c9a304559372d373,
+        type: 2}
+      propertyPath: escapePodCoolingClosed.Array.data[3]
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b4c78c6d02e469f4c9a304559372d373, type: 2}
   m_IsPrefabParent: 0
