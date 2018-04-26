@@ -9,20 +9,20 @@ public class UnitTesting : MonoBehaviour
 {
     //ButtonSelectScriptTests
     //Start
-    //[UnityTest]
-    //public IEnumerator BSStoggleOutline()
-    //{
-    //    //Arrange
-    //    var testButton = new GameObject().AddComponent<ButtonSelectScript>();
-        
-    //    yield return null;
+    [UnityTest]
+    public IEnumerator BSStoggleOutline()
+    {
+        //Arrange
+        var testButton = new GameObject().AddComponent<ButtonSelectScript>();
 
-    //    //Act
-    //    testButton.toggleOutline();
+        yield return null;
 
-    //    //Assert
-    //    Assert.AreEqual(true, testButton.isSelected());          //should simply select the button
-    //}
+        //Act
+        testButton.toggleOutline();
+
+        //Assert
+        Assert.AreEqual(true, testButton.isSelected());          //should simply select the button
+    }
 
     [UnityTest]
     public IEnumerator BSSisSelected()
