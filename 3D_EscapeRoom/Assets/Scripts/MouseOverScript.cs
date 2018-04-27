@@ -94,7 +94,11 @@ public class MouseOverScript : MonoBehaviour
                 tooltipText.text = targetKeypadButton.transform.gameObject.GetComponent<KeypadButtonScript>().getHoverText();
             }
             //else the target object will be priority
-            tooltipText.text = targetObject.transform.gameObject.GetComponent<InteractableScript>().hoverTooltipText;        //set tooltip text
+            else if(targetObject)
+            {
+                tooltipText.text = targetObject.transform.gameObject.GetComponent<InteractableScript>().hoverTooltipText;        //set tooltip text
+            }
+            
         }
 
         //Act on object (if there is one)
