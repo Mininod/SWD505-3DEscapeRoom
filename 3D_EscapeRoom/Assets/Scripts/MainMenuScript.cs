@@ -8,10 +8,6 @@ public class MainMenuScript : MonoBehaviour
 {
     public GameObject settingsMenuPanel;
     public GameObject creditsPanel;
-    public GameObject[] mainMenu;
-
-    private bool canInteract = true;
-    private int selectedButton = -1;
 
     private void Start()
     {
@@ -47,28 +43,4 @@ public class MainMenuScript : MonoBehaviour
         Application.Quit();
     }
     //End
-
-    //private void Update()
-    //{
-    //    float controllerInput = (float)Input.GetAxis("Vertical");
-
-    //    if (controllerInput != 0 && canInteract)
-    //    {
-    //        canInteract = false;    //stops multiple movements on the menu
-    //        StartCoroutine(menuChange(controllerInput));
-    //    }
-    //    mainMenu[selectedButton].GetComponent<Button>().Select();
-    //}
-
-    //IEnumerator menuChange(float input)
-    //{
-    //    if (input < 0 && selectedButton < mainMenu.Length - 1)
-    //        selectedButton++;
-    //    else if (input > 0 && selectedButton > 0)
-    //        selectedButton--;
-
-    //    yield return new WaitForSecondsRealtime(0.2f);
-    //    canInteract = true;     //now you move again
-    //    StopCoroutine(menuChange(0));
-    //}
 }
