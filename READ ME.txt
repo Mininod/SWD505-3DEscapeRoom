@@ -1,0 +1,5 @@
+We couldn't fit the build within the github because of size limit.
+To play the built version please load up unity and create a build yourself.
+It nice and simple as you just have to click build and run.
+
+Sorry for the inconvenience.
