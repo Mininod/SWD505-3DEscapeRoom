@@ -9,6 +9,8 @@ public class ValveControlScript : MonoBehaviour
     public bool canControlSecondgate = false;
     public int secondGateNumber = 0;
 
+    private string hoverText = "Turn valve";
+
     private PipePuzzleControlScript controller;
     private SoundManagerScript soundManager;
 
@@ -33,5 +35,10 @@ public class ValveControlScript : MonoBehaviour
             controller.toggleValve(gateNumber);
             if (canControlSecondgate) controller.toggleValve(secondGateNumber);
         }
+    }
+
+    public string getHoverText()
+    {
+        return hoverText;
     }
 }

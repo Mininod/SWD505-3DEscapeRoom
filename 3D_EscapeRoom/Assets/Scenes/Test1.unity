@@ -8395,6 +8395,56 @@ Prefab:
       propertyPath: pincode
       value: 4275
       objectReference: {fileID: 0}
+    - target: {fileID: 114563928414435740, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114110023571984334, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114164955289792266, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114847539723674756, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114625377231471860, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114618266409934412, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114688227235229804, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114375228900913550, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114207281034907420, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611713679230080, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1fe36e4ce5948041907e0f101e5cd59, type: 2}
   m_IsPrefabParent: 0
@@ -11544,6 +11594,56 @@ Prefab:
     - target: {fileID: 1975900207743730, guid: c1fe36e4ce5948041907e0f101e5cd59, type: 2}
       propertyPath: m_Name
       value: PinCodeInputA
+      objectReference: {fileID: 0}
+    - target: {fileID: 114563928414435740, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114110023571984334, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114164955289792266, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114847539723674756, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114625377231471860, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114618266409934412, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114688227235229804, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114375228900913550, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114207281034907420, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
+      objectReference: {fileID: 0}
+    - target: {fileID: 114611713679230080, guid: c1fe36e4ce5948041907e0f101e5cd59,
+        type: 2}
+      propertyPath: hoverText
+      value: Press button
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1fe36e4ce5948041907e0f101e5cd59, type: 2}

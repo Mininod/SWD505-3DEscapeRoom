@@ -5,6 +5,7 @@ using UnityEngine;
 public class KeypadButtonScript : MonoBehaviour
 {
     public int buttonNumber;
+    private string hoverText = "Press button";
 
     private PincodeInputScript controller;
     private SoundManagerScript soundManager;
@@ -24,5 +25,10 @@ public class KeypadButtonScript : MonoBehaviour
     {
         controller.addInput(buttonNumber);
         soundManager.PlaySFX("Beep1");
+    }
+
+    public string getHoverText()
+    {
+        return hoverText;
     }
 }

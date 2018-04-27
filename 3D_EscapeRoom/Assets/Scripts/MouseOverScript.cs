@@ -69,7 +69,6 @@ public class MouseOverScript : MonoBehaviour
 
                 if(item.transform.gameObject.GetComponent<InteractableScript>() && targetObject == null && !item.transform.gameObject.GetComponent<InteractableScript>().getTriggerStatus())
                 {
-                    tooltipText.text = item.transform.gameObject.GetComponent<InteractableScript>().hoverTooltipText;        //set tooltip text
                     targetObject = item.transform.gameObject.GetComponent<InteractableScript>();
                 }
                 else if(item.transform.gameObject.GetComponent<KeypadButtonScript>() && targetKeypadButton == null)
@@ -87,12 +86,15 @@ public class MouseOverScript : MonoBehaviour
             {
                 targetKeypadButton = null;
                 targetObject = null;
+                tooltipText.text = targetValveControl.transform.gameObject.GetComponent<ValveControlScript>().getHoverText();
             }
             else if(targetKeypadButton)
             {
                 targetObject = null;
+                tooltipText.text = targetKeypadButton.transform.gameObject.GetComponent<KeypadButtonScript>().getHoverText();
             }
             //else the target object will be priority
+            tooltipText.text = targetObject.transform.gameObject.GetComponent<InteractableScript>().hoverTooltipText;        //set tooltip text
         }
 
         //Act on object (if there is one)
