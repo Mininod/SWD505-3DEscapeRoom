@@ -127,7 +127,8 @@ public class MenuScript : MonoBehaviour
                 notesOverlay.SetActive(false);
                 notesUp = false;
                 playerController.enabled = true;
-                tooltipText.SetActive(true);    
+                tooltipText.SetActive(true);
+                reticle.SetActive(true);
             }
         }
     }
@@ -188,7 +189,7 @@ public class MenuScript : MonoBehaviour
                 {
                     GameObject toDrop = collectableLibrary.getGameObject(inventory.getObjectAtSlot(i));         //gets the gameObject from the object type at the selected slot
                     Vector3 dropPos = new Vector3(transform.position.x, transform.position.y - 1, transform.position.z) + transform.forward;    //drop pos
-                    GameObject drop = Instantiate(toDrop, dropPos, Quaternion.identity);             //Needs a translation on the drop point
+                    Instantiate(toDrop, dropPos, Quaternion.identity);             //Needs a translation on the drop point - dropPos
                     inventory.removeFromInventorySlot(i);
                     clearSelections();
                 }
@@ -261,6 +262,7 @@ public class MenuScript : MonoBehaviour
             notesUp = true;         //tells the script that a note is currently being displayed
             playerController.enabled = false;
             tooltipText.SetActive(false);       //hide tooltip text when a note is open
+            reticle.SetActive(false);
         }
         else Debug.Log("No Note");
     }
